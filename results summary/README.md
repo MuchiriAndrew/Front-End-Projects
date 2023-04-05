@@ -1,6 +1,4 @@
-# Frontend Mentor - Results summary component
-
-# Welcome! 👋
+# Hello! 👋
 
 This is a front-end coding challenge i did from Frontend Mentor
 
