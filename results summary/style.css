@@ -1,0 +1,21 @@
+.bluebox {
+    border-radius: 25px;
+    background-color: hsl(228, 45%, 44%);
+    width: 200px;
+    height: 300px;
+    float: left;
+    margin-left: 400px;
+}
+
+.whitebox{
+    border-radius: 25px;
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    float: right;
+    margin-right: 400px;
+}
+
+.overall {
+    margin: auto;
+}
