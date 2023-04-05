@@ -1,19 +1,18 @@
-.overall {
-    display: flex;
-    justify-content: center;
-    margin-top: 120px;
-}
-
 .bluebox {
     border-radius: 25px;
     background-color: hsl(228, 45%, 44%);
     width: 220px;
-    height: 300px;
-    float: left;
+    height: 310px;
     text-align: center;
     font-size: 11px;
     font-family: Hanken Grotesk;
-    color: lightgray
+    color: lightgray;
+    position: absolute;
+    top: 120px;
+    left: 366px;
+    z-index: 1;
+    box-shadow: -10px 0 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient( to bottom, hsl(252, 100%, 67%),hsl(241, 81%, 54%));
 }
 
 .bluebox h2{
@@ -28,6 +27,7 @@
     height: 110px;
     margin: auto;
     text-align: center;
+    background:linear-gradient(to bottom, hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
 }
 
 .circle h1 {
@@ -44,22 +44,26 @@
 
 .whitebox{
     border-radius: 25px;
-    background-color:chartreuse;
-    width: 220px;
-    height: 300px;
+    background-color:white;
+    width: 270px;
+    height: 310px;
     float: left;
     font-family: Hanken Grotesk;
     font-size: 12px;
+    position: absolute;
+    top: 120px;
+    left: 537px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);    
 }
 
 .whitebox h3{
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
-    padding-left: 20px;
+    padding-left:70px;
 }
 
 .results {
-margin-bottom: 30px;
+margin-bottom: 10px;
 display: flex;
 flex-direction: column;
 }
@@ -70,26 +74,26 @@ flex-direction: column;
 }
 
 .reaction{
-    width: 180px;
+    width: 170px;
     height: 35px;
     border-radius: 10px;
-    background-color: lightpink;
-    margin-left: 20px;
+    background-color:hsl(0, 88%, 97%);
+    margin-left: 70px;
     margin-right: 20px;
-    margin-bottom:5px;
-
+    margin-bottom:10px;
     display: flex;
     align-items: center;
+
 }
 
 .memory{
-    width: 180px;
+    width: 170px;
     height: 35px;
     border-radius: 10px;
-    background-color: lightsalmon;
-    margin-left: 20px;
+    background-color: hsl(41, 90%, 96%);
+    margin-left: 70px;
     margin-right: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     display: flex;
     align-items: center;
@@ -98,13 +102,13 @@ flex-direction: column;
 
 .verbal{
 
-    width: 180px;
+    width: 170px;
     height: 35px;
     border-radius: 10px;
-    background-color: lightcyan;
-    margin-left: 20px;
+    background-color:hsl(165, 100%, 97%);
+    margin-left: 70px;
     margin-right: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     display: flex;
     align-items: center;
@@ -112,30 +116,46 @@ flex-direction: column;
 }
 
 .visual{
-    width: 180px;
+    width: 170px;
     height: 35px;
     border-radius: 10px;
-    background-color: lightgray;
-    margin-left: 20px;
+    background-color: hsl(231, 100%, 97%);
+    margin-left: 70px;
     margin-right: 20px;
-    margin-bottom: 5px;
-
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
 .continuebtn{
-    width: 180px;
+    width: 170px;
     height: 35px;
     border-radius: 25px;
-    background-color: rgb(69, 68, 68);
-    margin: auto;
+    background-color: hsl(224, 30%, 27%);
+    margin-left: 70px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
-.continuebtn a{
+.continuebtn:hover {
+    background: linear-gradient( to bottom, hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+
+}
+
+.continuebtn p{
     color: white;
     text-decoration: none;
-    margin-left: 55px;
+    margin-left: 62px;
+}
+
+
+
+@media only screen and (min-width: 375px)
+/* a minimum width of 375px for mobile */
+{
+
+
+
+
 }
