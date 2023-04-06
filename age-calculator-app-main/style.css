@@ -1,10 +1,10 @@
 body{
-    background-color: lightgray;
+    background-color:hsl(0, 0%, 94%)
 }
 
 .box{
     background-color: white;
-    width: 580px;
+    width: 540px;
     height: 400px;
     margin: auto;
     margin-top: 100px;
@@ -16,17 +16,46 @@ body{
 form {
     display: flex;
     flex-direction: row;
+    margin-bottom: 5px;
 }
 
 form input {
-    width: 100px;
-    height: 30px;
-    margin-top: 10px;
+    width: 95px;
+    height: 40px;
+    margin-top: 5px;
+    border-width: 1px;
+    border-radius: 7%;
+    border-color: hsl(0, 0%, 86%);
+    border-style: solid;
+    font-family: Poppins;
+    font-weight: 400;
+    color: hsl(0, 1%, 44%);
+    font-size: 24px;
+    text-indent: 12px;
+    outline-width: 0px;
+    caret-color:hsl(259, 100%, 65%);
+}
+
+form input:hover {
+    border-color: hsl(259, 100%, 65%);
+    cursor: pointer;
+}
+
+form input:focus {
+   outline-color: hsl(259, 100%, 65%);
+   border-color: hsl(259, 100%, 65%);
+   cursor: pointer;
+}
+
+form input:valid {
+    color: black;
 }
 
 form label {
-    font-size: 11px;
-    color: lightgray;
+    font-size: 10px;
+    color: hsl(0, 1%, 44%);
+    font-family: Poppins;
+    font-weight: 400;
 }
 
 .day {
@@ -34,7 +63,7 @@ form label {
     flex-direction: column;
     margin-top: 40px;
     margin-left: 40px;
-    margin-right: 20px;
+
 }
 
 
@@ -43,7 +72,7 @@ form label {
     flex-direction: column;
     margin-top: 40px;
     margin-left: 20px;
-    margin-right: 20px;
+
 }
 
 .year{
@@ -51,7 +80,7 @@ form label {
     flex-direction: column;
     margin-top: 40px;
     margin-left: 20px;
-    margin-right: 20px;
+
 }
 
 .text {
@@ -59,16 +88,24 @@ form label {
     flex-direction: row;
     height: 60px;
     margin-left: 30px;
-    font-size: 54px;
+    font-size: 65px;
     font-family: Poppins;
+    font-style: italic;
+    font-weight: 800;
+    color: hsl(0, 0%, 8%);
 }
 
 .text h1{
     margin: auto;
     margin-left: 10px;
     margin-right: 5px;
-    margin-top: 10px;
-    color: purple;
+    margin-top: 33px;
+    color: hsl(259, 100%, 65%);
+    font-size: 75px;
+}
+
+p { 
+    margin-top: 35px;
 }
 
 .horzline{
@@ -76,16 +113,18 @@ form label {
         flex-direction: row;
 }
 
+
 .results {
     margin-top: -50px;
 }
 
 hr {
-    width: 450px;
-    height: 0px;
-    margin-top: 30px;
+    width: 400px;
+    border-top: 1px solid hsl(0, 0%, 86%);
     margin-left: 40px;
     margin-right: 0px;
+    height: 0px;
+    margin-top: 30px;
 }
 
 button {
@@ -93,5 +132,16 @@ button {
     width: 60px;
     height: 60px;
     margin-left: 0px;
-    background-color: blue;
+    background-color: hsl(259, 100%, 65%);
+    border: 0px;
+}
+
+button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+button img{
+    width: 65%;
+    height: 65%;
 }
