@@ -56,6 +56,7 @@ form label {
     color: hsl(0, 1%, 44%);
     font-family: Poppins;
     font-weight: 400;
+    letter-spacing: 2px;
 }
 
 .day {
