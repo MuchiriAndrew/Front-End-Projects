@@ -59,6 +59,12 @@ form label {
     letter-spacing: 2px;
 }
 
+form p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: hsl(0, 100%, 67%);
+}
+
 .day {
     display: flex;
     flex-direction: column;
