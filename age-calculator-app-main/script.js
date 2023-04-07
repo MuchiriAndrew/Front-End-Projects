@@ -12,6 +12,10 @@ function validateForm() {
     var monthTb = document.getElementById("month");
     var yearTb = document.getElementById("year");
 
+    var originalContent1=document.getElementById("day-error-message").innerHTML
+    var originalContent2=document.getElementById("month-error-message").innerHTML
+    var originalContent3=document.getElementById("month-error-message").innerHTML
+
 
     //dates Validation
 {   
@@ -22,7 +26,7 @@ function validateForm() {
 
     }
 
-    if(parseInt(dayValue)>31){
+   else if(dayValue>31){
         document.getElementById("day-error-message").innerHTML="Must be a valid day";
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
@@ -30,25 +34,25 @@ function validateForm() {
     
 //30 days of September, April, June and November
 
-    if(monthValue==4  && dayValue>30){
+    else if(monthValue==4  && dayValue>30){
         document.getElementById("day-error-message").innerHTML="Must be a valid day";
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
     }
 
-    if(monthValue==9  && dayValue>30){
+    else if(monthValue==9  && dayValue>30){
         document.getElementById("day-error-message").innerHTML="Must be a valid day";
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
     }
 
-    if(monthValue==6  && dayValue>30){
+    else if(monthValue==6  && dayValue>30){
         document.getElementById("day-error-message").innerHTML="Must be a valid day";
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
     }
 
-    if(monthValue==11  && dayValue>30){
+    else if(monthValue==11  && dayValue>30){
         document.getElementById("day-error-message").innerHTML="Must be a valid day";
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
@@ -57,13 +61,13 @@ function validateForm() {
 
 //February Leap Years
 
-    if(monthValue==2 && yearValue%4==0 && dayValue>29){
+    else if(monthValue==2 && yearValue%4==0 && dayValue>29){
         document.getElementById("day-error-message").innerHTML="Must be a valid day";
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
     }
 
-    if(monthValue==2 && yearValue%4!=0 && dayValue>28){
+    else if(monthValue==2 && yearValue%4!=0 && dayValue>28){
         document.getElementById("day-error-message").innerHTML="Must be a valid day";
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
@@ -77,7 +81,7 @@ function validateForm() {
         monthTb.style.borderColor="hsl(0, 100%, 67%)";
     }
     
-    if(parseInt(monthValue)>12){
+    else if(monthValue>12){
         document.getElementById("month-error-message").innerHTML="Must be a valid month";
         monthLabel.style.color="hsl(0, 100%, 67%)";
         monthTb.style.borderColor="hsl(0, 100%, 67%)";
@@ -89,13 +93,31 @@ function validateForm() {
         yearTb.style.borderColor="hsl(0, 100%, 67%)";
     }
 
-    if(yearValue> new Date().getFullYear()){//new Date().getFullYear() is a function for getting the current time
+    else if(yearValue> new Date().getFullYear()){//new Date().getFullYear() is a function for getting the current time
          document.getElementById("year-error-message").innerHTML="Must be in the past";
          yearLabel.style.color="hsl(0, 100%, 67%)";
         yearTb.style.borderColor="hsl(0, 100%, 67%)";       
     }
 
     else{
+        dayLabel.style.color="";
+        monthLabel.style.color="";
+        yearLabel.style.color="";
+
+        dayTb.style.borderColor="";
+        monthTb.style.borderColor="";
+        yearTb.style.borderColor="";
+
+        document.getElementById("day-error-message").innerHTML= "";
+        document.getElementById("month-error-message").innerHTML= "";
+        document.getElementById("year-error-message").innerHTML= "";
+
+
+        document.getElementById("day-error-message").innerHTML= originalContent1;
+        document.getElementById("month-error-message").innerHTML= originalContent2;
+        document.getElementById("year-error-message").innerHTML= originalContent3;
+
+
         return calculateAge();
     }
 }
