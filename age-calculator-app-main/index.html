@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -10,14 +11,22 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+  </style>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
 </head>
 
 
@@ -27,24 +36,24 @@
 
   <div class="form">
 
-    <form id="form" action="" method="get" onsubmit="return validateForm()">
+    <form action="/" method="post">
 
       <div class="day">
-        <label for="day">DAY</label>
+        <label id="daylabel" for="day">DAY</label>
         <input type="text" id="day" name="day" placeholder="DD">
-        <p id="error-message">error message</p>
+        <p id="day-error-message"></p>
       </div>
       
       <div class="month">
-        <label for="month">MONTH</label>
+        <label id="monthlabel" for="month">MONTH</label>
         <input type="text" id="month" name="month" placeholder="MM">
-        <p id="error-message">error message</p>
+        <p id="month-error-message"></p>
       </div>
       
       <div class="year">
-        <label for="year">YEAR</label>
+        <label id="yearlabel" for="year">YEAR</label>
         <input type="text" id="year" name="year" placeholder="YYYY">
-        <p id="error-message">error message</p>
+        <p id="year-error-message"></p>
       </div>
 
     </form>
@@ -53,7 +62,7 @@
 
   <div class="horzline">
     <hr>
-    <button type="submit" class="roundbutton"><img src="assets/images/icon-arrow.svg" alt="arrow"></button>
+    <button onclick="return validateForm()" type="submit" class="roundbutton"><img src="assets/images/icon-arrow.svg" alt="arrow"></button>
   </div>
 
 
@@ -80,8 +89,6 @@
 
 
 </div>
-
-<div id="error-message"></div>
 
  
 </body>

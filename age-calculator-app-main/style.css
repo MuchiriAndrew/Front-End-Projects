@@ -60,9 +60,13 @@ form label {
 }
 
 form p {
-    margin-top: 0px;
+    margin-top: 3px;
     margin-bottom: 0px;
     color: hsl(0, 100%, 67%);
+    font-style: italic;
+    font-size: 10px;   
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 .day {
