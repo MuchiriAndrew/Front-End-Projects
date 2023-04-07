@@ -96,12 +96,34 @@ function validateForm() {
     }
 
     else{
-        return submitForm();
+        return calculateAge();
     }
 }
 }
 
-function submitForm() {
+function calculateAge() {
 
-    console.log("garra submit this form!!")
+    var dayValue = document.getElementById("day").value;
+    var monthValue = document.getElementById("month").value;
+    var yearValue = document.getElementById("year").value;
+
+    var dateOfBirth = new Date (yearValue, monthValue-1, dayValue);
+
+    var currentDate = new Date();
+
+    var timeDifference = Math.abs(dateOfBirth - currentDate);
+
+    var differenceDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    var years = Math.floor(differenceDays/364);
+
+    var months = Math.floor((differenceDays%365)/12);
+
+    var days = Math.floor((differenceDays%365)%12);
+
+    console.log(years,months,days);
+
+    document.getElementById("daystext").innerHTML= days;
+    document.getElementById("monthstext").innerHTML= months; 
+    document.getElementById("yearstext").innerHTML=years;
 }
