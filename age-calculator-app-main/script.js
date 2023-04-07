@@ -12,7 +12,9 @@ function validateForm() {
     var monthTb = document.getElementById("month");
     var yearTb = document.getElementById("year");
 
-    
+
+    //dates Validation
+{   
     if(dayValue=='' || dayValue==null){
         document.getElementById("day-error-message").innerHTML="This field is required";
         dayLabel.style.color="hsl(0, 100%, 67%)";
@@ -25,6 +27,49 @@ function validateForm() {
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
     }
+    
+//30 days of September, April, June and November
+
+    if(monthValue==4  && dayValue>30){
+        document.getElementById("day-error-message").innerHTML="Must be a valid day";
+        dayLabel.style.color="hsl(0, 100%, 67%)";
+        dayTb.style.borderColor="hsl(0, 100%, 67%)";
+    }
+
+    if(monthValue==9  && dayValue>30){
+        document.getElementById("day-error-message").innerHTML="Must be a valid day";
+        dayLabel.style.color="hsl(0, 100%, 67%)";
+        dayTb.style.borderColor="hsl(0, 100%, 67%)";
+    }
+
+    if(monthValue==6  && dayValue>30){
+        document.getElementById("day-error-message").innerHTML="Must be a valid day";
+        dayLabel.style.color="hsl(0, 100%, 67%)";
+        dayTb.style.borderColor="hsl(0, 100%, 67%)";
+    }
+
+    if(monthValue==11  && dayValue>30){
+        document.getElementById("day-error-message").innerHTML="Must be a valid day";
+        dayLabel.style.color="hsl(0, 100%, 67%)";
+        dayTb.style.borderColor="hsl(0, 100%, 67%)";
+    }
+
+
+//February Leap Years
+
+    if(monthValue==2 && yearValue%4==0 && dayValue>29){
+        document.getElementById("day-error-message").innerHTML="Must be a valid day";
+        dayLabel.style.color="hsl(0, 100%, 67%)";
+        dayTb.style.borderColor="hsl(0, 100%, 67%)";
+    }
+
+    if(monthValue==2 && yearValue%4!=0 && dayValue>28){
+        document.getElementById("day-error-message").innerHTML="Must be a valid day";
+        dayLabel.style.color="hsl(0, 100%, 67%)";
+        dayTb.style.borderColor="hsl(0, 100%, 67%)";
+    }
+
+
 
     if(monthValue=='' || monthValue==null){
         document.getElementById("month-error-message").innerHTML="This field is required";
@@ -47,10 +92,16 @@ function validateForm() {
     if(yearValue> new Date().getFullYear()){//new Date().getFullYear() is a function for getting the current time
          document.getElementById("year-error-message").innerHTML="Must be in the past";
          yearLabel.style.color="hsl(0, 100%, 67%)";
-        yearTb.style.borderColor="hsl(0, 100%, 67%)";
-        
-       
+        yearTb.style.borderColor="hsl(0, 100%, 67%)";       
     }
 
+    else{
+        return submitForm();
+    }
+}
+}
 
+function submitForm() {
+
+    console.log("garra submit this form!!")
 }
