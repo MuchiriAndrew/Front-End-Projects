@@ -58,7 +58,6 @@ function validateForm() {
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
     }
 
-
 //February Leap Years
 
     else if(monthValue==2 && yearValue%4==0 && dayValue>29){
@@ -72,8 +71,6 @@ function validateForm() {
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
     }
-
-
 
     if(monthValue=='' || monthValue==null){
         document.getElementById("month-error-message").innerHTML="This field is required";
@@ -100,6 +97,7 @@ function validateForm() {
     }
 
     else{
+        
         dayLabel.style.color="";
         monthLabel.style.color="";
         yearLabel.style.color="";
@@ -129,19 +127,19 @@ function calculateAge() {
     var monthValue = document.getElementById("month").value;
     var yearValue = document.getElementById("year").value;
 
-    var dateOfBirth = new Date (yearValue, monthValue-1, dayValue);
+    var dateOfBirth = new Date (yearValue, monthValue-1, dayValue); //month values are zero indexed thus we need to subtract one!!
 
     var currentDate = new Date();
 
-    var timeDifference = Math.abs(dateOfBirth - currentDate);
+    var timeDifference = currentDate - dateOfBirth;     //time will be calculated in ms, we have to convert it to days
 
-    var differenceDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    var differenceDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); 
 
-    var years = Math.floor(differenceDays/364);
+    var years = Math.floor(differenceDays/364);         //divide number of days by 364 to get the number of years rounded down
 
-    var months = Math.floor((differenceDays%365)/12);
+    var months = Math.floor((differenceDays%364) /30);  //use the modulus to get the number of days left over nthat cannot make a full year the divide by 30 to get the number of months left over
 
-    var days = Math.floor((differenceDays%365)%12);
+    var days = Math.floor((differenceDays%364)%30);     //use the modulus of the number of months left over to find the number of days left over
 
     console.log(years,months,days);
 
