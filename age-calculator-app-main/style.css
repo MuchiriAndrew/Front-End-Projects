@@ -156,3 +156,55 @@ button img{
     width: 65%;
     height: 65%;
 }
+
+@media only screen and (max-width: 375px){ 
+ /* making the website application responsive for mobile i.e. 375px max */
+    .box{
+        width: 325px;
+        height: 425px;
+    }
+
+    hr {
+        width: 280px;
+        margin-left: 20px;
+    }
+    
+    button {
+        width: 50px;
+        height:50px;
+        margin-left: -166px;
+        margin-top: 5px;
+    }
+
+    .day {
+        margin-left: 20px;
+    }
+
+    form input {
+        width: 75px;
+        height: 40px;
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .horzline{
+         margin-top: 20px;
+         margin-bottom: 35px;
+    }
+
+    .text {
+        font-size: 50px;
+    }
+
+    .text h1{
+        font-size: 56px;
+        margin-left: -10px;
+    }
+
+    form p {
+        font-size: 8px;   
+    }
+
+
+
+}
