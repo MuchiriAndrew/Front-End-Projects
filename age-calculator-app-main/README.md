@@ -14,4 +14,4 @@ Your challenge is to build out this age calculator application and get it lookin
 ![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## My Recreation
-![shot](https://user-images.githubusercontent.com/121347385/230879023-e5c6186b-d285-406a-9054-b85f7bdb75b2.png)
+![Screenshot (235)](https://user-images.githubusercontent.com/121347385/230879382-3d43cb1b-d5a6-4091-bc0b-33968116a508.png)
