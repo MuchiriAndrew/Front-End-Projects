@@ -119,7 +119,7 @@ function calculateAge() {
 
     var currentDate = new Date();
 
-    var timeDifference = currentDate - dateOfBirth;     //time will be calculated in ms, we have to convert it to days
+    var timeDifference = Math.abs(dateOfBirth - currentDate);     //time will be calculated in ms, we have to convert it to days
 
     var differenceDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); 
 
