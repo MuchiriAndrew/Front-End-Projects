@@ -12,18 +12,12 @@ function validateForm() {
     var monthTb = document.getElementById("month");
     var yearTb = document.getElementById("year");
 
-    var originalContent1=document.getElementById("day-error-message").innerHTML
-    var originalContent2=document.getElementById("month-error-message").innerHTML
-    var originalContent3=document.getElementById("month-error-message").innerHTML
-
-
     //dates Validation
 {   
     if(dayValue=='' || dayValue==null){
         document.getElementById("day-error-message").innerHTML="This field is required";
         dayLabel.style.color="hsl(0, 100%, 67%)";
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
-
     }
 
    else if(dayValue>31){
@@ -72,7 +66,7 @@ function validateForm() {
         dayTb.style.borderColor="hsl(0, 100%, 67%)";
     }
 
-    if(monthValue=='' || monthValue==null){
+    else if(monthValue=='' || monthValue==null){
         document.getElementById("month-error-message").innerHTML="This field is required";
         monthLabel.style.color="hsl(0, 100%, 67%)";
         monthTb.style.borderColor="hsl(0, 100%, 67%)";
@@ -84,7 +78,7 @@ function validateForm() {
         monthTb.style.borderColor="hsl(0, 100%, 67%)";
     }
 
-    if(yearValue=='' || yearValue==null){
+    else if(yearValue=='' || yearValue==null){
         document.getElementById("year-error-message").innerHTML="This field is required";
         yearLabel.style.color="hsl(0, 100%, 67%)";
         yearTb.style.borderColor="hsl(0, 100%, 67%)";
@@ -110,12 +104,6 @@ function validateForm() {
         document.getElementById("month-error-message").innerHTML= "";
         document.getElementById("year-error-message").innerHTML= "";
 
-
-        document.getElementById("day-error-message").innerHTML= originalContent1;
-        document.getElementById("month-error-message").innerHTML= originalContent2;
-        document.getElementById("year-error-message").innerHTML= originalContent3;
-
-
         return calculateAge();
     }
 }
@@ -127,7 +115,7 @@ function calculateAge() {
     var monthValue = document.getElementById("month").value;
     var yearValue = document.getElementById("year").value;
 
-    var dateOfBirth = new Date (yearValue, monthValue-1, dayValue); //month values are zero indexed thus we need to subtract one!!
+    var dateOfBirth = new Date (yearValue, monthValue, dayValue); //month values are zero indexed thus we need to subtract one!!
 
     var currentDate = new Date();
 
@@ -141,7 +129,7 @@ function calculateAge() {
 
     var days = Math.floor((differenceDays%364)%30);     //use the modulus of the number of months left over to find the number of days left over
 
-    console.log(years,months,days);
+    // console.log(years,months,days);
 
     document.getElementById("daystext").innerHTML= days;
     document.getElementById("monthstext").innerHTML= months; 
