@@ -158,15 +158,25 @@ nav li a{
     border-radius: 12%;
     width: 120px;
     height: 35px;
+    background-color: hsl(0, 0%, 8%);
 }
 
+.link:hover{
+    background-color: hsl(0, 0%, 98%) ;
+}
+
+.link:hover .name {
+    color: hsl(0, 0%, 8%);
+  }
+
+
 #linktxt{
-    color:hsl(0, 0%, 8%) ;
+    color:hsl(0, 0%, 98%) ;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 12px;
     font-family: Epilogue;
-    font-weight: 700;
     font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .sponsors{
