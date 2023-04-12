@@ -31,19 +31,49 @@ a{
 #company-dropdown{
     visibility: hidden;
 }
+
+.logo{
+margin-top: 10px;
+margin-left: 20px;
+margin-right: 83px;
+}
+.logo img{
+    width: 60px;
+    height: 20px;
+}
+
 .navigation{
     display: flex;
     flex-direction: row;
 }
 
+
+
 nav{
     display: flex;
     flex-direction: row;
+    font-size: 11px;
+    color: hsl(0, 0%, 41%);
+    list-style-type: none;
+}
+nav li a{
+    font-size: 11px;
+    color: hsl(0, 0%, 41%);
+}
+
+
+.downarrow{
+    width: 7px;
+    height: 5px;
+    margin-left: 5px;
+    margin-top: 3px;
 }
 
 .features{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    margin-right: -16px;
 }
 
 .features-list{
@@ -54,11 +84,46 @@ nav{
 .company{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    margin-right: 0px;
 }
 
 .company-list{
     display: flex;
     flex-direction: row;
+}
+
+.careers{
+    margin-top: 10px;
+    margin-right: 38px;
+    
+}
+
+
+.about{
+    margin-top: 10px;
+}
+
+
+.login{
+    margin-top: 15px;
+    margin-left: 520px;
+    margin-right: 40px;
+}
+
+.register{
+    margin-top: 5px;
+    border: 1.5px solid hsl(0, 0%, 41%);
+    border-radius: 20%;
+    height: 28px;
+    width: 75px;
+}
+
+#regtxt{
+   text-decoration: none;
+   color: hsl(0, 0%, 41%);
+   margin-left: 15px;
+   margin-top: 9px;
 }
 
 .wrapper{
@@ -90,7 +155,7 @@ nav{
 
 .link{
     border: 1px solid hsl(0, 0%, 8%);
-    border-radius: 15%;
+    border-radius: 12%;
     width: 120px;
     height: 35px;
 }
@@ -121,7 +186,8 @@ nav{
 .body-content{
     display: flex;
     flex-direction: row;
-    margin-left: 150px;
+    margin-left: 120px;
+    margin-top: -50px;
 }
 
 .desktop-hero-photo{
