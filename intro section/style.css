@@ -1,0 +1,142 @@
+body{
+    background-color: hsl(0, 0%, 98%);
+    font-family: Epilogue;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+    /* mobile stuff */
+.menu-button{
+    visibility: hidden;
+}
+
+.nav-sidebar{
+    visibility: hidden;
+}
+
+.mobile-hero-photo{
+    visibility: hidden;
+}
+
+
+#features-dropdown{
+    visibility: hidden;
+}
+
+#company-dropdown{
+    visibility: hidden;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+}
+
+.features-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.company{
+    display: flex;
+    flex-direction: column;
+}
+
+.company-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    font-family: Epilogue;
+}
+
+.text h1{
+    font-weight: 700;
+    color: hsl(0, 0%, 8%);
+    font-size: 54px;
+}
+
+#paragraph{
+    font-size: 14px;
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 40px;
+}
+
+.link{
+    border: 1px solid hsl(0, 0%, 8%);
+    border-radius: 15%;
+    width: 120px;
+    height: 35px;
+}
+
+#linktxt{
+    color:hsl(0, 0%, 8%) ;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: Epilogue;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.sponsors{
+    display: flex;
+    flex-direction: row;
+}
+
+.sponsors img{
+    height: 50%;
+    margin-right: 18px;
+}
+
+#maker{
+    margin-right: 0px;
+}
+
+.body-content{
+    display: flex;
+    flex-direction: row;
+    margin-left: 120px;
+}
+
+.desktop-hero-photo{
+    width: 300px;
+    height: 400px;
+}
+
+.nav-sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: calc(100vh - 60px);
+    padding: 0 5px;
+    background-color: #1b1b1b;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out; /* creates the animation like look of the sidebar sliding in and out  */
+}
+
+

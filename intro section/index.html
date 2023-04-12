@@ -5,6 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 
 
@@ -13,28 +19,38 @@
 <div class="logo">
   <img src="images/logo.svg" alt="logo">
 </div>
-  
+
+<div class="navigation">
 <nav>
   <!-- for the navigation part of the website -->
   <!-- make this whole nav tag not visible when going into mobile format -->
-  <ul>
-    <li><a href="#"></a>Features</li>
-    <img src="images/icon-arrow-down.svg" alt="arrow-down">
-    <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
+  
 
-    <div id="features-dropdown">
-      <ul>
-        <li><img src="images/icon-todo.svg" alt="Todo"><a href="#">Todo List</a></li>
-        <li><img src="images/icon-calendar.svg" alt="Calender"><a href="#">Calender</a></li>
-        <li><img src="images/icon-reminders.svg" alt="Reminders"><a href="#">Reminders</a></li>
-        <li><img src="images/icon-planning.svg" alt=""><a href="#">Planning</a></li>
-      </ul>
+    <div class="features">
+      <div class="features-list">
+        <li><a href="#"></a>Features</li>
+        <img src="images/icon-arrow-down.svg" alt="arrow-down">
+        <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
+      </div>
+    
+      <div id="features-dropdown">
+        <ul>
+          <li><img src="images/icon-todo.svg" alt="Todo"><a href="#">Todo List</a></li>
+          <li><img src="images/icon-calendar.svg" alt="Calender"><a href="#">Calender</a></li>
+          <li><img src="images/icon-reminders.svg" alt="Reminders"><a href="#">Reminders</a></li>
+          <li><img src="images/icon-planning.svg" alt=""><a href="#">Planning</a></li>
+        </ul>
+      </div>
     </div>
+  
 
-
-    <li><a href="#"></a>Company</li>
-    <img src="images/icon-arrow-down.svg" alt="arrow-down">
-    <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
+  <div class="company">
+    <div class="company-list">
+      <li><a href="#"></a>Company</li>
+      <img src="images/icon-arrow-down.svg" alt="arrow-down">
+      <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
+    </div>
+    
     <div id="company-dropdown">
       <ul>
         <li><a href="">History</a></li>
@@ -42,6 +58,8 @@
         <li><a href="">Blog</a></li>
       </ul>
     </div>
+  </div>
+    
 
 
     <li><a href="#">Careers</a></li>
@@ -50,13 +68,17 @@
     <li><a href="#" class="login">Login</a></li>
     <li><a href="#" class="register">Register</a></li><!-- style borders -->
     
-  </ul>
+  
 </nav>
+
 
 <div class="menu-button">
   <!-- this will be invible during desktop format -->
   <img src="images/icon-menu.svg" alt="menubutton">
 </div>
+</div>
+
+
 
 <aside class="nav-sidebar">
 <!-- will only be visible during mobile format -->
@@ -95,14 +117,22 @@
 </aside>
 
 
+<div class="body-content">
+
 
 <div class="wrapper">
 <div class="text">
   <!-- for the text part -->
 
-  <h1>Make remote work</h1>
-  <p>Get your team in sync, no matter the location.<br>Streamline processes, create team rituals and watch productivity soar.</p>
-  <a href="#">Learn more</a>  <!-- style borders -->
+  <h1>Make<br>remote work</h1>
+  <p id="paragraph">Get your team in sync, no matter the location.<br>Streamline processes, create team rituals and<br>watch productivity soar.</p>
+
+    <a href="#" class="learn">
+      <div class="link">
+        <p id="linktxt">Learn more</p>
+      </div>
+    </a>  <!-- style borders -->
+  
 
 </div>
 
@@ -111,18 +141,24 @@
   <img src="images/client-databiz.svg" alt="databiz">
   <img src="images/client-audiophile.svg" alt="audiophile">
   <img src="images/client-meet.svg" alt="meet">
-  <img src="images/client-maker.svg" alt="maker">
+  <img src="images/client-maker.svg" alt="maker" id="maker">
 </div>
 </div>
 
-<div class="desktop-hero-photo">
+
+
+<div class="desktop-photo">
   <!-- for the desktop hero photo -->
-  <img src="images/image-hero-desktop.png" alt="desktop">
+  <img src="images/image-hero-desktop.png" alt="desktop" class="desktop-hero-photo">
 </div>
+
+
 
 <div class="mobile-hero-photo">
   <!-- for the mobile hero photo -->
   <img src="images/image-hero-mobile.png" alt="desktop">
+</div>
+
 </div>
 
 </body>
