@@ -64,26 +64,28 @@ nav{
 .wrapper{
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin-right: 100px;
 }
 
 .text{
     display: flex;
     flex-direction: column;
-    margin-bottom: 70px;
+    margin-bottom: 68px;
     font-family: Epilogue;
 }
 
 .text h1{
     font-weight: 700;
     color: hsl(0, 0%, 8%);
-    font-size: 54px;
+    font-size: 62px;
+    margin-top: 75px;
 }
 
 #paragraph{
     font-size: 14px;
     color: hsl(0, 0%, 41%);
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    line-height: 20px;
 }
 
 .link{
@@ -119,12 +121,12 @@ nav{
 .body-content{
     display: flex;
     flex-direction: row;
-    margin-left: 120px;
+    margin-left: 150px;
 }
 
 .desktop-hero-photo{
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
 }
 
 .nav-sidebar {
