@@ -1,216 +1,206 @@
-body{
-    background-color: hsl(0, 0%, 98%);
-    font-family: Epilogue;
+body {
+  background-color: hsl(0, 0%, 98%);
+  font-family: Epilogue;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-    /* mobile stuff */
-.menu-button{
-    visibility: hidden;
-}
-
-.nav-sidebar{
-    visibility: hidden;
-}
-
-.mobile-hero-photo{
-    visibility: hidden;
-}
-
-
-#features-dropdown{
-    visibility: hidden;
-}
-
-#company-dropdown{
-    visibility: hidden;
-}
-
-.logo{
-margin-top: 10px;
-margin-left: 20px;
-margin-right: 83px;
-}
-.logo img{
-    width: 60px;
-    height: 20px;
-}
-
-.navigation{
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-nav{
-    display: flex;
-    flex-direction: row;
-    font-size: 11px;
-    color: hsl(0, 0%, 41%);
-    list-style-type: none;
-}
-nav li a{
-    font-size: 11px;
-    color: hsl(0, 0%, 41%);
-}
-
-
-.downarrow{
-    width: 7px;
-    height: 5px;
-    margin-left: 5px;
-    margin-top: 3px;
-}
-
-.features{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-right: -16px;
-}
-
-.features-list{
-    display: flex;
-    flex-direction: row;
-}
-
-.company{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-right: 0px;
-}
-
-.company-list{
-    display: flex;
-    flex-direction: row;
-}
-
-.careers{
-    margin-top: 10px;
-    margin-right: 38px;
-    
-}
-
-
-.about{
-    margin-top: 10px;
-}
-
-
-.login{
-    margin-top: 15px;
-    margin-left: 520px;
-    margin-right: 40px;
-}
-
-.register{
-    margin-top: 5px;
-    border: 1.5px solid hsl(0, 0%, 41%);
-    border-radius: 20%;
-    height: 28px;
-    width: 75px;
-}
-
-#regtxt{
-   text-decoration: none;
-   color: hsl(0, 0%, 41%);
-   margin-left: 15px;
-   margin-top: 9px;
-}
-
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    margin-right: 100px;
-}
-
-.text{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 68px;
-    font-family: Epilogue;
-}
-
-.text h1{
-    font-weight: 700;
-    color: hsl(0, 0%, 8%);
-    font-size: 62px;
-    margin-top: 75px;
-}
-
-#paragraph{
-    font-size: 14px;
-    color: hsl(0, 0%, 41%);
-    margin-bottom: 60px;
-    line-height: 20px;
-}
-
-.link{
-    border: 1px solid hsl(0, 0%, 8%);
-    border-radius: 12%;
-    width: 120px;
-    height: 35px;
-    background-color: hsl(0, 0%, 8%);
-}
-
-.link:hover{
-    background-color: hsl(0, 0%, 98%) ;
-}
-
-.link:hover .name {
-    color: hsl(0, 0%, 8%);
-  }
-
-
-#linktxt{
-    color:hsl(0, 0%, 98%) ;
-    margin-left: 20px;
-    margin-top: 12px;
-    font-family: Epilogue;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.sponsors{
-    display: flex;
-    flex-direction: row;
-}
-
-.sponsors img{
-    height: 50%;
-    margin-right: 18px;
-}
-
-#maker{
-    margin-right: 0px;
-}
-
-.body-content{
-    display: flex;
-    flex-direction: row;
-    margin-left: 120px;
-    margin-top: -50px;
-}
-
-.desktop-hero-photo{
-    width: 400px;
-    height: 500px;
+/* mobile stuff */
+.menu-button {
+  visibility: hidden;
 }
 
 .nav-sidebar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: calc(100vh - 60px);
-    padding: 0 5px;
-    background-color: #1b1b1b;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out; /* creates the animation like look of the sidebar sliding in and out  */
+  visibility: hidden;
 }
 
+.mobile-hero-photo {
+  visibility: hidden;
+}
 
+#features-dropdown {
+  visibility: hidden;
+}
+
+#company-dropdown {
+  visibility: hidden;
+}
+
+.logo {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 83px;
+}
+.logo img {
+  width: 60px;
+  height: 20px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  font-size: 11px;
+  color: hsl(0, 0%, 41%);
+  list-style-type: none;
+}
+nav li a {
+  font-size: 11px;
+  color: hsl(0, 0%, 41%);
+}
+
+.downarrow {
+  width: 7px;
+  height: 5px;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: -16px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 0px;
+}
+
+.company-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.careers {
+  margin-top: 10px;
+  margin-right: 38px;
+}
+
+.about {
+  margin-top: 10px;
+}
+
+.login {
+  margin-top: 15px;
+  margin-left: 520px;
+  margin-right: 40px;
+}
+
+.register {
+  margin-top: 5px;
+  border: 1.5px solid hsl(0, 0%, 41%);
+  border-radius: 20%;
+  height: 28px;
+  width: 75px;
+}
+
+#regtxt {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+  margin-left: 15px;
+  margin-top: 9px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 68px;
+  font-family: Epilogue;
+}
+
+.text h1 {
+  font-weight: 700;
+  color: hsl(0, 0%, 8%);
+  font-size: 62px;
+  margin-top: 75px;
+}
+
+#paragraph {
+  font-size: 14px;
+  color: hsl(0, 0%, 41%);
+  margin-bottom: 60px;
+  line-height: 20px;
+}
+
+.link {
+  border: 1px solid hsl(0, 0%, 8%);
+  border-radius: 12%;
+  width: 120px;
+  height: 35px;
+  background-color: hsl(0, 0%, 8%);
+}
+
+.link:hover {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.link:hover .name {
+  color: hsl(0, 0%, 8%);
+}
+
+#linktxt {
+  color: hsl(0, 0%, 98%);
+  margin-left: 20px;
+  margin-top: 12px;
+  font-family: Epilogue;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.sponsors {
+  display: flex;
+  flex-direction: row;
+}
+
+.sponsors img {
+  height: 50%;
+  margin-right: 18px;
+}
+
+#maker {
+  margin-right: 0px;
+}
+
+.body-content {
+  display: flex;
+  flex-direction: row;
+  margin-left: 120px;
+  margin-top: -50px;
+}
+
+.desktop-hero-photo {
+  width: 400px;
+  height: 500px;
+}
+
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: calc(100vh - 60px);
+  padding: 0 5px;
+  background-color: #1b1b1b;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out; /* creates the animation like look of the sidebar sliding in and out  */
+}

@@ -1,58 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intro Page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
 
+  <body>
+    <div class="navigation">
+      <a href="#">
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+      </a>
 
-<body>
+      <nav>
+        <!-- for the navigation part of the website -->
+        <!-- make this whole nav tag not visible when going into mobile format -->
 
-<div class="navigation">
-  <a href="#">
-    <div class="logo">
-      <img src="images/logo.svg" alt="logo">
-    </div>
-  </a>
-
-
-    <nav>
-      <!-- for the navigation part of the website -->
-      <!-- make this whole nav tag not visible when going into mobile format -->
-      
-      <div class="features">
+        <div class="features">
           <div class="features-list">
             <li><a href="#"></a>Features</li>
-            <img class="downarrow" src="images/icon-arrow-down.svg" alt="arrow-down">
+            <img
+              class="downarrow"
+              src="images/icon-arrow-down.svg"
+              alt="arrow-down"
+            />
             <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
           </div>
-        
+
           <div id="features-dropdown">
             <ul>
-              <li><img src="images/icon-todo.svg" alt="Todo"><a href="#">Todo List</a></li>
-              <li><img src="images/icon-calendar.svg" alt="Calender"><a href="#">Calender</a></li>
-              <li><img src="images/icon-reminders.svg" alt="Reminders"><a href="#">Reminders</a></li>
-              <li><img src="images/icon-planning.svg" alt=""><a href="#">Planning</a></li>
+              <li>
+                <img src="images/icon-todo.svg" alt="Todo" /><a href="#"
+                  >Todo List</a
+                >
+              </li>
+              <li>
+                <img src="images/icon-calendar.svg" alt="Calender" /><a href="#"
+                  >Calender</a
+                >
+              </li>
+              <li>
+                <img src="images/icon-reminders.svg" alt="Reminders" /><a
+                  href="#"
+                  >Reminders</a
+                >
+              </li>
+              <li>
+                <img src="images/icon-planning.svg" alt="" /><a href="#"
+                  >Planning</a
+                >
+              </li>
             </ul>
           </div>
-      </div>
-      
-
-      <div class="company">
-        <div class="company-list">
-          <li><a href="#"></a>Company</li>
-          <img class="downarrow" src="images/icon-arrow-down.svg" alt="arrow-down">
-          <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
         </div>
-        
+
+        <div class="company">
+          <div class="company-list">
+            <li><a href="#"></a>Company</li>
+            <img
+              class="downarrow"
+              src="images/icon-arrow-down.svg"
+              alt="arrow-down"
+            />
+            <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
+          </div>
+
+          <div id="company-dropdown">
+            <ul>
+              <li><a href="">History</a></li>
+              <li><a href="">Our Team</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <li class="careers"><a href="#">Careers</a></li>
+        <li class="about"><a href="#">About</a></li>
+
+        <li class="login"><a href="#">Login</a></li>
+
+        <a href="#" class="register">
+          <p id="regtxt">Register</p>
+        </a>
+      </nav>
+
+      <div class="menu-button">
+        <!-- this will be invible during desktop format -->
+        <img src="images/icon-menu.svg" alt="menubutton" />
+      </div>
+    </div>
+
+    <aside class="nav-sidebar">
+      <!-- will only be visible during mobile format -->
+      <img src="images/icon-close-menu.svg" alt="closemenu" />
+      <ul>
+        <li>Features</li>
+        <img src="images/icon-arrow-down.svg" alt="arrow-down" />
+        <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
+        <div id="features-dropdown">
+          <ul>
+            <li>
+              <img src="images/icon-todo.svg" alt="Todo" /><a href="#"
+                >Todo List</a
+              >
+            </li>
+            <li>
+              <img src="images/icon-calendar.svg" alt="Calender" /><a href="#"
+                >Calender</a
+              >
+            </li>
+            <li>
+              <img src="images/icon-reminders.svg" alt="Reminders" /><a href="#"
+                >Reminders</a
+              >
+            </li>
+            <li>
+              <img src="images/icon-planning.svg" alt="" /><a href="#"
+                >Planning</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <li>Company</li>
+        <img src="images/icon-arrow-down.svg" alt="arrow-down" />
+        <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
         <div id="company-dropdown">
           <ul>
             <li><a href="">History</a></li>
@@ -60,112 +144,56 @@
             <li><a href="">Blog</a></li>
           </ul>
         </div>
-      </div>
-        
 
-
-        <li class="careers"><a href="#" >Careers</a></li>
-        <li class="about"><a href="#" >About</a></li>
-
-        <li class="login"><a href="#" >Login</a></li>
-
-        <a href="#" class="register">
-            <p id="regtxt">Register</p>
-        </a>
-        
-      
-    </nav>
-
-
-    <div class="menu-button">
-      <!-- this will be invible during desktop format -->
-      <img src="images/icon-menu.svg" alt="menubutton">
-    </div>
-</div>
-
-
-
-<aside class="nav-sidebar">
-<!-- will only be visible during mobile format -->
-<img src="images/icon-close-menu.svg" alt="closemenu">
-  <ul>
-     <li>Features</li>
-     <img src="images/icon-arrow-down.svg" alt="arrow-down">
-     <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
-     <div id="features-dropdown">
-      <ul>
-        <li><img src="images/icon-todo.svg" alt="Todo"><a href="#">Todo List</a></li>
-        <li><img src="images/icon-calendar.svg" alt="Calender"><a href="#">Calender</a></li>
-        <li><img src="images/icon-reminders.svg" alt="Reminders"><a href="#">Reminders</a></li>
-        <li><img src="images/icon-planning.svg" alt=""><a href="#">Planning</a></li>
+        <li>Careers</li>
+        <li>About</li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#" class="register">Register</a></li>
+        <!-- style borders -->
       </ul>
-    </div>
+    </aside>
 
-    <li>Company</li>
-    <img src="images/icon-arrow-down.svg" alt="arrow-down">
-    <!-- <img src="images/icon-arrow-up.svg" alt="arrow-up"> -->
-    <div id="company-dropdown">
-      <ul>
-        <li><a href="">History</a></li>
-        <li><a href="">Our Team</a></li>
-        <li><a href="">Blog</a></li>
-      </ul>
-    </div>
+    <div class="body-content">
+      <div class="wrapper">
+        <div class="text">
+          <!-- for the text part -->
 
-    <li>Careers</li>
-    <li>About</li>
-    <li><a href="#">Login</a></li>
-    <li><a href="#" class="register">Register</a></li> <!-- style borders -->
+          <h1>Make<br />remote work</h1>
+          <p id="paragraph">
+            Get your team in sync, no matter the location.<br />Streamline
+            processes, create team rituals and<br />watch productivity soar.
+          </p>
 
+          <a href="#" class="learn">
+            <div class="link">
+              <p id="linktxt"><span class="name">Learn more</span></p>
+            </div>
+          </a>
+          <!-- style borders -->
+        </div>
 
-  </ul>
-</aside>
-
-
-<div class="body-content">
-
-
-<div class="wrapper">
-<div class="text">
-  <!-- for the text part -->
-
-  <h1>Make<br>remote work</h1>
-  <p id="paragraph">Get your team in sync, no matter the location.<br>Streamline processes, create team rituals and<br>watch productivity soar.</p>
-
-    <a href="#" class="learn">
-      <div class="link">
-        <p id="linktxt"><span class="name">Learn more</span></p>
-       
+        <div class="sponsors">
+          <!-- for the sponsor photos -->
+          <img src="images/client-databiz.svg" alt="databiz" />
+          <img src="images/client-audiophile.svg" alt="audiophile" />
+          <img src="images/client-meet.svg" alt="meet" />
+          <img src="images/client-maker.svg" alt="maker" id="maker" />
+        </div>
       </div>
-    </a>  <!-- style borders -->
-  
 
-</div>
+      <div class="desktop-photo">
+        <!-- for the desktop hero photo -->
+        <img
+          src="images/image-hero-desktop.png"
+          alt="desktop"
+          class="desktop-hero-photo"
+        />
+      </div>
 
-<div class="sponsors">
-  <!-- for the sponsor photos -->
-  <img src="images/client-databiz.svg" alt="databiz">
-  <img src="images/client-audiophile.svg" alt="audiophile">
-  <img src="images/client-meet.svg" alt="meet">
-  <img src="images/client-maker.svg" alt="maker" id="maker">
-</div>
-</div>
-
-
-
-<div class="desktop-photo">
-  <!-- for the desktop hero photo -->
-  <img src="images/image-hero-desktop.png" alt="desktop" class="desktop-hero-photo">
-</div>
-
-
-
-<div class="mobile-hero-photo">
-  <!-- for the mobile hero photo -->
-  <img src="images/image-hero-mobile.png" alt="desktop">
-</div>
-
-</div>
-
-</body>
+      <div class="mobile-hero-photo">
+        <!-- for the mobile hero photo -->
+        <img src="images/image-hero-mobile.png" alt="desktop" />
+      </div>
+    </div>
+  </body>
 </html>
