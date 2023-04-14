@@ -18,14 +18,64 @@ a {
 .mobile-hero-photo {
   visibility:hidden;
 }
+.features-list {
+  margin-top: 10px;
+  margin-left: -25px;
+}
 
 #features-dropdown {
   visibility: hidden;
+  background-color: white;
+  border-radius: 10%;
+  height: 120px;
+  list-style-type: none;
+  margin-top: 38px;
+    margin-left: -120px;
+    margin-right: 50px
+}
+
+#features-dropdown ul {
+  list-style-type: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#features-dropdown ul li img {
+  width: 15%;
+  margin-right: 10px;
+ }
+
+#features-dropdown ul li {
+ margin-bottom: 10px;
+}
+
+.company-list {
+  margin-top: 10px;
+  margin-left: -20px;
 }
 
 #company-dropdown {
   visibility: hidden;
+  background-color:white;
+  border-radius: 10%;
+  margin-top: 38px;
+  margin-left: -62px;
+  margin-right: 10px;
+  height: 90px;
 }
+
+#company-dropdown ul {
+  list-style-type: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 16px;
+}
+
+#company-dropdown ul li {
+ margin-bottom: 12px;
+
+}
+
 
 .logo {
   margin-top: 10px;
@@ -92,7 +142,8 @@ nav a:hover{
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  margin-right: -16px;
+  margin-right: -17px;
+  margin-left: -24px
 }
 
 .features-list {
