@@ -49,9 +49,13 @@ nav {
   color: hsl(0, 0%, 41%);
   list-style-type: none;
 }
-nav li a {
+nav  a {
   font-size: 11px;
   color: hsl(0, 0%, 41%);
+}
+
+nav a:hover{
+  color: hsl(0, 0%, 8%);
 }
 
 #downarrow1 {
@@ -131,11 +135,19 @@ nav li a {
   width: 75px;
 }
 
+.register:hover{
+  border: 1.5px solid hsl(0, 0%, 8%);
+}
+
 #regtxt {
   text-decoration: none;
   color: hsl(0, 0%, 41%);
   margin-left: 15px;
   margin-top: 9px;
+}
+
+.register:hover #regtxt {
+  color: hsl(0, 0%, 8%);
 }
 
 .wrapper {
