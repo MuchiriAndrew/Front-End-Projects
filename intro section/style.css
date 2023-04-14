@@ -16,7 +16,7 @@ a {
 }
 
 .mobile-hero-photo {
-  visibility:hidden;
+  visibility: hidden;
 }
 .features-list {
   margin-top: 10px;
@@ -30,9 +30,9 @@ a {
   border-radius: 10%;
   height: 120px;
   margin-top: 38px;
-        margin-left: -120px;
-        margin-right: 50px;
-        box-shadow: 0px 0px 30px hsl(0, 1%, 80%);
+  margin-left: -120px;
+  margin-right: 50px;
+  box-shadow: 0px 0px 30px hsl(0, 1%, 80%);
 }
 
 #features-dropdown ul {
@@ -44,10 +44,10 @@ a {
 #features-dropdown ul li img {
   width: 15%;
   margin-right: 10px;
- }
+}
 
 #features-dropdown ul li {
- margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .company-list {
@@ -58,7 +58,7 @@ a {
 
 #company-dropdown {
   visibility: hidden;
-  background-color:white;
+  background-color: white;
   border-radius: 10%;
   margin-top: 38px;
   margin-left: -62px;
@@ -75,14 +75,13 @@ a {
 }
 
 #company-dropdown ul li {
- margin-bottom: 12px;
-
+  margin-bottom: 12px;
 }
 
-.logo-size{
-width: 83px;
-height: 30px;
-margin-right: 80px;
+.logo-size {
+  width: 83px;
+  height: 30px;
+  margin-right: 80px;
 }
 
 .logo {
@@ -108,12 +107,12 @@ nav {
   list-style-type: none;
   height: 30px;
 }
-nav  a {
+nav a {
   font-size: 11px;
   color: hsl(0, 0%, 41%);
 }
 
-nav a:hover{
+nav a:hover {
   color: hsl(0, 0%, 8%);
 }
 
@@ -147,24 +146,9 @@ nav a:hover{
   visibility: hidden;
 }
 
-.features {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-right: -17px;
-  margin-left: -24px
-}
-
 .features-list {
   display: flex;
   flex-direction: row;
-}
-
-.company {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-right: 0px;
 }
 
 .company-list {
@@ -195,7 +179,7 @@ nav a:hover{
   width: 75px;
 }
 
-.register:hover{
+.register:hover {
   border: 1.5px solid hsl(0, 0%, 8%);
 }
 
