@@ -29,11 +29,10 @@ a {
   background-color: white;
   border-radius: 10%;
   height: 120px;
-  list-style-type: none;
   margin-top: 38px;
-    margin-left: -120px;
-    margin-right: 50px;
-    box-shadow: 0px 0px 30px hsl(0, 1%, 80%);
+        margin-left: -120px;
+        margin-right: 50px;
+        box-shadow: 0px 0px 30px hsl(0, 1%, 80%);
 }
 
 #features-dropdown ul {
@@ -107,6 +106,7 @@ nav {
   font-size: 11px;
   color: hsl(0, 0%, 41%);
   list-style-type: none;
+  height: 30px;
 }
 nav  a {
   font-size: 11px;
@@ -280,7 +280,7 @@ nav a:hover{
   display: flex;
   flex-direction: row;
   margin-left: 120px;
-  margin-top: -50px;
+  margin-top: 80px;
 }
 
 .desktop-hero-photo {
