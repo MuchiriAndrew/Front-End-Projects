@@ -21,6 +21,7 @@ a {
 .features-list {
   margin-top: 10px;
   margin-left: -25px;
+  height: 20px;
 }
 
 #features-dropdown {
@@ -31,7 +32,8 @@ a {
   list-style-type: none;
   margin-top: 38px;
     margin-left: -120px;
-    margin-right: 50px
+    margin-right: 50px;
+    box-shadow: 0px 0px 30px hsl(0, 1%, 80%);
 }
 
 #features-dropdown ul {
@@ -52,6 +54,7 @@ a {
 .company-list {
   margin-top: 10px;
   margin-left: -20px;
+  height: 20px;
 }
 
 #company-dropdown {
@@ -62,6 +65,7 @@ a {
   margin-left: -62px;
   margin-right: 10px;
   height: 90px;
+  box-shadow: 0px 0px 30px hsl(0, 1%, 80%);
 }
 
 #company-dropdown ul {
@@ -76,6 +80,11 @@ a {
 
 }
 
+.logo-size{
+width: 83px;
+height: 30px;
+margin-right: 80px;
+}
 
 .logo {
   margin-top: 10px;
@@ -210,7 +219,7 @@ nav a:hover{
 .text {
   display: flex;
   flex-direction: column;
-  margin-bottom: 68px;
+  margin-bottom: 90px;
   font-family: Epilogue;
 }
 
@@ -218,7 +227,7 @@ nav a:hover{
   font-weight: 700;
   color: hsl(0, 0%, 8%);
   font-size: 62px;
-  margin-top: 75px;
+  margin-top: 55px;
 }
 
 #paragraph {
