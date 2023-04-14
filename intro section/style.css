@@ -16,7 +16,7 @@ a {
 }
 
 .mobile-hero-photo {
-  visibility: hidden;
+  visibility:hidden;
 }
 
 #features-dropdown {
@@ -54,11 +54,34 @@ nav li a {
   color: hsl(0, 0%, 41%);
 }
 
-.downarrow {
+#downarrow1 {
   width: 7px;
   height: 5px;
   margin-left: 5px;
   margin-top: 3px;
+  visibility: visible;
+}
+#downarrow2 {
+  width: 7px;
+  height: 5px;
+  margin-left: 5px;
+  margin-top: 3px;
+  visibility: visible;
+}
+
+#uparrow1 {
+  width: 7px;
+  height: 5px;
+  margin-left: -7px;
+  margin-top: 3px;
+  visibility: hidden;
+}
+#uparrow2 {
+  width: 7px;
+  height: 5px;
+  margin-left: -7px;
+  margin-top: 3px;
+  visibility: hidden;
 }
 
 .features {
