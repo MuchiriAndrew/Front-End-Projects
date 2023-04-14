@@ -18,10 +18,15 @@ a {
 .mobile-hero-photo {
   visibility: hidden;
 }
+
 .features-list {
   margin-top: 10px;
   margin-left: -25px;
   height: 20px;
+}
+
+.features-list:hover {
+  color: hsl(0, 0%, 8%);;
 }
 
 #features-dropdown {
@@ -54,6 +59,9 @@ a {
   margin-top: 10px;
   margin-left: -20px;
   height: 20px;
+}
+.company-list:hover {
+  color: hsl(0, 0%, 8%);;
 }
 
 #company-dropdown {
