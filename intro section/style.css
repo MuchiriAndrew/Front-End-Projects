@@ -285,13 +285,4 @@ nav a:hover {
 
 .nav-sidebar {
   visibility: hidden;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 50px;
-  height: calc(100vh - 60px);
-  padding: 0 5px;
-  background-color: #1b1b1b;
-  z-index: 1000;
-  transition: all 0.3s ease-in-out; /* creates the animation like look of the sidebar sliding in and out  */
 }
