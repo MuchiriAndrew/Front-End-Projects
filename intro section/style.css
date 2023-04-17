@@ -219,6 +219,7 @@ nav a:hover {
   font-family: Epilogue;
 }
 
+
 .text h1 {
   font-weight: 700;
   color: hsl(0, 0%, 8%);
@@ -227,7 +228,7 @@ nav a:hover {
 }
 
 #paragraph {
-  font-size: 14px;
+  font-size: 16px;
   color: hsl(0, 0%, 41%);
   margin-bottom: 60px;
   line-height: 20px;
@@ -340,9 +341,49 @@ nav a:hover {
 
   .login{
     margin-left: 0px;
+  } 
+
+  .wrapper{
+    margin-right: 0px;
+    margin-left: 34px;
+    width: 520px;
+  }
+
+  .text h1{
+    font-size: 54px;
+  }
+
+ #paragraph{
+  font-size: 24px;
+  line-height: 30px;
+  text-indent: 10px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+ }
+
+  .text a{
+    margin-left: 20px;
+  }
+
+  .link{
+    width: 205px;
+    height: 55px;
+    margin-left: 131px;
+    margin-right: 0px;
+  }
+
+  #linktxt{
+    font-size: 24px;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 15px;
   }
   
-  
+  .sponsors img{
+    margin-right: 50px;
+  }
+
+
   
 
 
@@ -353,3 +394,4 @@ nav a:hover {
 
 
 }
+
