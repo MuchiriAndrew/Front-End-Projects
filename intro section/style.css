@@ -17,6 +17,7 @@ a {
 
 .mobile-hero-photo {
   visibility: hidden;
+  width: 0px;
 }
 
 .features-list {
@@ -132,14 +133,14 @@ nav a:hover {
   height: 5px;
   margin-left: 5px;
   margin-top: 3px;
-  visibility: visible;
+  
 }
 #downarrow2 {
   width: 7px;
   height: 5px;
   margin-left: 5px;
   margin-top: 3px;
-  visibility: visible;
+  
 }
 
 #uparrow1 {
@@ -286,13 +287,69 @@ nav a:hover {
 .nav-sidebar {
   visibility: hidden;
   position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 50px;
-    height: 100%;
-    padding: 0 5px;
-    background-color: #1b1b1b;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out; /* creates the animation like look of the sidebar sliding in and out  */
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 100%;
+  transition: all 0.3s ease-in-out; /* creates the animation like look of the sidebar sliding in and out  */
   
+}
+
+@media only screen and (max-width: 375px){ 
+  .nav{
+    visibility: hidden;
+  }
+
+  .menu-button{
+    visibility: visible;
+    position: fixed;
+    left: 520px;
+    top: 20px;
+  }
+
+  .menu-button img {
+    width: 50px;
+    height: 25px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 35px;
+  }
+
+  .body-content {
+    display: flex;
+    flex-direction: column;
+   margin: auto;
+  }
+
+  .desktop-hero-photo{
+    visibility: hidden;
+    height: 0px;
+  }
+
+  .mobile-hero-photo {
+    visibility: visible;
+    margin-top: 40px;
+  }
+
+  .mobile-hero-photo img {
+    width: 585px;
+    height: 450px;
+  }
+
+  .login{
+    margin-left: 0px;
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
 }
