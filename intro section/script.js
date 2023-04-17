@@ -1,4 +1,5 @@
 let featuresdropdown = false;
+let navStatus = false;
 
 function featureslink() {
     var featuresmenu = document.getElementById("features-dropdown");
@@ -47,4 +48,18 @@ function companylink() {
         companydropdown = false
     }
     
+}
+
+function toggleNav() {
+    var navsidebar = document.getElementById("nav-sidebar");
+
+    if (navStatus === false){
+        navsidebar.style.visibility = "visible";
+        navStatus = true;
+    }
+    else  if (navStatus === true){
+        navsidebar.style.visibility = "hidden";
+        navStatus = false;
+    }
+
 }

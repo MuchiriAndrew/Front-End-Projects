@@ -228,7 +228,7 @@ nav a:hover {
 }
 
 #paragraph {
-  font-size: 16px;
+  font-size: 17px;
   color: hsl(0, 0%, 41%);
   margin-bottom: 60px;
   line-height: 20px;
@@ -285,18 +285,21 @@ nav a:hover {
   height: 500px;
 }
 
-.nav-sidebar {
+#nav-sidebar {
   visibility: hidden;
   position: fixed;
   right: 0;
   bottom: 0;
-  width: 50px;
+  width: 0px;
   height: 100%;
   transition: all 0.3s ease-in-out; /* creates the animation like look of the sidebar sliding in and out  */
   
 }
 
 @media only screen and (max-width: 375px){ 
+  body{
+    width: 500px;
+  }
   .nav{
     visibility: hidden;
   }
@@ -304,7 +307,7 @@ nav a:hover {
   .menu-button{
     visibility: visible;
     position: fixed;
-    left: 520px;
+    left: 440px;
     top: 20px;
   }
 
@@ -327,7 +330,12 @@ nav a:hover {
   .desktop-hero-photo{
     visibility: hidden;
     height: 0px;
+    width: 0px;
   }
+  .desktop-photo{
+    width: 0px;
+  }
+
 
   .mobile-hero-photo {
     visibility: visible;
@@ -335,30 +343,38 @@ nav a:hover {
   }
 
   .mobile-hero-photo img {
-    width: 585px;
-    height: 450px;
+    width: 505px;
+    height: 400px;
   }
 
   .login{
     margin-left: 0px;
   } 
+  .register{
+    width: 0px;
+  }
 
   .wrapper{
     margin-right: 0px;
     margin-left: 34px;
-    width: 520px;
+    width: 470px;
   }
 
+  br{content:'';}
+  br:after{content:'';}
+
   .text h1{
-    font-size: 54px;
+    font-size: 46px;
+
   }
 
  #paragraph{
-  font-size: 24px;
+  font-size: 21px;
   line-height: 30px;
   text-indent: 10px;
   margin-top: 0px;
   margin-bottom: 40px;
+  /* text-align: center; */
  }
 
   .text a{
@@ -368,7 +384,7 @@ nav a:hover {
   .link{
     width: 205px;
     height: 55px;
-    margin-left: 131px;
+    margin-left: 86px;
     margin-right: 0px;
   }
 
@@ -380,11 +396,45 @@ nav a:hover {
   }
   
   .sponsors img{
-    margin-right: 50px;
+    margin-right: 58px;
+    margin-left: -20px;
   }
 
 
+  #nav-sidebar {
+    width: 370px;
+    /* background-color:hsl(0, 0%, 98%); */
+    background-color: black;
+    z-index: 1000;
+    /* display: flex;
+    flex-direction: column; */
+    
+  }
+
+  #close{
+    position: fixed;
+    right: 50px;
+    top: 15px;
+  }
+  #features-dropdown{
+    margin-right: 0px;
+    width: 50px;
+  }
+
+  #nav-sidebar a{
+    color: hsl(0, 0%, 41%);;
+  }
   
+  .features-list{
+    width: 50px;
+    margin-left: 0px;
+  }
+  .features-list{
+    width: 50px;
+    margin-left: 0px;
+  }
+
+
 
 
 
