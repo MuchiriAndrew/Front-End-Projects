@@ -40,7 +40,7 @@
     font-size: 50px;
     font-weight: 300;
     margin-top: 40px;
-    margin-left: 95px;
+    margin-left: 65px;
 }
 
 .text-wrapper > p {
@@ -48,7 +48,7 @@
     color: hsl(0, 0%, 55%);
     font-size: 17px;
     margin-top: 25px;
-    margin-left: 95px;
+    margin-left: 65px;
     line-height: 25px;
 }
 
