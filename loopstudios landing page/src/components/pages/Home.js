@@ -10,8 +10,8 @@ function Home() {
         <>
         <Header />
         <HeroSection />
-        {/* <Creations />
-        <Footer /> */}
+        <Creations />
+        {/* <Footer /> */}
         </>
 
     )

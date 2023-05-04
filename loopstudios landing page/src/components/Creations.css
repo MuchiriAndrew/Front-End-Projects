@@ -1,0 +1,82 @@
+
+
+.deep-earth {
+  background-image: url(../../public/images/desktop/image-deep-earth.jpg);  
+}
+
+.night-arcade {
+    background-image: url(../../public/images/desktop/image-night-arcade.jpg);  
+  }
+
+  .soccer-team {
+    background-image: url(../../public/images/desktop/image-soccer-team.jpg);  
+  }
+
+  .grid {
+    background-image: url(../../public/images/desktop/image-grid.jpg);  
+  }
+
+  .from-up-above {
+    background-image: url(../../public/images/desktop/image-from-above.jpg);  
+  }
+
+  .pocket-borealis {
+    background-image: url(../../public/images/desktop/image-pocket-borealis.jpg);  
+  }
+
+  .curiosity {
+    background-image: url(../../public/images/desktop/image-curiosity.jpg);  
+  }
+
+  .fisheye {
+    background-image: url(../../public/images/desktop/image-fisheye.jpg);  
+  }
+
+
+.creations-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 1350px;
+    left: 0 ;
+
+}
+
+.heading > h1 {
+    font-family: Josefin Sans;
+    font-weight: 300;
+    margin-left: 130px;
+}
+
+.buttonlink{
+    margin-right: 220px;
+}
+
+
+
+
+
+.creations-grid {
+    display: grid;
+    grid-template-columns: 200px;
+
+}
