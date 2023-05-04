@@ -8,3 +8,11 @@
     flex-direction: column;
     object-fit:contain;
 }
+
+ 
+@media screen and (max-width: 960px) {
+    .header-container {
+        background-image: url('../../public/images/mobile/image-hero.jpg');
+        height: 100vh;
+    }
+}

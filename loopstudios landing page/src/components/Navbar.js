@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import './Navbar.css';
 
-
   function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
   
     const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+    const closeMobileMenu = () => setClick(false);   
+   
+
   
     const showButton = () => {
       if(window.innerWidth <= 960) {
@@ -18,20 +19,20 @@ import './Navbar.css';
       }
     };
   
-    useEffect(() => {
-      showButton()
-    },[])
+    // useEffect(() => {
+    //   showButton()
+    // },[])
     //remember when you leave the second array parameter empty i.e [] the useEffect hook will run on mount only.
   
   
   
-    window.addEventListener('resize', showButton)
+    // window.addEventListener('resize', showButton)
 
   return (
 
     <>
 
-    <nav className='navbar'>
+    <nav className='navbar' style={{ backgroundColor: click ? "black" : "transparent" }}>
 
 
         <div className='navbar-container'>
