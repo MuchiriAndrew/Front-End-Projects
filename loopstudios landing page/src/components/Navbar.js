@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
+import './Navbar.css';
 
 
   function Navbar() {
@@ -40,11 +41,17 @@ import {Link} from 'react-router-dom'
            </Link>
            {/* <link> replaces the <a> tag */}
 
+
+          {/* for the menu icon */}
            <div className='menu-icon' onClick={handleClick}>
             <i className = {click ? 'fas fa-times' : 'fas fa-bars'} />
            </div>
 
+          {/* for toggling the menu on and off on mobile mode */}
            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+
+
+            {/* starts listing the navigation items */}
 
             <li className='nav-item'>
             <Link to='/about' className='nav-links' onClick= {closeMobileMenu}>
@@ -65,7 +72,7 @@ import {Link} from 'react-router-dom'
             </li>
 
             <li className='nav-item'>
-            <Link to='/products' className='nav-links-mobile' onClick= {closeMobileMenu}>
+            <Link to='/products' className='nav-links' onClick= {closeMobileMenu}>
               Products
             </Link>
             </li>
