@@ -22,7 +22,7 @@ function Navbar() {
   useEffect(() => {
     showButton()
   },[])
-  //remember when you leave the second array parameter empty i.e [] the useEffect hook will run on mount only
+  //remember when you leave the second array parameter empty i.e [] the useEffect hook will run on mount only.
 
 
 
