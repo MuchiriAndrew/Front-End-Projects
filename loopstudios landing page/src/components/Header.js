@@ -10,8 +10,8 @@ function Header() {
     <div className='header-container'>
     <Navbar />
     
-    <div>
-        IMMERSIVE EXPERIENCES THAT DELIVER
+    <div className='header-text-wrapper'>
+      IMMERSIVE EXPERIENCES THAT DELIVER
     </div>
 
 
