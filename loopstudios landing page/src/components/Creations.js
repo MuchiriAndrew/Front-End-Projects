@@ -7,17 +7,12 @@ function Creations() {
   return (
     <>
     <div className='creations-container'>
-        <div className="wrapper">
+        <div className="creations-wrapper">
 
             <div className="heading">
-
             <h1>OUR CREATIONS</h1>
-
-            <Link to='/' className= 'buttonlink'>
-            <button className='btn'>SEE HERE</button>
-            </Link>
-
             </div>
+
 
             <div className="creations-grid">
                 
@@ -54,6 +49,10 @@ function Creations() {
                     </div>
 
             </div>
+
+            <Link to='/' className= 'buttonlink'>
+            <button className='btn'>SEE ALL</button>
+            </Link>
         </div>
     </div>
     

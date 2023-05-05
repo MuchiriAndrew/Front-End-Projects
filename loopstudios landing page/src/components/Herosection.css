@@ -17,7 +17,7 @@
 
 .hero-image{
     position: absolute;
-    top: 800px;
+    top: 750px;
     left: 135px;
     width:600px;
     height: 411px;
@@ -27,7 +27,7 @@
 
 .text-wrapper{
     position: absolute;
-    top: 950px;
+    top: 900px;
     left: 600px;
     width:600px;
     height: 300px;
@@ -46,7 +46,7 @@
 .text-wrapper > p {
     font-family: Alata;
     color: hsl(0, 0%, 55%);
-    font-size: 17px;
+    font-size: 18px;
     margin-top: 25px;
     margin-left: 65px;
     line-height: 25px;
