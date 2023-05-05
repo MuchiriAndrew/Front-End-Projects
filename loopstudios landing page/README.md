@@ -6,7 +6,7 @@ A landing page made using React, Bootstrap and Framer Motion
 
 ![preview](https://user-images.githubusercontent.com/121347385/236462325-802a7a24-586e-4007-ae45-441194f956ad.png)
 
-In the project directory, you can run:
+After cloning the project, in the project directory, you can run:
 
 ### `npm start`
 
