@@ -3,6 +3,6 @@ import '../../App.css'
 
 export default function Careers() {
 
-    return <h1 className="services">CAREERS</h1>
+    return <h1 className="careers">CAREERS</h1>
 
 }

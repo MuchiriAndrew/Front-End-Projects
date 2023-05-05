@@ -3,6 +3,6 @@ import '../../App.css'
 
 export default function Events() {
 
-    return <h1 className="services">EVENTS</h1>
+    return <h1 className="events">EVENTS</h1>
 
 }

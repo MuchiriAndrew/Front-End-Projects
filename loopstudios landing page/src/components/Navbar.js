@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
+import { motion } from 'framer-motion'
 import './Navbar.css';
 
   function Navbar() {
@@ -8,26 +9,7 @@ import './Navbar.css';
   
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);   
-   
-
   
-    const showButton = () => {
-      if(window.innerWidth <= 960) {
-        setButton(false);
-      }else{
-        setButton(true);
-      }
-    };
-  
-    // useEffect(() => {
-    //   showButton()
-    // },[])
-    //remember when you leave the second array parameter empty i.e [] the useEffect hook will run on mount only.
-  
-  
-  
-    // window.addEventListener('resize', showButton)
-
   return (
 
     <>
@@ -45,7 +27,10 @@ import './Navbar.css';
 
           {/* for the menu icon */}
            <div className='menu-icon' onClick={handleClick}>
-            <i className = {click ? 'fas fa-times' : 'fas fa-bars'} />
+            <motion.i
+            whileTap={{rotate: [0, 200, 200, 0]}}
+            
+            className = {click ? 'fas fa-times' : 'fas fa-bars'} />
            </div>
 
           {/* for toggling the menu on and off on mobile mode */}

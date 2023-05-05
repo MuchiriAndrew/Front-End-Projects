@@ -3,6 +3,6 @@ import '../../App.css'
 
 export default function About() {
 
-    return <h1 className="services">ABOUT US</h1>
+    return <h1 className="about">ABOUT US</h1>
 
 }

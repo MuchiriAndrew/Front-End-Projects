@@ -3,6 +3,6 @@ import '../../App.css'
 
 export default function Support() {
 
-    return <h1 className="services">SUPPORT</h1>
+    return <h1 className="support">SUPPORT</h1>
 
 }
