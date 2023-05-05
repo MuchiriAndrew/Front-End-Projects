@@ -59,8 +59,7 @@
  
   
   .nav-links:hover {
-    /* border-bottom: 2px solid #fff; */
-    /* width: 50%; */
+    border-bottom: 2px solid #fff;
     transition: all 0.2s ease-out;
     transform: translateY(-10%);
   }
