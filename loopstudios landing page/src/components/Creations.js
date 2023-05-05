@@ -16,36 +16,36 @@ function Creations() {
 
             <div className="creations-grid">
                 
-                    <div className='deep-earth'>
-                        <img src="/images/desktop/image-deep-earth" alt="" />
+                    <div id='div-hover' className='deep-earth'>
+                        <p className='div-text'>DEEP<br/>EARTH</p>
                     </div>
                   
-                    <div className='night-arcade'>
-                        <img src="/images/desktop/image-night-arcade" alt="" />
+                    <div id='div-hover' className='night-arcade'>
+                       <p className='div-text'> NIGHT<br/>ARCADE</p>
                     </div>
 
-                    <div className='soccer-team'>
-                        <img src="/images/desktop/image-soccer-team" alt="" />
+                    <div id='div-hover' className='soccer-team'>
+                    <p className='div-text'>SOCCER<br/>TEAM VR</p>
                     </div>
 
-                    <div className='grid'>
-                        <img src="/images/desktop/image-grid" alt="" />
+                    <div id='div-hover' className='grid'>
+                    <p className='div-text'>THE<br/>GRID</p>
                     </div>
 
-                    <div className='from-up-above'>
-                        <img src="/images/desktop/image-from-up-above" alt="" />
+                    <div id='div-hover' className='from-up-above'>
+                    <p className='div-text'>FROM UP<br/>ABOVE VR</p>
                     </div>
 
-                    <div className='pocket-borealis'>
-                        <img src="/images/desktop/image-pocket-borealis" alt="" />
+                    <div id='div-hover' className='pocket-borealis'>
+                    <p className='div-text'>POCKET<br/>BOREALIS</p>
                     </div>
 
-                    <div className='curiosity'>
-                        <img src="/images/desktop/image-curiosity" alt="" />
+                    <div id='div-hover' className='curiosity'>
+                    <p className='div-text'>THE<br/>CURIOSITY</p>
                     </div>
 
-                    <div className='fisheye'>
-                        <img src="/images/desktop/image-fisheye" alt="" />
+                    <div id='div-hover' className='fisheye'>
+                    <p className='div-text'>MAKE IT<br/>FISHEYE</p>
                     </div>
 
             </div>

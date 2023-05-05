@@ -18,18 +18,19 @@
 .hero-image{
     position: absolute;
     top: 750px;
-    left: 135px;
-    width:600px;
+    left: 180px;
+    width:500px;
     height: 411px;
     background-image: url(../../public/images/desktop/image-interactive.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .text-wrapper{
     position: absolute;
-    top: 900px;
-    left: 600px;
-    width:600px;
+    top: 865px;
+    left: 575px;
+    width:500px;
     height: 300px;
     background-color: white;
 }
@@ -37,18 +38,18 @@
 
 .text-wrapper > h1 {
     font-family: Josefin Sans;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 300;
     margin-top: 40px;
-    margin-left: 65px;
+    margin-left: 50px;
 }
 
 .text-wrapper > p {
     font-family: Alata;
     color: hsl(0, 0%, 55%);
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 25px;
-    margin-left: 65px;
+    margin-left: 50px;
     line-height: 25px;
 }
 
