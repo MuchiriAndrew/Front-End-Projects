@@ -22,6 +22,8 @@
     margin-left: 200px;
 }
 
+
+
  
 @media screen and (max-width: 960px) {
     .header-container {
@@ -43,7 +45,7 @@
     }
 }
 
-@media screen and (max-height: 800px){
+@media (max-height: 800px) and (max-width: 960px){
 
     .header-container {
       height:97vh;
@@ -62,3 +64,5 @@
         margin-left: 15px;
     }
   }
+
+
