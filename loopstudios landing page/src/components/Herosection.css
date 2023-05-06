@@ -16,9 +16,6 @@
 }
 
 .hero-image{
-    /* position: absolute;
-    top: 1125px;
-    left: 496px; */
     width:500px;
     height: 411px;
     background-image: url(../../public/images/desktop/image-interactive.jpg);
@@ -27,9 +24,6 @@
 }
 
 .text-wrapper{
-    /* position: absolute;
-    top: 1250px;
-    left: 860px; */
     width:500px;
     height: 300px;
     background-color: white;
@@ -67,18 +61,12 @@
     }
 
     .hero-image{
-        /* position: absolute;
-        top: 870px;
-        left: 32px; */
         width:360px;
         height: 247px;
         background-image: url(../../public/images/mobile/image-interactive.jpg);
     }
 
     .text-wrapper {
-        /* position: absolute;
-        top: 1120px;
-        left: 32px; */
         width:360px;
         height: 411px;
         text-align: center;
