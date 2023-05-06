@@ -2,9 +2,12 @@
 
 A landing page made using React, Bootstrap and Framer Motion
 
+Hosted the page on Render: https://loopstudios-0u1x.onrender.com
+
 ## Design Preview
 
-![preview](https://user-images.githubusercontent.com/121347385/236462325-802a7a24-586e-4007-ae45-441194f956ad.png)
+![preview](https://user-images.githubusercontent.com/121347385/236634038-0fbdb997-2ca1-4524-8046-ed307d93b218.png)
+
 
 After cloning the project, in the project directory, you can run:
 
