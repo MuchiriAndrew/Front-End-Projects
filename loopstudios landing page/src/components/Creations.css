@@ -54,38 +54,41 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 170vh;
+    height: 120vh;
 }
 
 .creations-wrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 130vh;
+    width: 75%;
+    height: 100vh;
     align-items: center;
     justify-content:space-around;
    }
 
 
 .heading {
+  margin-bottom: 50px;
     height: 80px;
-    width: 400px;
-    position: absolute;
-    top: 1300px;
-    left: 118px ;
+    width: 264px;
+    /* position: absolute;
+    top: 1965px;
+    left: 465px ; */
 
 }
 
 .heading > h1 {
     font-family: Josefin Sans;
     font-weight: 300;
-    margin-left: 130px;
+    /* margin-left: 130px; */
 }
 
 .buttonlink{
-    position: absolute;
-    left: 875px;
-    top: 1300px;
+    /* position: absolute; */
+    margin-top: 50px;
+    left: 1224px;
+    top: 1965px;
+
 }
 
 .btn {
@@ -113,9 +116,9 @@
     grid-template-columns: repeat(4,171px);
     grid-auto-rows: 300px;
     grid-gap: 20px;
-    position: absolute;
-    top: 1400px;
-    left: 250px ;
+    /* position: absolute;
+    top: 2100px;
+    left: 600px ; */
 }
 
 .div-text {
@@ -188,32 +191,29 @@
     background-repeat: no-repeat;  
   }
 
-  .creations-container {
 
-    height: 150vh;
+
+  .creations-container {
+    height: 163vh;
 }
+
+.creations-wrapper {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content:center;
+ 
+
   .creations-grid {
     display: grid;
     grid-template-columns: repeat(1,360px);
     grid-auto-rows: 150px;
     grid-gap: 20px;
-    position: absolute;
-    top: 1600px;
-    left: 27px;
 }
 
     .heading {
       height: 80px;
-      width: 100vw;
-      position: absolute;
-      top: 1500px;
-      left: -55px;
-    }
-
-    .buttonlink{
-      position: absolute;
-      left: 135px;
-      top: 2960px;
+      width: 264px;
     }
 
     .btn {
@@ -229,6 +229,7 @@
 
 
 
+}
 }
 
 
