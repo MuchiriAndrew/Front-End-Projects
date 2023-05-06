@@ -88,3 +88,10 @@
 
 
 }
+
+@media screen and (max-height: 800px){
+
+    .hero-container {
+      height:120vh;
+    }
+  }

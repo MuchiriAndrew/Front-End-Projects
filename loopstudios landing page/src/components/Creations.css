@@ -191,8 +191,6 @@
     background-repeat: no-repeat;  
   }
 
-
-
 .creations-container {
     height: 190vh;
 }
@@ -232,6 +230,11 @@
 }
 }
 
+@media screen and (max-height: 800px){
 
+  .creations-container {
+    height:270vh;
+  }
+}
 
 
