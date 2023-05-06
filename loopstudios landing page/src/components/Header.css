@@ -45,7 +45,7 @@
     }
 }
 
-@media (max-height: 800px) and (max-width: 960px){
+/* @media (max-height: 800px) and (max-width: 960px){
 
     .header-container {
       height:97vh;
@@ -63,6 +63,6 @@
         margin-top: 200px;
         margin-left: 15px;
     }
-  }
+  } */
 
 
