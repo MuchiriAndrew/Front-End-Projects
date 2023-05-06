@@ -16,11 +16,10 @@
     font-size: 64px;
     width:570px;
     height: 250px;
-    position: absolute;
-    top: 200px;
-    left: 150px;
     padding-top: 30px;
     padding-left: 30px;
+    margin-top: 140px;
+    margin-left: 200px;
 }
 
  
@@ -35,16 +34,11 @@
         color: white;
         font-family: Josefin Sans;
         font-size: 51px;
-
-        position: absolute;
-        top: 270px;
-        left: 22px;
-        width:370px;
+        width:360px;
         height: 235px;
-        
         padding-top: 20px;
         padding-left: 12px;
-        
-        
+        margin-top: 200px;
+        margin-left: 30px;
     }
 }
