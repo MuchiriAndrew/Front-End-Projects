@@ -1,13 +1,12 @@
-/* .bg-image1{
-    background-image: url("../../public/images/desktop/image-transform.jpg");
-    background-size:contain;
-    background-repeat: no-repeat;
-    height: 100vh;
+#col1{
+    position: relative;
 }
-
-@media screen and (max-width: 768px) {
-    .bg-image1{
-        background-image: url("../../public/images/mobile/image-transform.jpg");
-    }
-    
-} */
+#col2{
+    position: relative;
+}
+.overlayText1{
+    position: absolute;
+    /* top: 350px; */
+    bottom: 50px;
+    left: 20px;
+}
