@@ -1,0 +1,13 @@
+/* .bg-image1{
+    background-image: url("../../public/images/desktop/image-transform.jpg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    .bg-image1{
+        background-image: url("../../public/images/mobile/image-transform.jpg");
+    }
+    
+} */

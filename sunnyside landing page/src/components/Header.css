@@ -1,6 +1,7 @@
 .bg-image{
     background-image: url("../../public/images/desktop/image-header.jpg");
-    background-size: cover;
+    background-size:cover;
+    background-position:center;
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -13,13 +14,15 @@ h1{
     margin-top: 80px;
 }
 #row2{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 768px) {
    .bg-image{
     background-image: url("../../public/images/mobile/image-header.jpg");
     background-size: contain;
+    background-position: unset;
+    height: 64.6vh;
    } 
 
    h1{
