@@ -1,32 +1,9 @@
-.bg-image{
-    background-image: url("../../public/images/desktop/image-header.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat: no-repeat;
-    height: 100vh;
+.wrapper{
+    position: relative;
 }
 
-h1{
-    font-size: 54px;
-}
-
-#row1{
-    margin-top: 80px;
-}
-#row2{
-    margin-top: 50px;
-}
-
-@media screen and (max-width: 768px) {
-   .bg-image{
-    background-image: url("../../public/images/mobile/image-header.jpg");
-    background-size: contain;
-    background-position: unset;
-    height: 64.6vh;
-   } 
-
-   h1{
-    font-size: 33px;
-   }
-
+#text{
+    position: absolute;
+    bottom: 22%;
+    left:15%;
 }
