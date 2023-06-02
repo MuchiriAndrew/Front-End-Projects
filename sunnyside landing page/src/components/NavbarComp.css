@@ -1,0 +1,15 @@
+*{
+    font-family: Barlow;
+    font-size: 18px;
+}
+
+#contact-link{
+    font-family: Fraunces;
+    background-color: white;
+    border: 1px white;
+    border-radius: 25px;
+}
+#contact-link:hover{
+    background-color: hsl(196, 93%, 72%);
+    border: 1px hsl(196, 93%, 72%);
+}

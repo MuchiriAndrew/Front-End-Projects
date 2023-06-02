@@ -1,0 +1,29 @@
+.bg-image{
+    background-image: url("../../public/images/desktop/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1{
+    font-size: 54px;
+}
+
+#row1{
+    margin-top: 80px;
+}
+#row2{
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+   .bg-image{
+    background-image: url("../../public/images/mobile/image-header.jpg");
+    background-size: contain;
+   } 
+
+   h1{
+    font-size: 33px;
+   }
+
+}
