@@ -18,6 +18,12 @@ span{
 h5{
     font-family: Fraunces;
 }
+#testrow{
+    height: 100%;
+    width: 70vw;
+    margin: auto;
+}
+
 #wrapper{
     height: 100vh;
 }
@@ -25,5 +31,15 @@ h5{
 @media screen and (max-width: 768px) {
     #wrapper{
         height: 130vh;
+    }
+
+    h2{
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    #testrow{
+        width: 56vw;
+        margin: auto;
     }
 }

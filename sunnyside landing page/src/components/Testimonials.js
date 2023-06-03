@@ -6,9 +6,9 @@ import './Testimonials.css';
 
 function Testimonials() {
     return (
-        <Container id="wrapper" className='text-center' fluid>
+        <Container id="wrapper" className='text-center justify-content-center align-items-center' fluid>
            
-          <Row className='text-center' style={{height:"100%"}}>
+          <Row className='text-center' id='testrow' >
 
           <h2 className='mb-5 mt-5'>CLIENT TESTIMONIALS</h2>
          
