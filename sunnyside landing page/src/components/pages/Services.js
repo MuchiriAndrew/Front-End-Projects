@@ -1,9 +1,8 @@
 import React from 'react'
+import '../App.css'
 
 function Services() {
-  return (
-    <div>Services</div>
-  )
+    return <h1 className="services">SERVICES</h1>
 }
 
 export default Services

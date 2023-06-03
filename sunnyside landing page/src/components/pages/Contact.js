@@ -1,9 +1,9 @@
 import React from 'react'
+import '../App.css'
+
 
 function Contact() {
-  return (
-    <div>Contact</div>
-  )
+  return <h1 className="contact">CONTACT</h1>
 }
 
 export default Contact

@@ -10,7 +10,7 @@ function NavbarComp() {
       {['md'].map((expand) => (
         <Navbar key={expand} bg="transparent" expand={expand} style={{position: "absolute",width: "100%"}}>
           <Container fluid className='sasa'>
-            <Navbar.Brand className='ms-3' href="#"><img src="../../images/logo.svg" alt="sunnyside" /></Navbar.Brand>
+            <Navbar.Brand className='ms-3' href="/"><img src="../../images/logo.svg" alt="sunnyside" /></Navbar.Brand>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas className='offcanvas' id={`offcanvasNavbar-expand-${expand}`} aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`} placement="end" >
@@ -24,10 +24,10 @@ function NavbarComp() {
               <Offcanvas.Body>
                 <Nav id='link-container' className="justify-content-end flex-grow-1 pe-3">
 
-                  <Nav.Link  id='nav-link' className='me-4' href="#action1">About</Nav.Link>
-                  <Nav.Link id='nav-link' className='me-4' href="#action2">Services</Nav.Link>
-                  <Nav.Link  id='nav-link'className='me-4' href="#action2">Projects</Nav.Link>
-                  <Nav.Link  id='contact-link' className='me-4 ' href="#action2">CONTACT</Nav.Link>
+                  <Nav.Link  id='nav-link' className='me-4' href="./about">About</Nav.Link>
+                  <Nav.Link id='nav-link' className='me-4' href="./services">Services</Nav.Link>
+                  <Nav.Link  id='nav-link'className='me-4' href="./projects">Projects</Nav.Link>
+                  <Nav.Link  id='contact-link' className='me-4 ' href="./contact">CONTACT</Nav.Link>
                   
                 </Nav>
                

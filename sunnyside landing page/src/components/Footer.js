@@ -9,7 +9,7 @@ function Footer() {
       <div id='links'>
 
       <div id='logo'>
-        <Link to='#'>
+        <Link to='/'>
           <img className='img-fluid' src="../../images/logo-footer.svg" alt="logo" style={{marginTop:"50px"}} />
         </Link>
       </div>
@@ -23,19 +23,19 @@ function Footer() {
 
        <div id='social-media' style={{marginTop:"50px"}}>
 
-        <Link>
+        <Link to='/'>
         <img className='img-fluid' src="../../images/icon-facebook.svg" alt="facebook" style={{marginRight:"30px", fill:"red"}}/>
         </Link>
 
-        <Link>
+        <Link to='/'>
         <img className='img-fluid' src="../../images/icon-instagram.svg" alt="instagram" style={{marginRight:"30px"}}/>
         </Link>
 
-        <Link>
+        <Link to='/'>
         <img className='img-fluid' src="../../images/icon-twitter.svg" alt="twitter" style={{marginRight:"30px"}}/>
         </Link>
         
-        <Link>
+        <Link to='/'>
         <img className='img-fluid' src="../../images/icon-pinterest.svg" alt="pinterest" />
         </Link>
        </div>
