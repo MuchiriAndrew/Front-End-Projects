@@ -1,0 +1,9 @@
+.text-center{
+    height: 45vh;
+}
+
+@media screen and (max-width: 768px) {
+    .text-center{
+        height: 30vh;
+    }
+}

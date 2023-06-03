@@ -10,3 +10,33 @@
     bottom: 50px;
     left: 20px;
 }
+
+h1{
+    font-family: Fraunces;
+    font-weight: 900;
+}
+
+p{
+    font-family: Barlow;
+}
+
+#text-columns {
+height: 82vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+#text-divs{
+    width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+    #text-divs{
+        width: 90%;
+    }
+    #text-columns {
+        height: 70vh;
+    }
+}

@@ -4,12 +4,20 @@
 }
 
 #contact-link{
+    width: 110px;
     font-family: Fraunces;
     background-color: white;
     border: 1px white;
     border-radius: 25px;
+    color: black;
+    font-size: 14px;
+    padding-top: 12px;
+    padding-left: 18px;
+
+   
 }
 #contact-link:hover{
     background-color: hsl(196, 93%, 72%);
     border: 1px hsl(196, 93%, 72%);
+    color: white;
 }

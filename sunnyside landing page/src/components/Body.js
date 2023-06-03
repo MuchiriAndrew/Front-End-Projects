@@ -1,4 +1,5 @@
 //a 6 picture grid system
+import {Link} from 'react-router-dom'
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -12,7 +13,17 @@ function Body() {
 <Container fluid>
 
       <Row>
-        <Col md={6} className='order-2 order-md-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odio harum iste quia, placeat consequuntur? Numquam ipsa aperiam, repellat reprehenderit debitis totam reiciendis eveniet facilis nisi consectetur. Placeat, in officia.</Col>
+        <Col md={6} id="text-columns" className='order-2 order-md-1 '>
+
+          <div id="text-divs" >
+
+          <h1 className='mb-4' style={{color:"black", fontSize:'40px'}}>Transform your brand</h1>
+        <p className='mb-5'>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketting for you.</p>
+        <Link to='./about' style={{fontFamily:"Fraunces",textDecoration:"none",color:"black"}}>LEARN MORE</Link>
+
+          </div>
+        
+        </Col>
         
 {/* make use of bootstrap order classes in order to reorder the text and images once the screen sze gets to medium */}
 
@@ -29,7 +40,12 @@ function Body() {
             <img className='img-fluid d-none d-md-block' src="../../images/desktop/image-stand-out.jpg" style={{width:"100%"}} alt="egg" />
         </Col>
 
-        <Col md={6}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat distinctio sunt ut tenetur deleniti temporibus suscipit vero ad, esse dolore aperiam incidunt quis, sapiente nostrum dolorum possimus, eligendi adipisci quas?</Col>
+        <Col md={6} id="text-columns" className='text-center'>
+          <div  id="text-divs">
+          <h1 style={{color:"black", fontSize:'40px'}}>Transform your brand</h1>
+          </div>
+       
+          </Col>
       </Row>
 
       <Row>

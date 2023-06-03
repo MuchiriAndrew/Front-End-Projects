@@ -4,8 +4,12 @@
 
 #text{
         position: absolute;
-        top: 50%;
+        top: 43%;
         left: 50%;
         transform: translate(-50%, -50%);
         /* this is how oyu cneter align items while using position absolute */
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

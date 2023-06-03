@@ -3,6 +3,7 @@ import Header from '../Header'
 import Body from '../Body'
 import Testimonials from '../Testimonials';
 import Images from '../Images';
+import Footer from '../Footer';
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
         <Body />
         <Testimonials />
         <Images /> 
+        <Footer />
         </>
 
     )
