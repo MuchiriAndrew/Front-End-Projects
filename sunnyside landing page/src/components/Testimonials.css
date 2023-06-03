@@ -18,3 +18,12 @@ span{
 h5{
     font-family: Fraunces;
 }
+#wrapper{
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    #wrapper{
+        height: 130vh;
+    }
+}

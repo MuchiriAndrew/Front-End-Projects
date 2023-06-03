@@ -6,7 +6,7 @@ import './Testimonials.css';
 
 function Testimonials() {
     return (
-        <Container className='text-center' fluid style={{height:"100vh"}}>
+        <Container id="wrapper" className='text-center' fluid>
            
           <Row className='text-center' style={{height:"100%"}}>
 
@@ -32,7 +32,7 @@ function Testimonials() {
 
 
 
-            <Col md={4} className='mb-5'>
+            <Col md={4}>
             <div className='text-center justify-content-center align-items-center' style={{display:'flex', flexDirection:"column"}}>
                     <img src="../../images/image-jennie.jpg" className='mb-5 img-fluid rounded-circle' alt="thomas" style={{width:"15%"}} />
                     <p> <small>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</small> </p>
