@@ -3,7 +3,9 @@
 }
 
 #text{
-    position: absolute;
-    bottom: 22%;
-    left:15%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* this is how oyu cneter align items while using position absolute */
 }

@@ -8,7 +8,7 @@ function NavbarComp() {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar key={expand} bg="primary" expand={expand}>
+        <Navbar key={expand} bg="transparent" expand={expand} style={{position: "absolute",width: "100%"}}>
           <Container fluid >
             <Navbar.Brand className='ms-3' href="#"><img src="../../images/logo.svg" alt="sunnyside" /></Navbar.Brand>
 

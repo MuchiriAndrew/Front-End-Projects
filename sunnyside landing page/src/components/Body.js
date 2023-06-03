@@ -12,10 +12,10 @@ function Body() {
 <Container fluid>
 
       <Row>
-        <Col md={6}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odio harum iste quia, placeat consequuntur? Numquam ipsa aperiam, repellat reprehenderit debitis totam reiciendis eveniet facilis nisi consectetur. Placeat, in officia.</Col>
+        <Col md={6} className='order-2 order-md-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odio harum iste quia, placeat consequuntur? Numquam ipsa aperiam, repellat reprehenderit debitis totam reiciendis eveniet facilis nisi consectetur. Placeat, in officia.</Col>
         
-        <Col className='gx-0' md={6}>
-            <img className='img-fluid d-md-none' src="../../images/mobile/image-transform.jpg" style={{width:"100%"}} alt="egg" />
+        <Col className='gx-0 order-1 order-md-2' md={6}>
+            <img className='img-fluid d-md-none ' src="../../images/mobile/image-transform.jpg" style={{width:"100%"}} alt="egg" />
             <img className='img-fluid d-none d-md-block' src="../../images/desktop/image-transform.jpg" style={{width:"100%"}} alt="egg" />
         </Col>
       </Row>
