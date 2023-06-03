@@ -20,6 +20,33 @@ p{
     font-family: Barlow;
 }
 
+#link1{
+font-family: Fraunces;
+font-weight: 900;
+color: black;
+text-decoration: none;
+}
+
+#link1:hover {
+text-decoration-color: hsl(51, 100%, 49%);
+text-decoration-line:underline;
+text-decoration-thickness: 3px;
+transition: 0.3s ease-in-out;
+}
+
+#link2{
+font-family: Fraunces;
+font-weight: 900;
+color: black;
+text-decoration: none;
+}
+#link2:hover {
+    text-decoration-color: hsl(7, 99%, 70%);
+    text-decoration-line:underline;
+    text-decoration-thickness: 3px;
+    transition: 0.3s ease-in-out;
+    }
+
 #text-columns {
 height: 82vh;
 display: flex;
@@ -38,5 +65,6 @@ align-items: center;
     }
     #text-columns {
         height: 70vh;
+        text-align: center;
     }
 }

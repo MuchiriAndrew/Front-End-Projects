@@ -18,8 +18,8 @@ function Body() {
           <div id="text-divs" >
 
           <h1 className='mb-4' style={{color:"black", fontSize:'40px'}}>Transform your brand</h1>
-        <p className='mb-5'>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketting for you.</p>
-        <Link to='./about' style={{fontFamily:"Fraunces",textDecoration:"none",color:"black"}}>LEARN MORE</Link>
+        <p className='mb-5' style={{color:"hsl(213, 9%, 39%)",lineHeight:"25px"}}>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketting for you.</p>
+        <Link to='./about' id='link1' >LEARN MORE</Link>
 
           </div>
         
@@ -40,9 +40,13 @@ function Body() {
             <img className='img-fluid d-none d-md-block' src="../../images/desktop/image-stand-out.jpg" style={{width:"100%"}} alt="egg" />
         </Col>
 
-        <Col md={6} id="text-columns" className='text-center'>
-          <div  id="text-divs">
-          <h1 style={{color:"black", fontSize:'40px'}}>Transform your brand</h1>
+        <Col md={6} id="text-columns">
+        <div id="text-divs" >
+
+          <h1 className='mb-4' style={{color:"black", fontSize:'40px'}}>Stand out to the right audience</h1>
+          <p className='mb-5' style={{color:"hsl(213, 9%, 39%)",lineHeight:"25px"}}>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</p>
+          <Link to='./about' id='link2'>LEARN MORE</Link>
+
           </div>
        
           </Col>
