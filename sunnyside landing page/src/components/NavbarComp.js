@@ -9,25 +9,25 @@ function NavbarComp() {
     <>
       {['md'].map((expand) => (
         <Navbar key={expand} bg="transparent" expand={expand} style={{position: "absolute",width: "100%"}}>
-          <Container fluid >
+          <Container fluid className='sasa'>
             <Navbar.Brand className='ms-3' href="#"><img src="../../images/logo.svg" alt="sunnyside" /></Navbar.Brand>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-            <Navbar.Offcanvas id={`offcanvasNavbar-expand-${expand}`} aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`} placement="end" >
+            <Navbar.Offcanvas className='offcanvas' id={`offcanvasNavbar-expand-${expand}`} aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`} placement="end" >
 
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                <img src="../../images/logo-offcanvas.svg" alt="sunnyside logo" />
                 </Offcanvas.Title>
               </Offcanvas.Header>
 
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav id='link-container' className="justify-content-end flex-grow-1 pe-3">
 
-                  <Nav.Link className='text-light me-4' href="#action1">About</Nav.Link>
-                  <Nav.Link className='text-light me-4' href="#action2">Services</Nav.Link>
-                  <Nav.Link className='text-light me-4' href="#action2">Projects</Nav.Link>
-                  <Nav.Link id='contact-link' className='me-4 ' href="#action2">CONTACT</Nav.Link>
+                  <Nav.Link  id='nav-link' className='me-4' href="#action1">About</Nav.Link>
+                  <Nav.Link id='nav-link' className='me-4' href="#action2">Services</Nav.Link>
+                  <Nav.Link  id='nav-link'className='me-4' href="#action2">Projects</Nav.Link>
+                  <Nav.Link  id='contact-link' className='me-4 ' href="#action2">CONTACT</Nav.Link>
                   
                 </Nav>
                

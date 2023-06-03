@@ -4,12 +4,18 @@
 
 #text{
         position: absolute;
-        top: 43%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /* this is how oyu cneter align items while using position absolute */
+        /* this is how oyu center align items while using position absolute */
 }
 
 h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    #text{
+        top: 52%;
+}
 }
