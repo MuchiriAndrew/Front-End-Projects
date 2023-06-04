@@ -24,10 +24,10 @@ function NavbarComp() {
               <Offcanvas.Body>
                 <Nav id='link-container' className="justify-content-end flex-grow-1 pe-3">
 
-                  <Nav.Link  id='nav-link' className='me-4' href="./about">About</Nav.Link>
-                  <Nav.Link id='nav-link' className='me-4' href="./services">Services</Nav.Link>
-                  <Nav.Link  id='nav-link'className='me-4' href="./projects">Projects</Nav.Link>
-                  <Nav.Link  id='contact-link' className='me-4 ' href="./contact">CONTACT</Nav.Link>
+                  <Nav.Link  id='nav-link' className='me-4' href="/about">About</Nav.Link>
+                  <Nav.Link id='nav-link' className='me-4' href="/services">Services</Nav.Link>
+                  <Nav.Link  id='nav-link'className='me-4' href="/projects">Projects</Nav.Link>
+                  <Nav.Link  id='contact-link' className='me-4 ' href="/contact">CONTACT</Nav.Link>
                   
                 </Nav>
                
