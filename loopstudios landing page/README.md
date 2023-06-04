@@ -1,6 +1,6 @@
 ## Loopstudios landing page
 
-A landing page made using React, Bootstrap and Framer Motion
+A landing page made using React and Framer Motion
 
 Hosted the page on Render: https://loopstudios-0u1x.onrender.com
 
