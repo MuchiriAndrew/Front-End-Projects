@@ -27,9 +27,11 @@
 @media screen and (max-width: 768px) {
 
 
+
 #nav-link{
     color: hsl(210, 4%, 67%);
     margin-bottom: 20px;
+    margin-right: 0px;
 }
 
 #link-container{
