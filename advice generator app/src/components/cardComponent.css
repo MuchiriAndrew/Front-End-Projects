@@ -46,4 +46,16 @@
 
 #circle:hover {
   box-shadow: 0 0 0px hsl(150, 100%, 66%), 0 0 0px hsl(150, 100%, 66%), 0 0 30px hsl(150, 100%, 66%); 
+  transform: rotate(360deg);
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 992px) {
+    #circle:hover {
+        box-shadow: none; 
+        transition: 0.7s ease-in-out;
+        cursor: pointer;
+      }
 }
