@@ -28,7 +28,7 @@ function CardComponent() {
       <Col xs={11} sm={10} md={9} lg={8} xl={6} className='content rounded-3'>
 
         
-        <p className='mt-4' style={{color:" hsl(150, 100%, 66%)"}}>ADVICE #{advice.id}</p>
+        <p className='mt-4' style={{color:" hsl(150, 100%, 66%)", fontFamily:"Manrope"}}>ADVICE #{advice.id}</p>
         <h6 className='mb-4' style={{color:"hsl(193, 38%, 86%)", fontSize:"28px", fontFamily:"Manrope", width:"80%"}}>"{advice.advice}"</h6>
         <img className='img-fluid mb-5 d-none d-lg-block' src="../../images/pattern-divider-desktop.svg" alt="pattern-divider" />
         <img className='img-fluid mb-5 d-block d-lg-none' src="../../images/pattern-divider-mobile.svg" alt="pattern-divider" />
