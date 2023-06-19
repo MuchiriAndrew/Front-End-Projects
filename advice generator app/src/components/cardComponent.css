@@ -55,7 +55,6 @@
 @media screen and (max-width: 992px) {
     #circle:hover {
         box-shadow: none; 
-        transition: 0.7s ease-in-out;
-        cursor: pointer;
+        transform: none;
       }
 }
