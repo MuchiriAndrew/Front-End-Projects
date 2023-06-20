@@ -2,6 +2,7 @@ import React from 'react'
 import NavbarComp from '../NavbarComp'
 import HeroSection from '../HeroSection'
 import LinkComponent from '../LinkComponent'
+import Statistics from '../Statistics'
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
     <NavbarComp />
     <HeroSection />
     <LinkComponent />
+    <Statistics />
     
     </>
     
