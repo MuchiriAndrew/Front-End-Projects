@@ -27,7 +27,7 @@ function NavbarComp() {
 
     {['md'].map((expand) => (
 
-        <Navbar className='' bg="" expand={expand}>
+        <Navbar className='mt-2' bg="" expand={expand}>
             <Container id='mainCont'>  
 
             <Navbar.Brand as={Link} to="/" className='ms-4'>

@@ -7,6 +7,11 @@
 #navlink {
     color: hsl(0, 0%, 75%);
     font-family: Poppins;
+    font-size: 13px;
+}
+
+#navlink:hover {
+    color: black;
 }
 
 .brand {
@@ -27,11 +32,6 @@
     border: 1px solid hsl(180, 97%, 60%);
     transition: 0.7s ease-in-out;
 }
-
-
-
-
-
 
 
 @media screen and (max-width: 768px) {
