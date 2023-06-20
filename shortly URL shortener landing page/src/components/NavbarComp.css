@@ -1,0 +1,76 @@
+.inside-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navlink {
+    color: hsl(0, 0%, 75%);
+    font-family: Poppins;
+}
+
+.brand {
+    width: 100px;
+}
+
+.signup {
+    border: 1px solid hsl(180, 66%, 49%);
+    background-color: hsl(180, 66%, 49%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+
+.signup:hover {
+    background-color: hsl(180, 97%, 60%);
+    border: 1px solid hsl(180, 97%, 60%);
+    transition: 0.7s ease-in-out;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .offcanvas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(257, 27%, 26%);  
+    }
+
+    .inside-nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        color: white;
+    }
+
+    #hr1 {
+        width: -webkit-fill-available;
+        color: gray;
+    }
+
+    #nav2 {
+        width: 100%;
+    }
+
+    .signup {
+        width: 100%;
+    }
+    .signup:hover {
+        border: 1px solid hsl(180, 66%, 49%);
+    background-color: hsl(180, 66%, 49%);
+        transition: none;
+    }
+
+   
+
+
+}
