@@ -72,8 +72,6 @@
     }
 
     #h1 {
-        font-family: Poppins;
-        font-weight: 900;
         font-size: 50px;
     }
 
@@ -95,8 +93,27 @@
         background-color: hsl(180, 66%, 49%);
         transition: none;
     }
+}
 
 
+@media screen and (max-height:900px) {
+    #wrapper {
+        height: 100vh;
+        display: flex;
+    }
 
+    #h1 {
+        font-size: 47px;
+    }
+}
 
+@media screen and (max-height:700px) {
+    #wrapper {
+        height: 140vh;
+        display: flex;
+    }
+
+    #h1 {
+        font-size: 40px;
+    }
 }
