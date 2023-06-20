@@ -1,16 +1,14 @@
 import React from 'react'
 import './LinkComponent.css'
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 function LinkComponent() {
   return (
-    <Container fluid id='wrapper2' className='bg-info'>
+    <Container fluid id='wrapper2'>
 
       <div id="content-row">
 
-        <div id='div1' className='rounded-3'>
+        <div id='div1' className='rounded-3 mb-4'>
             <form className='form'>
 
                 <input className='txtbox rounded-3' type="text" />
@@ -22,8 +20,37 @@ function LinkComponent() {
         
         </div>
 
-        <div id='div2' className='bg-danger'>
-        fajsidjid
+        <div id='div2' className=''>
+        
+            <div className='copy mb-3 bg-light rounded-3'>
+                <p id='setLink' className='mb-0 ms-3'>https://www.sitebydrew.io</p>
+
+                <div className='inner-div'>
+                    <p className='mb-0'>https://www.sitebydrew.io</p>
+                    <div className='copybtn rounded-3'>Copy</div>
+                </div>
+
+            </div>
+
+            <div className='copy mb-3 bg-light rounded-3'>
+                <p id='setLink' className='mb-0 ms-3'>https://www.sitebydrew.io</p>
+
+                <div className='inner-div'>
+                    <p className='mb-0'>https://www.sitebydrew.io</p>
+                    <div className='copybtn rounded-3'>Copy</div>
+                </div>
+                
+            </div>
+
+            <div className='copy mb-5 bg-light rounded-3'>
+                <p id='setLink' className='mb-0 ms-3'>https://www.sitebydrew.io</p>
+
+                <div className='inner-div'>
+                    <p className='mb-0'>https://www.sitebydrew.io</p>
+                    <div className='copybtn rounded-3'>Copy</div>
+                </div>
+                
+            </div>
         </div>
 
       </div>

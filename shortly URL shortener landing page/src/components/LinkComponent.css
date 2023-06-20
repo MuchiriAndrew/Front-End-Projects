@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: hsl(257, 7%, 63%);
 }
 
 #content-row {
@@ -13,6 +14,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+    top: -50px;
 }
 
 #div1 {
@@ -21,8 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: -50px;
+
     background-color: hsl(257, 27%, 26%);
     background-image: url(../../public/images/bg-shorten-desktop.svg);
     background-size: cover;
@@ -58,14 +61,66 @@
     transition: 0.7s ease-in-out;
 }
 
+#div2 {
+    width: 70vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden; */
+}
+
+
+.copy {
+    color: white;
+    font-family: Poppins;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#setLink {
+    color: black;
+
+}
+
+.inner-div {
+    color: hsl(180, 66%, 49%);
+    font-family: Poppins;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.copybtn {
+    color: white;
+    font-family: Poppins;
+    width: 100px;
+    height: 40px;
+    border: 1px solid hsl(180, 66%, 49%);
+    background-color: hsl(180, 66%, 49%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 @media screen and (max-width: 768px) {
+
+    #content-row {
+        position: relative;
+        top: -90px;
+    }
 
     #div1 {
         width: 90vw;
         height: 200px;
-        position: relative;
-        top: -90px;
+       
 
         display: flex;
         justify-content: center;
