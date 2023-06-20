@@ -1,0 +1,100 @@
+#wrapper2 {
+    height: auto;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content-row {
+    height: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#div1 {
+    width: 70vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(../../public/images/bg-shorten-desktop.svg);
+    background-size: cover;
+}
+
+.form {
+    width: 90%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.txtbox {
+    width: 580px;
+    height: 50px;
+    border: none;
+}
+
+.mybtn {
+    font-family: Poppins;
+    color: white;
+    border: 1px solid hsl(180, 66%, 49%);
+    background-color: hsl(180, 66%, 49%);
+    height: 50px;
+    width: 200px;
+}
+
+.mybtn:hover {
+    background-color: hsl(180, 97%, 60%);
+    border: 1px solid hsl(180, 97%, 60%);
+    transition: 0.7s ease-in-out;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #div1 {
+        width: 90vw;
+        height: 200px;
+        position: relative;
+        top: -90px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        background-color: hsl(257, 27%, 26%);
+        background-image: url(../../public/images/bg-shorten-mobile.svg);
+        background-size: contain;
+    }
+
+    .form {
+        width: 90%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .txtbox {
+        width: 98%;
+        height: 50px;
+        border: none;
+    }
+    
+    .mybtn{
+        height: 50px;
+        width: 98%;
+    }
+
+
+}
