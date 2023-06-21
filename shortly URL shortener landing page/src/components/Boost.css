@@ -1,0 +1,55 @@
+.wrapper4 {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(257, 27%, 26%);
+}
+
+#content_wrapper {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../public/images/bg-boost-desktop.svg);
+    background-size: cover;
+}
+
+#boosth1 {
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+
+    #content_wrapper {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../../public/images/bg-boost-mobile.svg);
+        background-size: cover;
+    }
+}
+
+@media screen and (max-height:700px) and (max-width:768px) {
+    #content_wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #boosth1 {
+        font-family: Poppins;
+        font-weight: 900;
+        font-size: 22px;
+        color: white;
+    }
+}
