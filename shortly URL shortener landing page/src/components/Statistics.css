@@ -201,6 +201,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 100;
     }
 
     #inner-box {
@@ -227,6 +228,27 @@
         width: 70px;
         height: 70px;
         position: unset;
+    }
+
+    .backhrmob1 {
+        position: relative;
+        top: 60%;
+        left: -50%;
+        width: 0;
+        height: 300px;
+        z-index: 0;
+        border-left: 10px solid hsl(180, 66%, 49%);
+    }
+
+    
+    .backhrmob2 {
+        position: relative;
+        top: 60%;
+        left: -49%;
+        width: 0;
+        height: 300px;
+        z-index: 0;
+        border-left: 10px solid hsl(180, 66%, 49%);
     }
 }
 

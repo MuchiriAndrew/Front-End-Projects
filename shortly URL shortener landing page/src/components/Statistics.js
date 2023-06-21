@@ -43,9 +43,12 @@ function Statistics() {
                             
 
                             </div>
+
+                            <hr className='d-md-none backhrmob1 p-0'/>
                         </Col>
 
                         
+
                         <Col id='col_2' md={4} className='p-0'>
                             <div className='box bg-white rounded-2'>
 
@@ -63,9 +66,11 @@ function Statistics() {
 
                                 </div>                                    
                             </div>
+                            <hr className='d-md-none backhrmob2 p-0'/>
+
                         </Col>
 
-
+                        
                         <Col md={4} id='col_3' className='p-0'>
                             <div className='box bg-white rounded-2'>
 
