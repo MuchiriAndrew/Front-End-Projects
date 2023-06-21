@@ -104,7 +104,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    top: -18%;
+   top: -35px;
 }
 
 .cardh2 {
@@ -213,7 +213,7 @@
         align-items: center;
         text-align: center;
         position: relative;
-        top: -12%;
+        top: -40px;
     }
 
     .cardh2 {
