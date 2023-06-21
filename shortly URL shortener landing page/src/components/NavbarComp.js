@@ -28,9 +28,9 @@ function NavbarComp() {
     {['md'].map((expand) => (
 
         <Navbar className='mt-2' bg="" expand={expand}>
-            <Container id='mainCont'>  
+            <Container id='mainCont' >  
 
-            <Navbar.Brand as={Link} to="/" className='ms-4'>
+            <Navbar.Brand as={Link} to="/">
             <img src="../../images/logo.svg" alt="logo"  className="brand img-fluid"/>
             </Navbar.Brand>
 
