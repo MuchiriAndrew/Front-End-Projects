@@ -11,6 +11,7 @@ function LinkComponent() {
     const [expand, setExpand ] = useState(false); 
     const [links, setLinks ] = useState([]);
     const [copied, setCopied] = useState ("Copy");
+    const [color, setColor ] = useState(false);
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,8 +36,9 @@ function LinkComponent() {
     }
 
     const handleCopy = ()=> {
-        navigator.clipboard.writeText(links.full_short_link)
-        setCopied("Copied!")
+        navigator.clipboard.writeText(links.full_short_link);
+        setCopied("Copied!");
+        setColor(true);
     }
 
 
@@ -54,7 +56,7 @@ function LinkComponent() {
                     className='txtbox rounded-3'
                     style={{border:warning ? "2px solid red" : "none"}}
                     type="text"
-                    placeholder='Shorten your link here'
+                    placeholder='  Shorten your link here...'
                     value={text}
                     onChange={(e)=> setText(e.target.value)}/>
 
@@ -82,7 +84,7 @@ function LinkComponent() {
 
                 <div className='inner-div'>
                     <Link style={{textDecoration:"none"}} to={links.full_short_link} className='mb-0'>{links.full_short_link}</Link>
-                    <div onClick={handleCopy} className='copybtn rounded-3'>{copied}</div>
+                    <div onClick={handleCopy} className='copybtn rounded-3' style={{backgroundColor: color ? "hsl(257, 27%, 26%)" : "hsl(180, 66%, 49%)" }}>{copied}</div>
                 </div>
 
             </div>
