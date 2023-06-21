@@ -16,7 +16,6 @@ function Home() {
     <Statistics />
     <Boost />
     <Footer />
-    
     </>
     
   )

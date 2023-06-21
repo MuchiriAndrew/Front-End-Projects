@@ -1,4 +1,35 @@
 .wrapper5 {
     height: 40vh;
-    background-color: black;
+    background-color: hsl(260, 8%, 14%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-row {
+    width: 100%;
+    height: 90%;
+
+}
+
+.brand-col{
+   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .wrapper5 {
+        height: 80vh;
+        background-color: hsl(260, 8%, 14%);
+    }
+
 }
