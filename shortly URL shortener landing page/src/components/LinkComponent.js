@@ -1,18 +1,67 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import './LinkComponent.css'
 import Container from 'react-bootstrap/Container';
+import { Link } from 'react-router-dom';
 
 function LinkComponent() {
+
+    const [text,setText] = useState('');
+    const [warning, setWarning] = useState(false)
+    const [expand, setExpand ] = useState(false); 
+    const [links, setLinks ] = useState([]);
+    const [copied, setCopied] = useState ("Copy");
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if(!text){
+            setWarning(true);
+            setExpand(false);
+        }else {
+            setWarning(false);
+
+            const shortenLink = async () => {
+                const res = await fetch (`https://api.shrtco.de/v2/shorten?url=${text}`)
+
+                const data = await res.json()
+                console.log(data);
+                setLinks(data.result);
+                setText('');
+            } 
+            shortenLink();
+            setExpand(true);
+        }
+    }
+
+    const handleCopy = ()=> {
+        navigator.clipboard.writeText(links.full_short_link)
+        setCopied("Copied!")
+    }
+
+
+    
   return (
     <Container fluid id='wrapper2' className='p-0'>
 
       <div id="content-row">
 
         <div id='div1' className='rounded-3 mb-4'>
-            <form className='form'>
+            <form className='form' onSubmit={handleSubmit}>
 
-                <input className='txtbox rounded-3' type="text" />
-                <button className='mybtn rounded-3'>
+                <div id='mid-div'>
+                    <input 
+                    className='txtbox rounded-3'
+                    style={{border:warning ? "2px solid red" : "none"}}
+                    type="text"
+                    placeholder='Shorten your link here'
+                    value={text}
+                    onChange={(e)=> setText(e.target.value)}/>
+
+                    <p id='warning' className='m-0' style={{visibility:warning ? "visible" : "hidden"}}>Please add a link</p>
+                </div>
+                
+                <button className='mybtn rounded-3' onClick={handleSubmit}>
                     Shorten It!
                 </button>
 
@@ -20,50 +69,24 @@ function LinkComponent() {
         
         </div>
 
-        <div id='div2' className=''>
+        <div id='div2' style={{display: expand ? "block" : "none"}}>
         
             <div className='copy mb-3 bg-light rounded-3'>
 
                 <div id='example'>
-                <p id='setLink' className='mb-0 ms-md-3'>https://www.sitebydrew.io</p>
+                <p id='setLink' className='mb-0 ms-md-3'>{links.original_link}</p>
                 </div>
                 
 
                 <hr id='hr2' className='d-md-none' />
 
                 <div className='inner-div'>
-                    <p className='mb-0'>https://www.sitebydrew.io</p>
-                    <div className='copybtn rounded-3'>Copy</div>
+                    <Link style={{textDecoration:"none"}} to={links.full_short_link} className='mb-0'>{links.full_short_link}</Link>
+                    <div onClick={handleCopy} className='copybtn rounded-3'>{copied}</div>
                 </div>
 
             </div>
 
-            <div className='copy mb-3 bg-light rounded-3'>
-                <div id='example'>
-                <p id='setLink' className='mb-0  ms-md-3'>https://www.sitebydrew.io</p>
-                </div>
-
-                <hr id='hr2' className='d-md-none' />
-
-                <div className='inner-div'>
-                    <p className='mb-0'>https://www.sitebydrew.io</p>
-                    <div className='copybtn rounded-3'>Copy</div>
-                </div>
-            </div>
-
-            <div className='copy mb-5 bg-light rounded-3'>
-                <div id='example'>
-                <p id='setLink' className='mb-0 ms-md-3 '>https://www.sitebydrew.io</p>
-                </div>
-
-                <hr id='hr2' className='d-md-none' />
-
-                <div className='inner-div'>
-                    <p className='mb-0'>https://www.sitebydrew.io</p>
-                    <div className='copybtn rounded-3'>Copy</div>
-                </div>
-                
-            </div>
         </div>
 
       </div>
