@@ -54,9 +54,9 @@ function LinkComponent() {
                 <div id='mid-div'>
                     <input 
                     className='txtbox rounded-3'
-                    style={{border:warning ? "2px solid red" : "none"}}
                     type="text"
-                    placeholder='  Shorten your link here...'
+                    placeholder='Shorten your link here...'
+                    style={{border:warning ? "2px solid red" : "none"}}
                     value={text}
                     onChange={(e)=> setText(e.target.value)}/>
 
