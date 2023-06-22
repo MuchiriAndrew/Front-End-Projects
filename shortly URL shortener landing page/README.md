@@ -1,7 +1,8 @@
 ## Shortly URL Shortener
 
-A landing page made using React and Bootstrap
-Used the Shrtcode API to create a link shotener on the landing page
+A landing page made using React and Bootstrap.
+
+Used the Shrtcode API to create a link shotener on the landing page.
 
 Hosted on Render: https://shortly-bg7a.onrender.com/
 
