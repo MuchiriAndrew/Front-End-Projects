@@ -26,7 +26,8 @@ function LinkComponent() {
                 const res = await fetch (`https://api.shrtco.de/v2/shorten?url=${text}`)
 
                 const data = await res.json()
-                console.log(data);
+                
+                
                 setLinks(data.result);
                 setText('');
             } 
