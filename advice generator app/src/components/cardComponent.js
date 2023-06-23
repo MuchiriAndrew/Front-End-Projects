@@ -12,6 +12,7 @@ function CardComponent() {
 
     const getAdvice = async() => {
         const response = await axios.get("https://api.adviceslip.com/advice")
+        
         const advice = await response.data.slip;
         setAdvice(advice);
     }
