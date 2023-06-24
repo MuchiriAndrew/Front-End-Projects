@@ -4,6 +4,7 @@ import './LinkComponent.css'
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
 
+
 function LinkComponent() {
 
     const [text,setText] = useState('');
@@ -23,10 +24,9 @@ function LinkComponent() {
             setWarning(false);
 
             const shortenLink = async () => {
-                const res = await fetch (`https://api.shrtco.de/v2/shorten?url=${text}`)
+                const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${text}`)
 
                 const data = await res.json()
-                
                 
                 setLinks(data.result);
                 setText('');
