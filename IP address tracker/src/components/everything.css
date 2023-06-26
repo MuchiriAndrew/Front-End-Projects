@@ -188,6 +188,24 @@ h3 {
         margin-top: 20px;
     }
 
+
+    .txtbox {
+        width: 85%;
+        border: none;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
+    .mybtn {
+        width: 15%;
+        border: none;
+        background-color: black;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .results-div {
         width: 90%;
         height: 35%;
@@ -200,7 +218,7 @@ h3 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
+    }    
     
     #col {
         width: 100%;
