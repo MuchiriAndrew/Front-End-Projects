@@ -1,0 +1,207 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 35%;
+    background-image: url(../../public/images/pattern-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inner-div {
+    height: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.results-div {
+    width: 90%;
+    height: 100px;
+    position: relative;
+    top: -50px;
+    background-color: white;
+}
+
+.myrow {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#col {
+    width: 25%;
+    height: 50%;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    border-right: 1px solid grey;
+    margin-left: 10px;
+}
+
+#map-div {
+    height: 65%;
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.txtbox {
+    width: 92%;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.mybtn {
+    width: 8%;
+    border: none;
+    background-color: black;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #input-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 35%;
+        background-image: url(../../public/images/pattern-bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .inner-div {
+        height: 50%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .results-div {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        width:100%;
+        position: relative;
+        top: -50px;
+        background-color: white;
+    }
+
+    .myrow {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h6 {
+        font-size: 12px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+}
+
+ @media screen and (max-width: 768px) {
+
+    #input-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 35%;
+        background-image: url(../../public/images/pattern-bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .inner-div {
+        height: 50%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    .results-div {
+        width: 90%;
+        height: 55%;
+        top: -140px;
+    }
+    
+    .myrow {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #col {
+        width: 100%;
+        height: unset;
+        display: flex;
+        justify-content:center;
+        text-align: center;
+        align-items: center;
+        border-right: none;
+        margin-left: 0px;
+    }
+} 
+
+@media screen and (max-height:740px) and (max-width:768px) {
+    .wrapper {
+        height: 140vh;
+    }
+}
