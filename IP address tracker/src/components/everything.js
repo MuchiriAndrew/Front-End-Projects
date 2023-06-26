@@ -5,6 +5,12 @@ import './everything.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
+import { MapContainer } from 'react-leaflet/MapContainer'
+import { TileLayer } from 'react-leaflet/TileLayer'
+import { useMap } from 'react-leaflet/hooks'
+import 'leaflet/dist/leaflet.css';
+import { Marker } from 'react-leaflet';
+import { Popup } from 'leaflet';
 
 function Everything() {
 
@@ -16,6 +22,8 @@ function Everything() {
   const [isp, setIsp] = useState('');
   const [visible, setVisible] = useState(false);
   const [position, setPosition] = useState(true);
+
+  const center = [-22.9518171845764, -43.210465747563134]
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,46 +79,59 @@ function Everything() {
 
         </div>
 
-        <div id='map-div' className='bg-success'>
+        <Container style={{display: visible ? "block" : "none"}} className='results-div  rounded-4'>
+                          <Row className='myrow'>
+                            
+                            <Col id='col' className=''>
 
-          <Container style={{display: visible ? "block" : "none"}} className='results-div  rounded-4'>
-              <Row className='myrow'>
-                
-                <Col id='col' className=''>
+                              <div className=''>
+                              <h6 className=''>IP ADDRESS</h6>
+                              <h3>{ip}</h3>
+                              </div>
+                          
+                            </Col>
 
-                  <div className=''>
-                  <h6 className=''>IP ADDRESS</h6>
-                  <h3>{ip}</h3>
-                  </div>
-              
-                </Col>
+                            <Col id='col' className=''>
+                            <div>
+                              <h6 className=''>LOCATION</h6>
+                              <h3>{location}</h3>
+                              </div>
+                            </Col>
 
-                <Col id='col' className=''>
-                <div>
-                  <h6 className=''>LOCATION</h6>
-                  <h3>{location}</h3>
-                  </div>
-                </Col>
+                            <Col  id='col' className=''>
+                            <div>
+                              <h6 className=''>TIMEZONE</h6>
+                              <h3>{timezone}</h3>
+                              </div>
+                            </Col>
 
-                <Col  id='col' className=''>
-                <div>
-                  <h6 className=''>TIMEZONE</h6>
-                  <h3>{timezone}</h3>
-                  </div>
-                </Col>
+                            <Col id='col' className='' style={{borderRight:"none"}}>
+                            <div>
+                              <h6 className=''>ISP</h6>
+                              <h3>{isp}</h3>
+                              </div>
+                            </Col>
 
-                <Col id='col' className='' style={{borderRight:"none"}}>
-                <div>
-                  <h6 className=''>ISP</h6>
-                  <h3>{isp}</h3>
-                  </div>
-                </Col>
+                          </Row>
+        </Container>
 
-              </Row>
-          </Container>
+        <MapContainer 
+              center={center}
+              zoom={10}
+              id='map-div'
+            >
 
-          MY MAP
-        </div>
+            <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+
+            {/* <Marker position={[-22.9518171845764, -43.210465747563134]}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker> */}         
+        </MapContainer>
 
     </Container>
   )
