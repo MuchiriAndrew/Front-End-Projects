@@ -4,19 +4,43 @@ import { useState, useEffect } from 'react';
 import './everything.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import axios from 'axios';
 
 function Everything() {
 
   const [warning, setWarning] = useState(false);
   const [text,setText] = useState('');
+  const [ip, setIp] = useState('');
+  const [location, setLocation] = useState('');
+  const [timezone, setTimezone] = useState('');
+  const [isp, setIsp] = useState('');
+  const [visible, setVisible] = useState(false);
+  const [position, setPosition] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const getLocation = async() => {
+      const key = "at_vphtNU8fqOKUSKlv1mbmFt6Secpzc";
+      const response = await axios.get(`https://geo.ipify.org/api/v2/country?apiKey=${key}&ipAddress=${text}`)
+      
+      console.log(response.data);
+
+      const mydata = await response.data
+
+      setIp(`${mydata.ip}`)
+      setLocation(`${mydata.location.region}, ${mydata.location.country}`)
+      setTimezone(`${mydata.location.timezone}`)
+      setIsp(`${mydata.isp}`)
+  }
 
     if(!text){
         setWarning(true);
     }else {
         setWarning(false);
+        getLocation();
+        setVisible(true);
+        setPosition(false);
     }
 }
 
@@ -24,7 +48,7 @@ function Everything() {
   return (
     <Container fluid className='wrapper p-0'>
 
-        <div id='input-div'>
+        <div id='input-div' style={{justifyContent: position ? "center" : "start"}}>
 
           <div className='inner-div ' >
               <h1 className='text-light'>IP Address Tracker</h1>
@@ -48,14 +72,15 @@ function Everything() {
         </div>
 
         <div id='map-div' className='bg-success'>
-          <Container className='results-div  rounded-4'>
+
+          <Container style={{display: visible ? "block" : "none"}} className='results-div  rounded-4'>
               <Row className='myrow'>
                 
                 <Col id='col' className=''>
 
                   <div className=''>
                   <h6 className=''>IP ADDRESS</h6>
-                  <h3>192.212.174.101</h3>
+                  <h3>{ip}</h3>
                   </div>
               
                 </Col>
@@ -63,21 +88,21 @@ function Everything() {
                 <Col id='col' className=''>
                 <div>
                   <h6 className=''>LOCATION</h6>
-                  <h3>Brooklyn, NY 10001</h3>
+                  <h3>{location}</h3>
                   </div>
                 </Col>
 
                 <Col  id='col' className=''>
                 <div>
                   <h6 className=''>TIMEZONE</h6>
-                  <h3>UTC -05:00</h3>
+                  <h3>{timezone}</h3>
                   </div>
                 </Col>
 
                 <Col id='col' className='' style={{borderRight:"none"}}>
                 <div>
                   <h6 className=''>ISP</h6>
-                  <h3>SpaceX Starlink</h3>
+                  <h3>{isp}</h3>
                   </div>
                 </Col>
 

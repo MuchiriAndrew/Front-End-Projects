@@ -157,7 +157,7 @@ h3 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: start;
+        /* justify-content: center; */
         height: 35%;
         background-image: url(../../public/images/pattern-bg-mobile.png);
         background-repeat: no-repeat;
