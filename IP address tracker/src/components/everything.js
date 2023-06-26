@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import './everything.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,7 +8,6 @@ import axios from 'axios';
 import { MapContainer } from 'react-leaflet/MapContainer'
 import { TileLayer } from 'react-leaflet/TileLayer'
 import 'leaflet/dist/leaflet.css';
-import { Marker, Popup, useMap } from 'react-leaflet'
 import Markerposition from './Markerposition';
 import arrow from "../images/icon-arrow.svg"
 
