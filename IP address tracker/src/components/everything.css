@@ -218,4 +218,10 @@ h3 {
     .wrapper {
         height: 140vh;
     }
+
+    .results-div {
+        width: 90%;
+        height: 45%;
+        top: 180px;
+    }
 }
