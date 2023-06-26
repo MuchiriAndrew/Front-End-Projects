@@ -54,8 +54,6 @@
     height: 65%;
 }
 
-
-
 .form {
     display: flex;
     flex-direction: row;
@@ -83,12 +81,23 @@
     align-items: center;
 }
 
+h1 {
+    font-family: Rubik;
+    font-weight: 00;
+}
+
 h6 {
     font-size: 12px;
+    font-family: Rubik;
+    color:hsl(0, 0%, 59%);
+    font-weight: 500;
 }
 
 h3 {
     font-size: 26px;
+    font-family: Rubik;
+    color: hsl(0, 0%, 17%);
+    font-weight: 700;
 }
 
 @media screen and (max-width: 1200px) {
@@ -178,6 +187,7 @@ h3 {
         width: 90%;
         height: 55%;
         top: -140px;
+        /* display: none; */
     }
     
     .myrow {
