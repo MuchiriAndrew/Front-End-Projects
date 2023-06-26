@@ -10,7 +10,7 @@
     justify-content: start;
     align-items: center;
     height: 35%;
-    background-image: url(../../public/images/pattern-bg-desktop.png);
+    background-image: url(../images/pattern-bg-desktop.png);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: visible;
@@ -114,7 +114,7 @@ h3 {
         align-items: center;
         justify-content: center;
         height: 35%;
-        background-image: url(../../public/images/pattern-bg-desktop.png);
+        background-image: url(../images/pattern-bg-desktop.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -164,7 +164,7 @@ h3 {
         flex-direction: column;
         align-items: center;
         height: 35%;
-        background-image: url(../../public/images/pattern-bg-mobile.png);
+        background-image: url(../images/pattern-bg-mobile.png);
         background-repeat: no-repeat;
         background-size: cover;
     }

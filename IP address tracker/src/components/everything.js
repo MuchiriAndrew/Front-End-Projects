@@ -7,12 +7,15 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import { MapContainer } from 'react-leaflet/MapContainer'
 import { TileLayer } from 'react-leaflet/TileLayer'
-import { useMap } from 'react-leaflet/hooks'
 import 'leaflet/dist/leaflet.css';
-import { Marker } from 'react-leaflet';
-import { Popup } from 'leaflet';
+import { Marker, Popup, useMap } from 'react-leaflet'
+import Markerposition from './Markerposition';
+import arrow from "../images/icon-arrow.svg"
+
 
 function Everything() {
+
+  
 
   const [warning, setWarning] = useState(false);
   const [text,setText] = useState('');
@@ -22,15 +25,15 @@ function Everything() {
   const [isp, setIsp] = useState('');
   const [visible, setVisible] = useState(false);
   const [position, setPosition] = useState(true);
-
-  const center = [-22.9518171845764, -43.210465747563134]
+  const [coordinates, setCoordinates] = useState([-22.9518171845764, -43.210465747563134]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const getLocation = async() => {
       const key = "at_vphtNU8fqOKUSKlv1mbmFt6Secpzc";
-      const response = await axios.get(`https://geo.ipify.org/api/v2/country?apiKey=${key}&ipAddress=${text}`)
+
+      const response = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=${key}&ipAddress=${text}`)
       
       console.log(response.data);
 
@@ -40,6 +43,7 @@ function Everything() {
       setLocation(`${mydata.location.region}, ${mydata.location.country}`)
       setTimezone(`${mydata.location.timezone}`)
       setIsp(`${mydata.isp}`)
+      setCoordinates([mydata.location.lat, mydata.location.lng]);
   }
 
     if(!text){
@@ -52,8 +56,7 @@ function Everything() {
     }
 }
 
-
-  return (
+return (
     <Container fluid className='wrapper p-0'>
 
         <div id='input-div' style={{justifyContent: position ? "center" : "start"}}>
@@ -71,10 +74,9 @@ function Everything() {
                 />
 
                 <button className='mybtn'>
-                  <img src="../../images/icon-arrow.svg" alt="arrow" />
+                  <img src={arrow} alt="arrow" />
                 </button>
               </form> 
-
           </div>    
 
         </div>
@@ -116,8 +118,8 @@ function Everything() {
         </Container>
 
         <MapContainer 
-              center={center}
-              zoom={10}
+              center={coordinates}
+              zoom={13}
               id='map-div'
             >
 
@@ -126,14 +128,11 @@ function Everything() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
 
-            {/* <Marker position={[-22.9518171845764, -43.210465747563134]}>
-                <Popup>
-                  A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-              </Marker> */}         
+              <Markerposition coordinates={coordinates}/>
+     
         </MapContainer>
 
-    </Container>
+    </Container >
   )
 }
 
