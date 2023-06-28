@@ -8,9 +8,9 @@ function Countries({mode}) {
 
     const countryData = async () => {
     const response = await fetch(url);
-    const countries = await response.json();
-    setCountries(countries);
-    console.log(countries);
+    const data = await response.json();
+    setCountries(data);
+    console.log(data);
     }
 
     useEffect(()=> {

@@ -10,7 +10,8 @@ function App() {
     <>
     <Router>
       <Routes>
-        <Route path='/' element={<ViewCountry/>} />
+        <Route path='/' element={<Search/>} />
+        <Route path='/country' element={<ViewCountry/>} />
       </Routes>
     </Router>
     </>

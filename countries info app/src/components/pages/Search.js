@@ -3,6 +3,8 @@ import Container from 'react-bootstrap/Container';
 import './Search.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Countries from '../Countries';
+import { Link } from 'react-router-dom';
+import ViewCountry from './ViewCountry';
 
 
 function Search() {
@@ -60,6 +62,8 @@ function Search() {
         <button id='searchbtn' style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)"}}><i className={search}></i></button>
         
       </form>
+
+      <Link to='/country'>Go To ViewCountry</Link>
 
       <div>
         <select style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)", color: mode ? "black" : "white", outline:"none"}} name="select" id="dropdown">

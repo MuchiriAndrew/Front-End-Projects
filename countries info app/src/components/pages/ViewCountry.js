@@ -19,12 +19,6 @@ function ViewCountry() {
     } else {
       setMoon("bi bi-moon me-2")
     }
-
-    // if(search === "bi bi-search"){
-    //   setSearch("bi bi-search text-light")
-    // } else {
-    //   setSearch("bi bi-search")
-    // }
   } 
 
   return (
@@ -48,6 +42,9 @@ function ViewCountry() {
     <i className="bi bi-arrow-left me-3"></i>
        Back
     </Link>
+
+    <Link to='/'>Go To Search </Link>
+
    </Container>
 
    <Container style={{color: mode ? "black" : "white"}} fluid id='wrapper-6' className=' p-0'>
