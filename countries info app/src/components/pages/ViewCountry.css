@@ -1,5 +1,5 @@
 #wrapper-4 {
-    height: 100vh;
+    height: max-content;
 }
 
 #wrapper-5 {
@@ -93,4 +93,209 @@ h5{
     font-family: Nunito Sans;
     font-weight: 600;
     font-size: 18px;
+}
+
+
+@media only screen and (max-width: 992px){
+    #wrapper-6 {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    #row {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #flag-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    #country_img {
+        width: 70%;
+    }
+
+    #txt-col {
+        display: flex;
+        flex-grow: 1;
+    }
+    
+    #txt_wrapper {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    #text_row {      
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #my_col1 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    #my_col2 {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    #border-countries {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+    #list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #borders {
+        border: 1px solid gray;
+        border-radius: 5px;
+        width: 90px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 768px){
+
+    #wrapper-6 {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    #row {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #flag-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    #country_img {
+        width: 100%;
+    }
+
+    #txt-col {
+        display: flex;
+        flex-grow: 1;
+    }
+    
+    #txt_wrapper {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: start;
+    }
+
+    #text_row {      
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #my_col1 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    #my_col2 {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    #border-countries {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 10px;
+        justify-content: space-around;
+    }
+    
+    #list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #borders {
+        border: 1px solid gray;
+        border-radius: 5px;
+        width: 90px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-height:1000px) and (max-width:768px)  {
+
+    #wrapper-6 {
+        height: 95vh;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+
+@media screen and (max-height:900px) and (max-width:768px)  {
+
+    #wrapper-6 {
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+@media screen and (max-height:720px) and (max-width:768px) {
+    #wrapper-6 {
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+    }
 }

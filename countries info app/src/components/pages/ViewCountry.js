@@ -53,11 +53,11 @@ function ViewCountry() {
    <Container style={{color: mode ? "black" : "white"}} fluid id='wrapper-6' className=' p-0'>
 
     <Row id='row' className=''>
-      <Col id='flag-col' className='= p-0'>
+      <Col lg= {6} id='flag-col' className='= p-0'>
         <img id='country_img' className='img-fluid' src="../../images/ke.png" alt="" />
       </Col>
 
-      <Col className='p-0' id='txt-col'>
+      <Col lg= {6} className='p-0' id='txt-col'>
 
       <div id='txt_wrapper' className=''>
 
