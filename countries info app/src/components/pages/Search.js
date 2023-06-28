@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './Search.css';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Card from 'react-bootstrap/Card';
 import Navbar from 'react-bootstrap/Navbar';
 import Countries from '../Countries';
 
@@ -55,7 +51,7 @@ function Search() {
       <form>
 
       <input 
-          style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)"}}
+          style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)",color: mode ? "black" : "white"}}
           id='searchbar'
           type="text"
           placeholder='Search for a country'

@@ -1,0 +1,96 @@
+#wrapper-4 {
+    height: 100vh;
+}
+
+#wrapper-5 {
+    width: 90%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+        
+#backbtn {
+    width: 150px;
+    height: 40px;
+    font-family: Nunito Sans;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#wrapper-6 {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+#row {
+    width: 90%;
+}
+
+#flag-col {
+    display: flex;
+    flex-direction: column;
+}
+
+#country_img {
+    width: 80%;
+}
+
+#text_row {
+    width: 100%;
+    height: 70%;
+}
+
+#txt_wrapper {
+    width: 100%;
+    height: 80%;
+}
+
+#my_col1 {
+    width: 50%;
+}
+
+#my_col2 {
+    width: 50%;
+    padding-top: 8%;
+}
+
+#border-countries {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#list {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#borders {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 90px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-family: Nunito Sans;
+    font-weight: 800;
+}
+
+h5{
+    font-family: Nunito Sans;
+    font-weight: 600;
+    font-size: 18px;
+}
