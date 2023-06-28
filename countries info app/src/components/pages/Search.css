@@ -23,8 +23,8 @@ form {
 }
 
 #searchbtn {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     border: none;
     height: 50px;
     width: 10%;
@@ -32,8 +32,8 @@ form {
 
 #searchbar {
     /* box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.5); */
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     height: 50px;
     border: none;
     width: 90%;
@@ -66,25 +66,16 @@ form {
     justify-content: center;
 }
 
-#mycards {
-    width: 15rem;
-}
-
-.dropdown-menu {
+/* .dropdown-menu {
     width: 100%;
     margin-top: 5px;
-}
+} */
 
 #mode-selector {
     cursor: pointer;
 }
 
 @media only screen and (max-width: 768px){
-
-    #mycards {
-        width: unset;
-    }
-
     #search-div {
         height:20vh;
         width: 90%;

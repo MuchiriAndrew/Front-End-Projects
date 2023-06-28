@@ -7,13 +7,11 @@ import Search from './components/pages/Search'
 function App() {
   return(
     <>
-
     <Router>
       <Routes>
         <Route path='/' element={<Search/>} />
       </Routes>
     </Router>
-    
     </>
 
   );

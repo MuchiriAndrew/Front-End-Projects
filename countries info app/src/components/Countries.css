@@ -1,0 +1,68 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+#cardcont {
+    display: flex;
+    justify-content: center;
+}
+
+#mycards {
+    width: 15rem;
+    height: 20rem;
+}
+
+#country-img {
+   height: 50%;
+}
+
+.body-txt {
+    font-family: Nunito Sans;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#country-title {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+span {
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 992px){
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #mycards {
+        width: 14rem;
+        height: 20rem;
+    }
+    
+}
+
+@media only screen and (max-width: 768px){
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #mycards {
+        width: 90%;
+        height: 20rem;
+    }
+
+}
+
+
