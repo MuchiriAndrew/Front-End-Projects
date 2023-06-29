@@ -15,7 +15,12 @@
 }
 
 #country-img {
-   height: 50%;
+   height: 100%;
+}
+
+#img_cont {
+    height: 50%;
+    width: 100%;
 }
 
 .body-txt {

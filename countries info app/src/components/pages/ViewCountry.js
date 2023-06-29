@@ -151,22 +151,22 @@ function ViewCountry() {
 
 
         
-                <div id='border-countries' className=''>
+        <div id='border-countries' className=''>
 
-                <h5 className='me-md-3 '>Border Countries: </h5>
+        <h5 className='me-md-3 '>Border Countries: </h5>
 
-                {mydata.borders && (
-                <>
-                  <ul id='list'>
-                    {mydata.borders.map((border, index) => (
-                      <li id='borders' key={index} >
-                        {border}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-              </div>
+        {mydata.borders && (
+        <>
+          <ul id='list'>
+            {mydata.borders.map((border, index) => (
+              <li id='borders' key={index} >
+                {border}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+        </div>
 
 
       </div>
