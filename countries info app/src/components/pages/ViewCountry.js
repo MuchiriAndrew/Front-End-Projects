@@ -25,7 +25,7 @@ function ViewCountry() {
       }
 
       fetchCountryData();
-    },[])
+    },[name])
 
     const handleMode = ()=> {
     setMode(!mode);
@@ -63,7 +63,7 @@ function ViewCountry() {
    <Container style={{color: mode ? "black" : "white"}} fluid id='wrapper-6' className=' p-0'>
 
    {country.map((mydata)=> {
-        const { numericCode, name, population, region, subregion, capital, tld, flags, borders } = mydata;
+        const {name, population, region, subregion, capital, tld, flags, borders } = mydata;
 
         const currencies = (x) =>
         Object.keys(x.currencies).map((e) => x.currencies[e].name);

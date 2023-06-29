@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import './Search.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Countries from '../Countries';
-import { Link } from 'react-router-dom';
-import ViewCountry from './ViewCountry';
 
 
 function Search() {
@@ -13,7 +11,7 @@ function Search() {
   const [moon, setMoon] = useState("bi bi-moon me-2");
   const [search, setSearch] = useState("bi bi-search");
   const [region, setRegion] = useState("");
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
 
 
   const handleMode = ()=> {
@@ -31,7 +29,6 @@ function Search() {
       setSearch("bi bi-search")
     }
   } 
-  
 
   return (
     <>
@@ -61,7 +58,7 @@ function Search() {
           placeholder='Search for a country'
         />
 
-        {/* <button id='searchbtn' style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)"}}><i className={search}></i></button> */}
+        {/* <button onClick={()=> childRef.current.searchCountry()} id='searchbtn' style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)"}}><i className={search}></i></button> */}
         
       </form>
 
@@ -84,7 +81,7 @@ function Search() {
 
 
     <Container fluid id='wrapper-3' style={{backgroundColor: mode ? "hsl(0, 0%, 98%)" : "hsl(207, 26%, 17%)"}}>
-      <Countries mode={mode} region={region} text={text}/>
+      <Countries mode={mode} region={region} text={text} />
     </Container>
 
     

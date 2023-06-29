@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
 import Card from 'react-bootstrap/Card';
 import './Countries.css'
 import { Link } from 'react-router-dom';
 
-function Countries({mode, region, text}) {
+function Countries({mode, region, text}) { 
 
     const urlAll = "https://restcountries.com/v3.1/all"
     const [ countries, setCountries ] = useState([])
@@ -15,65 +15,62 @@ function Countries({mode, region, text}) {
             const response = await fetch(urlAll);
             const data = await response.json();
             setCountries(data);
-        }
-
-        if (region === "europe") {
+        }if (region === "europe") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }if (region === "africa") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }if (region === "asia") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }if (region === "americas") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }if (region === "oceania") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }if (region === "antarctic") {
             const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
             const data = await response.json();
             setCountries(data);
         }
 
-        if (region === "africa") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }
 
-        if (region === "asia") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }
-
-        if (region === "americas") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }
-
-        if (region === "oceania") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }
-
-        if (region === "antarctic") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }
 }
-
     useEffect(()=> {
         countryData()
     },[region])
 
 
-    // const searchForCountry = async() => {
+    useEffect(()=> {
+        if(text){
+            searchForCountry()
+        }
+    },[text])
 
-    // }
 
 
+    const searchForCountry = async() => {
+        const response = await fetch(`https://restcountries.com/v3.1/name/${text}`);
+        const data = await response.json();
+        setCountries(data);
+    }
 
   return (
     <>
 
     <section className='grid'>
 
-    {countries.map((country)=> {
-        const { numericCode, name, population, region, capital, flags } = country;
+    {countries && countries.map((country)=> {
+        const {name, population, region, capital, flags } = country;
 
-        return <article id='cardcont' key = {numericCode}>
+        return <article id='cardcont'>
             <Card style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)"}} id='mycards'>
                 <Link id='img_cont' to={`/country/${name.common}`}>
                 <Card.Img id='country-img' className='img-fluid' variant="top" src={flags.png}  />
@@ -87,6 +84,8 @@ function Countries({mode, region, text}) {
                     </Card.Text>
                 </Card.Body>
             </Card>
+
+            {/* <button onClick={searchForCountry}>search</button> */}
 
         </article>
     })}
