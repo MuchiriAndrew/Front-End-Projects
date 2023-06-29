@@ -15,34 +15,13 @@ function Countries({mode, region, text}) {
             const response = await fetch(urlAll);
             const data = await response.json();
             setCountries(data);
-        }if (region === "europe") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }if (region === "africa") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }if (region === "asia") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }if (region === "americas") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }if (region === "oceania") {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setCountries(data);
-        }if (region === "antarctic") {
+        }else {
             const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
             const data = await response.json();
             setCountries(data);
         }
+    }
 
-
-}
     useEffect(()=> {
         countryData()
     },[region])
@@ -50,12 +29,7 @@ function Countries({mode, region, text}) {
 
     useEffect(()=> {
         if(text){
-            try{
-                searchForCountry()
-            }
-           catch(error){
-            console.log(error);
-           }
+          searchForCountry();
         }
     },[text])
 

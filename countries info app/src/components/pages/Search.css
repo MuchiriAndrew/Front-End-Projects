@@ -53,8 +53,8 @@ form {
 }
 
 #wrapper-3 {
+    min-height: 70vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -67,11 +67,6 @@ form {
     display: flex;
     justify-content: center;
 }
-
-/* .dropdown-menu {
-    width: 100%;
-    margin-top: 5px;
-} */
 
 #mode-selector {
     cursor: pointer;
@@ -112,6 +107,13 @@ form {
         height: 50px;
         border: none;
         width: 80%;
+    }
+
+    #wrapper-3 {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
 }

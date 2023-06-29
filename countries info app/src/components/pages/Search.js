@@ -57,9 +57,7 @@ function Search() {
           type="text"
           placeholder='Search for a country'
         />
-
-        {/* <button onClick={()=> childRef.current.searchCountry()} id='searchbtn' style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)"}}><i className={search}></i></button> */}
-        
+       
       </form>
 
       <div>
