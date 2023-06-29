@@ -63,8 +63,6 @@ function Search() {
         
       </form>
 
-      <Link to='/country'>Go To ViewCountry</Link>
-
       <div>
         <select style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)", color: mode ? "black" : "white", outline:"none"}} name="select" id="dropdown">
           <option  value="Filter by Region">Filter by region</option>

@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Search/>} />
-        <Route path='/country' element={<ViewCountry/>} />
+        <Route path='/country/:name' element={<ViewCountry/>} />
       </Routes>
     </Router>
     </>

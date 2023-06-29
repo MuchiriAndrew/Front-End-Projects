@@ -1,15 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './ViewCountry.css'
 
 function ViewCountry() {
 
     const [mode, setMode] = useState(true);
     const [moon, setMoon] = useState("bi bi-moon me-2");
+    const [country, setCountry] = useState([])
+    const {name} = useParams()
+
+
+
+    useEffect(()=> {
+      const fetchCountryData = async() => {
+        const res = await fetch(`https://restcountries.com/v3.1/name/${name}`)
+
+        const data = await res.json()
+        setCountry(data)
+        console.log(data);
+      }
+
+      fetchCountryData();
+    },[])
 
     const handleMode = ()=> {
     setMode(!mode);
@@ -38,20 +54,30 @@ function ViewCountry() {
     </Navbar>
 
    <Container id='wrapper-5' fluid style={{backgroundColor: mode ? "hsl(0, 0%, 98%)" : "hsl(207, 26%, 17%)"}}>
-    <Link style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)",color: mode ? "black" : "white"}} id='backbtn'>
+    <Link to='/' style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)",color: mode ? "black" : "white"}} id='backbtn'>
     <i className="bi bi-arrow-left me-3"></i>
        Back
     </Link>
-
-    <Link to='/'>Go To Search </Link>
-
    </Container>
 
    <Container style={{color: mode ? "black" : "white"}} fluid id='wrapper-6' className=' p-0'>
 
-    <Row id='row' className=''>
+   {country.map((mydata)=> {
+        const { numericCode, name, population, region, subregion, capital, tld, flags, borders } = mydata;
+
+        const currencies = (x) =>
+        Object.keys(x.currencies).map((e) => x.currencies[e].name);
+
+        const languages = (x) =>
+        Object.keys(x.languages).map((e) => x.languages[e]);
+
+        const nativeName = (x) =>
+        Object.keys(x.name.nativeName).map((e) => x.name.nativeName[e].common);
+
+
+        return<Row key={population} id='row' className=''>
       <Col lg= {6} id='flag-col' className='= p-0'>
-        <img id='country_img' className='img-fluid' src="../../images/ke.png" alt="" />
+        <img id='country_img' className='img-fluid' src={flags.svg} alt={name.common} />
       </Col>
 
       <Col lg= {6} className='p-0' id='txt-col'>
@@ -60,36 +86,87 @@ function ViewCountry() {
 
         <Row className=' m-0' id='text_row'>
           <Col id='my_col1' className=''>
-          <h3>Belgium</h3>
 
-          <h5>Native Name: <span></span>   </h5>
-          <h5>Population:<span></span></h5>
-          <h5>Region:<span></span></h5>
-          <h5>Sub Region:<span></span></h5>
-          <h5>Capital:<span></span></h5>
+          {mydata.name && (
+            <>
+            <h3>{name.common}</h3>
+            </>
+          )}
+
+          {mydata.name.nativeName && (
+            <>
+            <h5>Native Name: <span>{nativeName(mydata)[0]}</span>   </h5>
+            </>
+          )}
+
+          {mydata.population && (
+            <>
+            <h5>Population: <span>{population}</span></h5>
+            </>
+          )}
+
+          {mydata.region && (
+            <>
+            <h5>Region: <span>{region}</span></h5>
+            </>
+          )}
+
+          {mydata.subregion && (
+            <>
+             <h5>Sub Region: <span>{subregion}</span></h5>
+            </>
+          )}
+
+          {mydata.capital && (
+            <>
+            <h5>Capital: <span>{capital}</span></h5>
+            </>
+          )}      
+          
           </Col>
 
           <Col  id='my_col2' className=''>
 
-          <h5>Top Level Domain: <span></span>   </h5>
-          <h5>Currencies:<span></span></h5>
-          <h5>Languages:<span></span></h5>
+
+          {mydata.tld && (
+            <>
+             <h5>Top Level Domain: <span>{tld[0]}</span>   </h5>
+            </>
+          )} 
+
+          {mydata.currencies && (
+            <>
+              <h5>Currencies: <span>{currencies(mydata)}</span></h5>
+            </>
+          )} 
+
+          {mydata.languages && (
+            <>
+             <h5>Languages: <span>{languages(mydata)[0]}</span></h5>
+            </>
+          )}       
           
           </Col>
         </Row>
 
-        <div id='border-countries' className=''>
 
-          <h5 className='me-md-3 '>Border Countries: </h5>
+        
+                <div id='border-countries' className=''>
 
-          <div id='list'>
-          <div id='borders'>France</div>
-          <div id='borders'>France</div>
-          <div id='borders'>France</div>
-          </div>
-          
+                <h5 className='me-md-3 '>Border Countries: </h5>
 
-        </div>
+                {mydata.borders && (
+                <>
+                  <ul id='list'>
+                    {mydata.borders.map((border, index) => (
+                      <li id='borders' key={index} >
+                        {border}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              </div>
 
 
       </div>
@@ -98,8 +175,7 @@ function ViewCountry() {
       
       </Col>
     </Row>
-
-
+    })}
    </Container>
 
 
