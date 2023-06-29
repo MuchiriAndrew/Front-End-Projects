@@ -50,7 +50,12 @@ function Countries({mode, region, text}) {
 
     useEffect(()=> {
         if(text){
-            searchForCountry()
+            try{
+                searchForCountry()
+            }
+           catch(error){
+            console.log(error);
+           }
         }
     },[text])
 
@@ -67,7 +72,8 @@ function Countries({mode, region, text}) {
 
     <section className='grid'>
 
-    {countries && countries.map((country)=> {
+
+    {countries.length > 0 && countries.map((country)=> {
         const {name, population, region, capital, flags } = country;
 
         return <article id='cardcont'>
