@@ -36,7 +36,7 @@ function Countries({mode}) {
                     <Card.Text >
                         <h4 style={{color: mode ? "black" : "white"}}>Population: <span>{population.toLocaleString()}</span></h4>
                         <h4 style={{color: mode ? "black" : "white"}}>Region: <span>{region}</span></h4>
-                        <h4 style={{color: mode ? "black" : "white"}}>Capital: <span>{capital}</span></h4>
+                        <h4 style={{color: mode ? "black" : "white"}}>Capital: <span>{capital && (<>{capital[0]}{capital[1] && (<>, {capital[1]}</>)}{capital[2] && (<>, {capital[2]}</>)} </>)} </span></h4>
                     </Card.Text>
                 </Card.Body>
             </Card>

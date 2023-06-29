@@ -96,6 +96,8 @@ function ViewCountry() {
           <h5>Native Name: <span>{mydata.name.nativeName && (
             <>
             {nativeName(mydata)[0]}
+            {nativeName(mydata)[1] && (<>,  {nativeName(mydata)[1]}</>)}
+            {nativeName(mydata)[2] && (<>,  {nativeName(mydata)[2]}</>)}
             </>
           )} </span></h5>
 
@@ -120,7 +122,9 @@ function ViewCountry() {
 
           <h5>Capital: <span>{mydata.capital && (
             <>
-            {capital}
+            {capital[0]}
+            {capital[1] && (<>, {capital[1]}</>)}
+            {capital[2] && (<>, {capital[2]}</>)}
             </>
           )} </span></h5>
           
@@ -148,6 +152,16 @@ function ViewCountry() {
           <h5>Languages: <span>{mydata.languages && (
             <>
             {languages(mydata)[0]}
+            {languages(mydata)[1] && (<>, {languages(mydata)[1]}</>)}
+            {languages(mydata)[2] && (<>, {languages(mydata)[2]}</>)}
+            {languages(mydata)[3] && (<>, {languages(mydata)[3]}</>)}
+            {languages(mydata)[4] && (<>, {languages(mydata)[4]}</>)}
+            {languages(mydata)[5] && (<>, {languages(mydata)[5]}</>)}
+            {languages(mydata)[6] && (<>, {languages(mydata)[6]}</>)}
+            {languages(mydata)[7] && (<>, {languages(mydata)[7]}</>)}
+            {languages(mydata)[8] && (<>, {languages(mydata)[8]}</>)}
+            {languages(mydata)[9] && (<>, {languages(mydata)[9]}</>)}
+            {languages(mydata)[10] && (<>, {languages(mydata)[10]}</>)}
             </>
           )} </span></h5>      
 
