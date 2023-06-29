@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import './Search.css';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,7 +11,9 @@ function Search() {
 
   const [mode, setMode] = useState(true);
   const [moon, setMoon] = useState("bi bi-moon me-2");
-  const [search, setSearch] = useState("bi bi-search")
+  const [search, setSearch] = useState("bi bi-search");
+  const [region, setRegion] = useState("");
+  const [text, setText] = useState('');
 
 
   const handleMode = ()=> {
@@ -30,7 +32,6 @@ function Search() {
     }
   } 
   
-
 
   return (
     <>
@@ -53,24 +54,26 @@ function Search() {
       <form>
 
       <input 
+          onChange={(e)=> setText(e.target.value)}
           style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)",color: mode ? "black" : "white"}}
           id='searchbar'
           type="text"
           placeholder='Search for a country'
         />
 
-        <button id='searchbtn' style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)"}}><i className={search}></i></button>
+        {/* <button id='searchbtn' style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)"}}><i className={search}></i></button> */}
         
       </form>
 
       <div>
-        <select style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)", color: mode ? "black" : "white", outline:"none"}} name="select" id="dropdown">
-          <option  value="Filter by Region">Filter by region</option>
-          <option value="Africa">Africa</option>
-          <option value="America">America</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Ocaenia">Oceania</option>
+        <select  onChange={(e)=> setRegion(e.target.value)} style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)", color: mode ? "black" : "white", outline:"none"}} name="select" id="dropdown">
+          <option value="">Filter by region</option>
+          <option value="africa">Africa</option>
+          <option value="americas">Americas</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+          <option value="antarctic">Antarctic</option>
         </select>
       </div>
   
@@ -81,7 +84,7 @@ function Search() {
 
 
     <Container fluid id='wrapper-3' style={{backgroundColor: mode ? "hsl(0, 0%, 98%)" : "hsl(207, 26%, 17%)"}}>
-      <Countries mode={mode}/>
+      <Countries mode={mode} region={region} text={text}/>
     </Container>
 
     

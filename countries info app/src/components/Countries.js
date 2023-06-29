@@ -3,19 +3,66 @@ import Card from 'react-bootstrap/Card';
 import './Countries.css'
 import { Link } from 'react-router-dom';
 
-function Countries({mode}) {
-    const url = "https://restcountries.com/v3.1/all"
+function Countries({mode, region, text}) {
+
+    const urlAll = "https://restcountries.com/v3.1/all"
     const [ countries, setCountries ] = useState([])
 
+
     const countryData = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setCountries(data);
+
+        if (region === "") {
+            const response = await fetch(urlAll);
+            const data = await response.json();
+            setCountries(data);
+        }
+
+        if (region === "europe") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }
+
+        if (region === "africa") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }
+
+        if (region === "asia") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }
+
+        if (region === "americas") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }
+
+        if (region === "oceania") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }
+
+        if (region === "antarctic") {
+            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const data = await response.json();
+            setCountries(data);
+        }
 }
 
     useEffect(()=> {
         countryData()
-    },[])
+    },[region])
+
+
+    // const searchForCountry = async() => {
+
+    // }
+
 
 
   return (
