@@ -255,7 +255,7 @@ h5{
     }
 
     #border-countries {
-        width: 100%4;
+        width: 100%;
         height: 30%;
         display: flex;
         flex-direction: column;

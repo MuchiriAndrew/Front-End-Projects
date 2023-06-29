@@ -17,7 +17,7 @@ function ViewCountry() {
 
     useEffect(()=> {
       const fetchCountryData = async() => {
-        const res = await fetch(`https://restcountries.com/v3.1/name/${name}`)
+        const res = await fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
 
         const data = await res.json()
         setCountry(data)
@@ -177,11 +177,11 @@ function ViewCountry() {
         {mydata.borders && (
         <>
           <ul id='list' className='p-0'>
-            {mydata.borders.map((border, index) => (
-              <li id='borders' key={index} >
-                {border}
-              </li>
-            ))}
+              <li id='borders' >{borders[0]}</li>
+              {borders[1] && (<> <li id='borders'>{borders[1]}</li></>)}
+              {borders[2] && (<> <li id='borders'>{borders[2]}</li></>)}
+              {borders[3] && (<> <li id='borders'>{borders[3]}</li></>)}
+              {borders[4] && (<> <li id='borders'>{borders[4]}</li></>)}
           </ul>
         </>
       )}
@@ -189,7 +189,6 @@ function ViewCountry() {
 
 
       </div>
-
       
       
       </Col>

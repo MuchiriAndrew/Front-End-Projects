@@ -28,7 +28,7 @@ function Countries({mode}) {
 
         return <article id='cardcont' key = {numericCode}>
             <Card style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)"}} id='mycards'>
-                <Link id='img_cont' to={`/country/${name.official}`}>
+                <Link id='img_cont' to={`/country/${name.common}`}>
                 <Card.Img id='country-img' className='img-fluid' variant="top" src={flags.png}  />
                 </Link>
                 <Card.Body className='body-txt' >
