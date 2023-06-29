@@ -93,59 +93,64 @@ function ViewCountry() {
             </>
           )}
 
-          {mydata.name.nativeName && (
+          <h5>Native Name: <span>{mydata.name.nativeName && (
             <>
-            <h5>Native Name: <span>{nativeName(mydata)[0]}</span>   </h5>
+            {nativeName(mydata)[0]}
             </>
-          )}
+          )} </span></h5>
 
-          {mydata.population && (
+          <h5>Population: <span>{mydata.population && (
             <>
-            <h5>Population: <span>{population}</span></h5>
+            {population.toLocaleString()}
             </>
-          )}
+          )} </span></h5>
 
-          {mydata.region && (
+          <h5>Region: <span>{mydata.region && (
             <>
-            <h5>Region: <span>{region}</span></h5>
+            {region}
             </>
-          )}
+          )} </span></h5>
 
-          {mydata.subregion && (
+          <h5>Subregion: <span>{mydata.subregion && (
             <>
-             <h5>Sub Region: <span>{subregion}</span></h5>
+            {subregion}
             </>
-          )}
+          )} </span></h5>
+ 
 
-          {mydata.capital && (
+          <h5>Capital: <span>{mydata.capital && (
             <>
-            <h5>Capital: <span>{capital}</span></h5>
+            {capital}
             </>
-          )}      
+          )} </span></h5>
           
           </Col>
 
           <Col  id='my_col2' className=''>
 
 
-          {mydata.tld && (
+          <h5>Top Level Domain: <span>{mydata.tld && (
             <>
-             <h5>Top Level Domain: <span>{tld[0]}</span>   </h5>
+            {tld[0]}
             </>
-          )} 
+          )} </span></h5>
 
-          {mydata.currencies && (
-            <>
-              <h5>Currencies: <span>{currencies(mydata)}</span></h5>
-            </>
-          )} 
 
-          {mydata.languages && (
+
+          <h5>Currency: <span>{mydata.currencies && (
             <>
-             <h5>Languages: <span>{languages(mydata)[0]}</span></h5>
+            {currencies(mydata)}
             </>
-          )}       
-          
+          )} </span></h5> 
+
+
+
+          <h5>Languages: <span>{mydata.languages && (
+            <>
+            {languages(mydata)[0]}
+            </>
+          )} </span></h5>      
+
           </Col>
         </Row>
 
@@ -157,7 +162,7 @@ function ViewCountry() {
 
         {mydata.borders && (
         <>
-          <ul id='list'>
+          <ul id='list' className='p-0'>
             {mydata.borders.map((border, index) => (
               <li id='borders' key={index} >
                 {border}
