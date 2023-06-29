@@ -189,7 +189,15 @@ h5{
 
 }
 
+@media screen and (max-height:500px) and (max-width:992px)  {
 
+    #wrapper-6 {
+        height: max-content;
+        display: flex;
+        justify-content: center;
+    }
+
+}
 
 @media only screen and (max-width: 768px){
 
@@ -299,8 +307,6 @@ h5{
 
 }
 
-
-
 @media screen and (max-height:900px) and (max-width:768px)  {
 
     #wrapper-6 {
@@ -311,11 +317,20 @@ h5{
 
 }
 
-
 @media screen and (max-height:720px) and (max-width:768px) {
     #wrapper-6 {
         height: 110vh;
         display: flex;
         justify-content: center;
     }
+}
+
+@media screen and (max-height:400px) and (max-width:768px)  {
+
+    #wrapper-6 {
+        height: max-content;
+        display: flex;
+        justify-content: center;
+    }
+
 }
