@@ -21,7 +21,7 @@ function Search() {
       setMoon("bi bi-moon-fill text-light me-2")
     } else {
       setMoon("bi bi-moon me-2")
-    }
+   }
 
     if(search === "bi bi-search"){
       setSearch("bi bi-search text-light")

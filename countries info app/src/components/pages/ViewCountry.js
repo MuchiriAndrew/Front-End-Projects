@@ -35,7 +35,7 @@ function ViewCountry() {
     } else {
       setMoon("bi bi-moon me-2")
     }
-  } 
+  }
 
   return (
     <>
