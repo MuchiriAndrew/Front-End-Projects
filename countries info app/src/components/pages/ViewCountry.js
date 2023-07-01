@@ -5,28 +5,27 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Link, useParams } from 'react-router-dom';
 import './ViewCountry.css'
+import Map from '../Map';
 
 function ViewCountry() {
 
     const [mode, setMode] = useState(true);
     const [moon, setMoon] = useState("bi bi-moon me-2");
     const [country, setCountry] = useState([])
-    const [theme, setTheme] = useState("Dark")
+    const [theme, setTheme] = useState("Dark");
+    const [location, setLocation] = useState([]);
     const {name} = useParams()
 
-
-
-    useEffect(()=> {
+  useEffect(()=> {
       const fetchCountryData = async() => {
         const res = await fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
 
         const data = await res.json()
         setCountry(data)
-        console.log(data);
       }
 
       fetchCountryData();
-    },[name])
+    },[name, country])
 
     const handleMode = ()=> {
     setMode(!mode);
@@ -40,6 +39,16 @@ function ViewCountry() {
   useEffect(()=> {
     setTheme(mode ? "Dark" : "Light")
   },[mode])
+
+  // useEffect(()=> {
+  //   const fetchCountryData = async() => {
+  //     const res = await fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
+  //     const data = await res.json()
+  //     setLocation([data[0].latlng[0], data[0].latlng[1]]);
+  //     console.log(location);
+  //   }
+  //   fetchCountryData();
+  // },[])
 
 
   return (
@@ -200,6 +209,8 @@ function ViewCountry() {
     </Row>
     })}
    </Container>
+
+   <Map />
 
 
     </Container>
