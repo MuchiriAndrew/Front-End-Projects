@@ -55,6 +55,8 @@ function Countries({mode, region, text}) {
                 <Link id='img_cont' to={`/country/${name.common}`}>
                 <Card.Img id='country-img' className='img-fluid' variant="top" src={flags.png}  />
                 </Link>
+
+                <Link style={{textDecoration:"none"}} to={`/country/${name.common}`}>
                 <Card.Body className='body-txt' >
                     <Card.Title style={{color: mode ? "black" : "white"}} id='country-title'>{name.common}</Card.Title>
                     <Card.Text >
@@ -63,6 +65,7 @@ function Countries({mode, region, text}) {
                         <h4 style={{color: mode ? "black" : "white"}}>Capital: <span>{capital && (<>{capital[0]}{capital[1] && (<>, {capital[1]}</>)}{capital[2] && (<>, {capital[2]}</>)} </>)} </span></h4>
                     </Card.Text>
                 </Card.Body>
+                </Link>
             </Card>
         </article>
     })}
