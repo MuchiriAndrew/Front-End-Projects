@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Link, useParams } from 'react-router-dom';
 import './ViewCountry.css'
-import Map from '../Map';
+import { MapContainer, TileLayer } from 'react-leaflet';
 
 function ViewCountry() {
 
@@ -13,19 +13,17 @@ function ViewCountry() {
     const [moon, setMoon] = useState("bi bi-moon me-2");
     const [country, setCountry] = useState([])
     const [theme, setTheme] = useState("Dark");
-    const [location, setLocation] = useState([]);
     const {name} = useParams()
 
   useEffect(()=> {
       const fetchCountryData = async() => {
         const res = await fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
-
         const data = await res.json()
         setCountry(data)
+        console.log(data);
       }
-
       fetchCountryData();
-    },[name, country])
+    },[name]);
 
     const handleMode = ()=> {
     setMode(!mode);
@@ -39,17 +37,6 @@ function ViewCountry() {
   useEffect(()=> {
     setTheme(mode ? "Dark" : "Light")
   },[mode])
-
-  // useEffect(()=> {
-  //   const fetchCountryData = async() => {
-  //     const res = await fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
-  //     const data = await res.json()
-  //     setLocation([data[0].latlng[0], data[0].latlng[1]]);
-  //     console.log(location);
-  //   }
-  //   fetchCountryData();
-  // },[])
-
 
   return (
     <>
@@ -210,7 +197,30 @@ function ViewCountry() {
     })}
    </Container>
 
-   <Map />
+   {/* <Map coordinates = {coordinates} /> */}
+
+
+   <Container style={{color: mode ? "black" : "white"}} fluid id='map-div' className=' p-0'>
+
+{country.map((mydata)=> {
+     const { latlng } = mydata;
+
+   return<MapContainer 
+              center={[latlng[0], latlng[1] ]}
+              zoom={3}
+              style={{height:"100%"}}
+            >
+
+            <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+
+              {/* <Markerposition coordinates={coordinates}/> */}
+     
+    </MapContainer>
+     })}
+    </Container>
 
 
     </Container>
