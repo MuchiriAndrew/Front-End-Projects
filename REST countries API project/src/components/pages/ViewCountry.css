@@ -136,6 +136,7 @@ h5{
     #txt-col {
         display: flex;
         flex-grow: 1;
+        justify-content: center;
     }
     
     #txt_wrapper {
