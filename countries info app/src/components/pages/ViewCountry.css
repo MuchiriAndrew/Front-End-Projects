@@ -96,7 +96,7 @@ h5{
 }
 
 
-@media only screen and (max-width: 992px){
+@media screen  and (max-width: 992px){
     #wrapper-6 {
         height: 80vh;
         display: flex;
@@ -319,7 +319,7 @@ h5{
 
 @media screen and (max-height:720px) and (max-width:768px) {
     #wrapper-6 {
-        height: 110vh;
+        height: 120vh;
         display: flex;
         justify-content: center;
     }
