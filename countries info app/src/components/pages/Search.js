@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import './Search.css';
 import Navbar from 'react-bootstrap/Navbar';
@@ -12,6 +12,8 @@ function Search() {
   const [search, setSearch] = useState("bi bi-search");
   const [region, setRegion] = useState("");
   const [text, setText] = useState("");
+  const [theme, setTheme] = useState("Dark")
+
 
 
   const handleMode = ()=> {
@@ -30,15 +32,19 @@ function Search() {
     }
   } 
 
+  useEffect(()=> {
+    setTheme(mode ? "Dark" : "Light")
+  },[mode])
+
   return (
     <>
-     <Navbar id='nav' style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)", height:"10vh"}}>
+     <Navbar sticky='top' id='nav' style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)", height:"10vh"}}>
       <Container>
         <h4 style={{color: mode ? "black" : "white"}}>Where in the world?</h4>
 
         <div style={{color: mode ? "black" : "white"}}  id='mode-selector' onClick={handleMode}>
         <i className={moon}></i>
-          Dark Mode
+          {theme} Mode
         </div>
 
       </Container>

@@ -11,6 +11,7 @@ function ViewCountry() {
     const [mode, setMode] = useState(true);
     const [moon, setMoon] = useState("bi bi-moon me-2");
     const [country, setCountry] = useState([])
+    const [theme, setTheme] = useState("Dark")
     const {name} = useParams()
 
 
@@ -29,7 +30,6 @@ function ViewCountry() {
 
     const handleMode = ()=> {
     setMode(!mode);
-
     if(moon === "bi bi-moon me-2" ){
       setMoon("bi bi-moon-fill text-light me-2")
     } else {
@@ -37,17 +37,22 @@ function ViewCountry() {
     }
   }
 
+  useEffect(()=> {
+    setTheme(mode ? "Dark" : "Light")
+  },[mode])
+
+
   return (
     <>
     <Container className='p-0' fluid id='wrapper-4' style={{backgroundColor: mode ? "hsl(0, 0%, 98%)" : "hsl(207, 26%, 17%)"}}>
 
-    <Navbar id='nav' style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)", height:"10vh"}}>
+    <Navbar sticky='top' id='nav' style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)", height:"10vh"}}>
       <Container>
         <h4 style={{color: mode ? "black" : "white"}}>Where in the world?</h4>
 
         <div style={{color: mode ? "black" : "white"}}  id='mode-selector' onClick={handleMode}>
         <i className={moon}></i>
-          Dark Mode
+          {theme} Mode
         </div>
 
       </Container>
