@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import { Link, useParams } from 'react-router-dom';
 import './ViewCountry.css'
 import { MapContainer, TileLayer } from 'react-leaflet';
+import Markerposition from '../Markerposition';
 
 function ViewCountry() {
 
@@ -204,19 +205,25 @@ function ViewCountry() {
 
 {country.map((mydata)=> {
      const { latlng } = mydata;
+     const coordinates = [latlng[0], latlng[1] ]
 
    return<MapContainer 
-              center={[latlng[0], latlng[1] ]}
+              center={coordinates}
               zoom={3}
               style={{height:"100%"}}
             >
 
-            <TileLayer
+            {/* <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              /> */}
+
+              <TileLayer
+                attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+                url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=hmOgtCQqlQpyvMC2LZTL"
               />
 
-              {/* <Markerposition coordinates={coordinates}/> */}
+              <Markerposition coordinates={coordinates}/>
      
     </MapContainer>
      })}
