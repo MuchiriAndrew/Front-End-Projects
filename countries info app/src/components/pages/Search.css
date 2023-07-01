@@ -51,7 +51,8 @@ form {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow:-10px 0 15px rgba(0, 0, 0, 0.5);;
+    box-shadow:-10px 0 15px rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
 }
 
 #wrapper-3 {
