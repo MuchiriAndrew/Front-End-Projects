@@ -176,7 +176,7 @@ function ViewCountry() {
 
         <h5 className='me-md-3 '>Border Countries: </h5>
 
-        {mydata.borders && (
+        {mydata.borders &&(
         <>
           <ul id='list' className='p-0'>
               <li id='borders' >{borders[0]}</li>
@@ -197,9 +197,6 @@ function ViewCountry() {
     </Row>
     })}
    </Container>
-
-   {/* <Map coordinates = {coordinates} /> */}
-
 
    <Container style={{color: mode ? "black" : "white"}} fluid id='map-div' className=' p-0'>
 

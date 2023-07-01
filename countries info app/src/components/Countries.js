@@ -64,9 +64,6 @@ function Countries({mode, region, text}) {
                     </Card.Text>
                 </Card.Body>
             </Card>
-
-            {/* <button onClick={searchForCountry}>search</button> */}
-
         </article>
     })}
 

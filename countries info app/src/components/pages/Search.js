@@ -9,7 +9,6 @@ function Search() {
 
   const [mode, setMode] = useState(true);
   const [moon, setMoon] = useState("bi bi-moon me-2");
-  const [search, setSearch] = useState("bi bi-search");
   const [region, setRegion] = useState("");
   const [text, setText] = useState("");
   const [theme, setTheme] = useState("Dark")
@@ -24,12 +23,6 @@ function Search() {
     } else {
       setMoon("bi bi-moon me-2")
    }
-
-    if(search === "bi bi-search"){
-      setSearch("bi bi-search text-light")
-    } else {
-      setSearch("bi bi-search")
-    }
   } 
 
   useEffect(()=> {
