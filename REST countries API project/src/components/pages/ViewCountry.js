@@ -58,7 +58,7 @@ function ViewCountry({mode, setMode}) {
    <Container id='wrapper-5' className='p-0' fluid style={{backgroundColor: mode ? "hsl(0, 0%, 98%)" : "hsl(207, 26%, 17%)"}}>
     <Link to='/' style={{backgroundColor: mode ? "white" : "hsl(209, 23%, 22%)",color: mode ? "black" : "white"}} id='backbtn'>
     <i className="bi bi-arrow-left me-3"></i>
-       Back
+      Back
     </Link>
    </Container>
 
