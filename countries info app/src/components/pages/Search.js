@@ -5,9 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import Countries from '../Countries';
 
 
-function Search() {
 
-  const [mode, setMode] = useState(true);
+function Search({mode, setMode}) {
+
   const [moon, setMoon] = useState("bi bi-moon me-2");
   const [region, setRegion] = useState("");
   const [text, setText] = useState("");
@@ -19,7 +19,7 @@ function Search() {
     setMode(!mode);
 
     if(moon === "bi bi-moon me-2" ){
-      setMoon("bi bi-moon-fill text-light me-2")
+      setMoon("bi bi-moon-fill me-2")
     } else {
       setMoon("bi bi-moon me-2")
    }

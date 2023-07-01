@@ -8,9 +8,9 @@ import './ViewCountry.css'
 import { MapContainer, TileLayer } from 'react-leaflet';
 import Markerposition from '../Markerposition';
 
-function ViewCountry() {
 
-    const [mode, setMode] = useState(true);
+function ViewCountry({mode, setMode}) {
+
     const [moon, setMoon] = useState("bi bi-moon me-2");
     const [country, setCountry] = useState([])
     const [theme, setTheme] = useState("Dark");
@@ -29,10 +29,10 @@ function ViewCountry() {
     const handleMode = ()=> {
     setMode(!mode);
     if(moon === "bi bi-moon me-2" ){
-      setMoon("bi bi-moon-fill text-light me-2")
+      setMoon("bi bi-moon-fill me-2")
     } else {
       setMoon("bi bi-moon me-2")
-    }
+   }
   }
 
   useEffect(()=> {
