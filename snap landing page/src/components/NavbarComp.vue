@@ -357,6 +357,8 @@ export default {
     align-items: center;
     margin-top: 10px;
     border: none;
+    box-shadow: none;
+
 }
 
 #dropdown2 {
@@ -369,6 +371,8 @@ export default {
     font-size: 14px;
     margin-top: 10px;
     border: none;
+    box-shadow: none;
+
 }
 
 #registerbtn {
