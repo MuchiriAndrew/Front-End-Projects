@@ -20,7 +20,7 @@
       <div class="offcanvas-body p-0">
         <div class="navbar-nav flex-grow-1">
         <ul id="first-navs">
-            <li class="nav-item dropdown">
+            <li id="nav_items"  class="nav-item dropdown">
                 
             <a @click='handleClick' id='nrml_links' href="#"  >
               Features
@@ -79,7 +79,7 @@
             </ul>
             </li>
 
-            <li class="nav-item dropdown">
+            <li id="nav_items" class="nav-item dropdown">
             <a @click='handleClick2' id="nrml_links" href="#" >
               Company
              
@@ -181,8 +181,6 @@ export default {
     margin: 0;
     text-decoration: none;
     list-style: none;
-    /* font-size: 14px;
-    font-family: Epilogue; */
 }
 
 #dropdown1 {
@@ -304,6 +302,12 @@ export default {
     width: 60%;
 }
 
+#nav_items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .navbar-nav {
     width: 100%;
     height: 100%;
@@ -382,5 +386,30 @@ export default {
     color: hsl(0, 0%, 41%);
 }
 }
+
+@media screen and (max-height:700px) and (max-width:768px) {
+    #first-navs {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    margin: 0;
+}
+
+#second-navs {
+    height: 20%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    align-content: center;  
+    padding: 0;
+}
+}
+
 
 </style>
