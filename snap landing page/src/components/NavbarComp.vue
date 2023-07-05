@@ -11,7 +11,7 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
       <div class="offcanvas-header justify-content-end">
-            <img  data-bs-dismiss="offcanvas" id="closebtn" src="../assets/icon-close-menu.svg" alt="close">
+        <img  data-bs-dismiss="offcanvas" id="closebtn" src="../assets/icon-close-menu.svg" alt="close">
       </div>
 
       <div class="offcanvas-body p-0">
