@@ -157,6 +157,8 @@ export default {
 <style>
 .navbar {
     height: 10vh;
+    background-color: hsl(0, 0%, 98%);
+    position: unset;
 }
 .navbar-nav {
     height: 100%;
@@ -170,7 +172,7 @@ export default {
 }
 
 #first-navs {
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -188,16 +190,22 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    font-size: 14px;
+    font-family: Epilogue;
     align-items: center;
     margin-top: 10px;
     color: hsl(0, 0%, 41%);
+    border: none;
+    box-shadow: 0px 0px 30px hsl(0, 1%, 80%);
 }
 
-#dropdown1:hover {
+#drop-list:hover {
     color: black;
+    cursor: pointer;
 }
-#dropdown2:hover {
+.ms-3:hover {
     color: black;
+    cursor: pointer;
 }
 
 #drop-list {
@@ -210,7 +218,7 @@ export default {
 }
 
 #list-img {
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: center;
 }
@@ -230,8 +238,11 @@ export default {
     flex-direction: column;
     justify-content: space-around;
     font-size: 14px;
+    font-family: Epilogue;
     margin-top: 10px;
     color: hsl(0, 0%, 41%);
+    border: none;
+    box-shadow: 0px 0px 30px hsl(0, 1%, 80%);
 }
 
 
@@ -315,7 +326,7 @@ export default {
 
 #first-navs {
     width: 100%;
-    height: 30%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -324,7 +335,7 @@ export default {
 }
 
 #second-navs {
-    height: 10%;
+    height: 15%;
     width: 100%;
     margin: 0;
     display: flex;
@@ -387,7 +398,7 @@ export default {
 @media screen and (max-height:700px) and (max-width:768px) {
     #first-navs {
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -396,7 +407,7 @@ export default {
 }
 
 #second-navs {
-    height: 20%;
+    height: 30%;
     width: 100%;
     margin: 0;
     display: flex;
