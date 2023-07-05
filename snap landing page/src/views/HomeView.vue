@@ -1,12 +1,13 @@
 <template>
   <div class="home">
-    <h1>This is my homepage</h1>
+    <NavbarComp />
   </div>
 </template>
 
 <script>
+import NavbarComp from '../components/NavbarComp.vue'
 export default {
   name: 'HomeView',
-  components: {}
+  components: {NavbarComp}
 }
 </script>
