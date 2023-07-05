@@ -5,7 +5,7 @@
 
     <div id="text-col" class="col-lg-6  order-2 order-lg-1 p-0">
       <div class="inner-text-div ">
-        <h1 id="myh1">Make <br class="d-none d-lg-block"> Remote Work</h1>
+        <h1 id="myh1">Make <br class="d-none d-lg-block"> remote work</h1>
         <p id="myparagraph">Get your team in sync, no matter your location. Streamline processes,create team rituals, and watch productivity soar</p>
 
         <div id="learn" class="rounded-3">Learn More</div>
@@ -70,21 +70,26 @@ export default {
 }
 
 #myh1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
     font-family: Epilogue;
     font-weight: 700;
     font-size: 70px;
     color: black;
+    line-height: 65px;
 }
 
 #myparagraph {
+    width:70%;
     color: hsl(0, 0%, 41%);
     font-family: Epilogue;
-    font-size: 18px;
+    font-size: 14px;
+    margin-bottom: 30px;
 }
 
 #learn {
-    height: 50px;
-    width: 150px;
+    height: 45px;
+    width: 130px;
     border: 1px solid black;
     background-color: black;
     color: white;
@@ -92,8 +97,9 @@ export default {
     justify-content: center;
     align-items: center;
     font-family: Epilogue;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
+    margin-bottom: 70px;
 }
 #clients {
     width: 100%;
@@ -175,12 +181,16 @@ export default {
     font-family: Epilogue;
     font-weight: 700;
     font-size: 36px;
+    line-height: unset;
+     margin-top: unset;
+    margin-bottom: unset;
 }
 
 #myparagraph {
     color: hsl(0, 0%, 41%);
     font-family: Epilogue;
     font-size: 18px;
+    width:unset;
 }
 
 #learn {
@@ -192,6 +202,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: unset;
 }
 #clients {
     width: 100%;
