@@ -8,9 +8,6 @@
 
       <img class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" src="../assets/icon-menu.svg" alt="menu">
     
-
-
-
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
       <div class="offcanvas-header justify-content-end">
