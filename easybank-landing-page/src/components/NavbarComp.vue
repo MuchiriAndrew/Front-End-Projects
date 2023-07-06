@@ -73,7 +73,7 @@ export default {
 .navbar {
     height: 10vh;
     background-color: white;
-    position: unset;
+    position: relative;
     z-index: 1000;
 }
 
