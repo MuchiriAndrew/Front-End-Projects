@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top bg-info p-0">
+  <nav class="navbar navbar-expand-lg p-0">
   <div class="container-fluid p-0">
 
     <a class="navbar-brand" href="#">
@@ -72,8 +72,9 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 .navbar {
     height: 10vh;
-    /* background-color: hsl(0, 0%, 98%); */
+    background-color: white;
     position: unset;
+    z-index: 1000;
 }
 
 .container-fluid {
@@ -158,10 +159,11 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    color:  hsl(220, 16%, 96%);
+    color: hsl(233, 8%, 62%);
 }
 
 #nrml_links:hover {
+     color: black;
     border-bottom: 4px solid hsl(136, 65%, 51%);
     transition: 0.3s ease-in-out;
 }
@@ -216,6 +218,12 @@ export default {
     justify-content: center;
     align-items: center;
     color: black;
+}
+
+#nrml_links:hover {
+    color:unset;
+    border-bottom:unset;
+    transition: unset;
 }
 
 .offcanvas-backdrop {
