@@ -138,6 +138,7 @@ export default {
 }
 
 
+
 @media only screen and (max-width: 992px){ 
 
 .row {
