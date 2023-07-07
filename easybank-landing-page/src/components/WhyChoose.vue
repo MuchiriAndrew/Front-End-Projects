@@ -264,7 +264,7 @@ h2 {
 }
 
 #grid-box {
-  flex-grow: 1;
+  flex-grow: 0.7;
   height: unset;
   width: 100%;
   display: flex;
