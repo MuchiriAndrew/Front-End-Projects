@@ -83,6 +83,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: hsl(0, 0%, 98%);
 }
 #heading {
     width: 50%;
@@ -116,13 +117,13 @@ export default {
 .inner-col-div {
     width: 90%;
     height: 95%;
-    background: aqua;
 }
 
 .card {
     width: 100%;
     height: 100%;
     text-align: start;
+    border: none;
 }
 
 .card-img-top {
@@ -194,7 +195,6 @@ p {
 .inner-col-div {
     width: 90%;
     height: 95%;
-    background: aqua;
 }
 
 .card {
@@ -256,7 +256,6 @@ p {
 .inner-col-div {
     width: 90%;
     height: 95%;
-    background: aqua;
 }
 
 .card {
