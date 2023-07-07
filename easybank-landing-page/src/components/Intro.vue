@@ -91,6 +91,7 @@ export default {
 #myh1 {
     font-family: Public Sans;
     font-size: 60px;
+    color: hsl(233, 26%, 24%);
 }
 
 #introparagraph {
@@ -266,6 +267,7 @@ export default {
 }
  }
 
+/* normal phones landscape view */
 @media only screen and (max-width: 992px) and (max-height:500px){
 #wrapper1{
     height: 300vh;
