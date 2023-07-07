@@ -179,7 +179,7 @@ export default {
 }
 
 #offcanvasNavbar {
-    margin-top: 15vh;
+    margin-top: 12vh;
     width: 90%;
     border-radius: 5px;
 }
@@ -233,13 +233,10 @@ export default {
 
 }
 
-@media only screen and (max-width: 992px) and (max-height:500px){
+@media only screen and (max-width: 992px)and (orientation: landscape){ 
 .navbar {
     height: 15vh;
 }
-}
-
-@media only screen and (max-width: 992px)and (orientation: landscape){ 
 .navbar-brand {
     width: 25%;
 }
@@ -249,8 +246,8 @@ export default {
 }
 
 #offcanvasNavbar {
-    margin-top: 15vh;
-    width: 90%;
+    margin-top: 20vh;
+    width: 40%;
     border-radius: 5px;
 }
 .navbar-nav {
