@@ -233,6 +233,12 @@ export default {
 
 }
 
+@media only screen and (max-width: 992px) and (max-height:500px){
+.navbar {
+    height: 15vh;
+}
+}
+
 @media only screen and (max-width: 992px)and (orientation: landscape){ 
 .navbar-brand {
     width: 25%;
