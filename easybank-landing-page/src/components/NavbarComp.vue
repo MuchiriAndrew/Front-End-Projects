@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg p-0">
+  <nav class="navbar sticky-top navbar-expand-lg p-0">
   <div class="container-fluid p-0">
 
     <a class="navbar-brand" href="#">
