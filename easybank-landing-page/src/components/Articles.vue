@@ -126,6 +126,10 @@ export default {
     border: none;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .card-img-top {
     height: 45%;
 }
@@ -143,6 +147,10 @@ span {
 
 h5 {
     font-family: Public Sans;
+}
+
+h5:hover {
+    color:  hsl(136, 65%, 51%);
 }
 
 p {

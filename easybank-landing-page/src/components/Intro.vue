@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 #wrapper1 {
     height: 90vh;
@@ -104,6 +104,7 @@ export default {
 #request_btn:hover{
     background: linear-gradient(to right, hsl(136, 100%, 63%), hsl(192, 100%, 61%));
     transition: 0.7s ease-in-out;
+    cursor: pointer;
 }
 
 /* tablets */
