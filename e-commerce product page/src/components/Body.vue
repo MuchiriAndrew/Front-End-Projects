@@ -73,30 +73,30 @@
 export default {
     data(){
         return{
-            link: 'http://localhost:8080/img/image-product-1.c95272fd.jpg'
+            link: '../assets/image-product-1-thumbnail.jpg'
         }
     },
     
     methods: {
         picture1() {
-            this.link = "http://localhost:8080/img/image-product-1.c95272fd.jpg"
+            this.link = "../assets/image-product-1-thumbnail.jpg"
         },
         picture2() {
-            this.link = "http://localhost:8080/img/image-product-2.3c0d837c.jpg"
+            this.link = "../assets/image-product-2-thumbnail.jpg"
         },
         picture3() {
-            this.link = "http://localhost:8080/img/image-product-3.18849313.jpg"
+            this.link = "../assets/image-product-3-thumbnail.jpg"
         },
         picture4() {
-            this.link = "http://localhost:8080/img/image-product-4.ed713294.jpg"
+            this.link = "../assets/image-product-4-thumbnail.jpg"
         },
 
         handleNext() {
-            if(this.link === "http://localhost:8080/img/image-product-1.c95272fd.jpg" ){
+            if(this.link === "../assets/image-product-1-thumbnail.jpg" ){
                this.picture2()
-            }else if(this.link ==="http://localhost:8080/img/image-product-2.3c0d837c.jpg" ){
+            }else if(this.link ==="../assets/image-product-2-thumbnail.jpg" ){
                 this.picture3()
-            }else if(this.link ==="http://localhost:8080/img/image-product-3.18849313.jpg" ){
+            }else if(this.link ==="../assets/image-product-3-thumbnail.jpg" ){
                 this.picture4()
             }else{
                 this.picture1()
@@ -104,11 +104,11 @@ export default {
         },
 
         handlePrevious() {
-            if(this.link === "http://localhost:8080/img/image-product-1.c95272fd.jpg" ){
+            if(this.link === "../assets/image-product-1.jpg" ){
                  this.picture4()
-            }else if(this.link === "http://localhost:8080/img/image-product-2.3c0d837c.jpg" ){
+            }else if(this.link === "../assets/image-product-2.jpg" ){
                  this.picture1()
-            }else if(this.link === "http://localhost:8080/img/image-product-3.18849313.jpg" ){
+            }else if(this.link === "../assets/image-product-3.jpg" ){
                  this.picture2()
             }else{
                  this.picture3()
