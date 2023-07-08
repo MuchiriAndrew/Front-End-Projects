@@ -1,14 +1,16 @@
 <template>
-  <div class="home bg-info">
+  <div class="home">
     <NavbarComp />
+    <Body />
   </div>
 </template>
 
 <script>
 import NavbarComp from '../components/NavbarComp.vue'
+import Body from '../components/Body.vue'
 export default {
   name: 'HomeView',
-  components: {NavbarComp}
+  components: {NavbarComp, Body}
 }
 </script>
 
