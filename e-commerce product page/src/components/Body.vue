@@ -2,14 +2,14 @@
     <div id="wrapper" class="container-fluid">
     <div class="row">
 
-        <div id="product-images" class="col bg-warning p-0">
-            <div id="inner-images-div" class="bg-primary">
+        <div id="product-images" class="col p-0">
+            <div id="inner-images-div" class="">
 
                 <div id="current-display">
-                <img class="rounded-3" id="current-image" src="../assets/image-product-1.jpg" alt="">
+                <img class="rounded-0 rounded-md-3" id="current-image" src="../assets/image-product-1.jpg" alt="">
                 </div>
 
-                <div id="thumbnails" class="bg-dark">
+                <div id="thumbnails" class="d-none d-lg-flex">
                     <img class="thumb rounded-3" src="../assets/image-product-1-thumbnail.jpg" alt="">
                     <img class="thumb rounded-3" src="../assets/image-product-2-thumbnail.jpg" alt="">
                     <img class="thumb rounded-3" src="../assets/image-product-3-thumbnail.jpg" alt="">
@@ -19,34 +19,37 @@
             </div>
         </div>
 
-        <div id="product-details" class="col bg-danger p-0">
-            <div id="inner-details-div" class="bg-info">
-                <div id="dets1" class="bg-light">
+        <div id="product-details" class="col p-0">
+            <div id="inner-details-div" class="">
+                <div id="dets1" class="mt-4 mt-lg-0">
                     <h6>SNEAKER COMPANY</h6>
                     <h1>Fall Limited Edition Sneakers</h1>
                     <p>These low profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer</p>
                 </div>
                 
-                <div id="prices-section" class="bg-primary">
+                <div id="prices-section" class="">
                     <div id="price">
                         <h3>$125.00</h3>
-                        <span id="discount" class="rounded-2 p-2">50%</span> 
+                        <span id="discount" class="rounded-2 p-1 p-lg-2">50%</span> 
                     </div>
 
-                    <span id="price-before">$250.00</span>
+                    <span id="price-before"><s>$250.00</s></span>
                 </div>
 
-                <div id="select-section" class="bg-warning">
+                <div id="select-section" class="">
 
-                    <div id="quantity">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
+                    <div id="quantity" class="rounded-3">
+                        <span id="operation" >-</span>
+                        <span style="color:black">0</span>
+                        <span id="operation">+</span>
                     </div>
 
-                    <div id="addbtn">
-                        <img src="../assets/icon-cart.svg" alt="">
-                        Add to cart
+                    <div id="addbtn" class='rounded-3'>
+                        <div id="inner">
+                            <img id="btncart" src="../assets/icon-cart-white.svg" alt="">
+                            Add to cart
+                        </div>
+                        
                     </div>
 
                 </div>
@@ -111,7 +114,6 @@ export default {
 }
 
 #current-display {
-    background: aqua;
     width: 100%;
     height: 80%;
     display: flex;
@@ -132,6 +134,17 @@ export default {
 
 .thumb {
     height: 100%;
+}
+
+.thumb:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+}
+
+.thumb:active {
+    border: 1px solid red;
 }
 
 #dets1 {
@@ -197,7 +210,7 @@ export default {
 
 #price-before {
     width: max-content;
-    color: hsl(223, 64%, 98%);
+    color: gray;
     font-size: 13px;
 }
 
@@ -210,6 +223,359 @@ export default {
     align-items: center;
 }
 
+
+#addbtn {
+    background-color: hsl(26, 100%, 55%);
+    width: 55%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#addbtn:hover {
+    background-color: hsl(26, 100%, 65%);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+}
+
+#inner {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#btncart {
+    height: 100%;
+}
+
+#quantity {
+    width: 40%;
+    height: 55%;
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(229, 100%, 93%);
+}
+
+#quantity span {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+#operation {
+    color: hsl(26, 100%, 55%);
+    font-size: 24px;
+}
+
+#operation:hover {
+    color: hsl(26, 100%, 65%);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px){ 
+#wrapper { 
+    height: 90vh;
+}
+
+.row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#product-images {
+    max-height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner-images-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#current-display {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#current-image {
+   height: 100%;
+}
+
+#product-details {
+    height: 60%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#inner-details-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#dets1 {
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#prices-section {
+    width: 60%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#price {
+    width: 30%;
+}
+
+#select-section {
+    width: 60%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#addbtn {
+    background-color: hsl(26, 100%, 55%);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#addbtn:hover {
+    background-color: unset;
+}
+
+#inner {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#btncart {
+    height: 100%;
+}
+
+#quantity {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(220, 14%, 75%);
+}
+
+#quantity span {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 20px; */
+    font-weight: 700;
+}
+
+#operation {
+        color: hsl(26, 100%, 55%);
+        font-size: 24px;
+}
+
+#operation:hover {
+        color: hsl(26, 100%, 65%);
+        cursor: pointer;
+}
+
+}
+
+
+@media only screen and (max-width: 768px){ 
+
+#wrapper { 
+    height: 90vh;
+}
+
+.row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#product-images {
+    max-height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner-images-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#current-display {
+    background: aqua;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#current-image {
+   width: 100%;
+}
+
+#product-details {
+    height: 60%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#inner-details-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#dets1 {
+    width: 90%;
+    height: 50%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+#prices-section {
+    width: 90%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#price {
+    width: 40%;
+}
+
+
+#select-section {
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#addbtn {
+    background-color: hsl(26, 100%, 55%);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#addbtn:hover {
+    background-color: unset;
+}
+
+#inner {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#btncart {
+    height: 100%;
+}
+
+#quantity {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(220, 14%, 75%);
+}
+
+#quantity span {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 20px; */
+    font-weight: 700;
+}
+
+#operation {
+        color: hsl(26, 100%, 55%);
+        font-size: 24px;
+}
+
+#operation:hover {
+        color: hsl(26, 100%, 65%);
+        cursor: pointer;
+}
+
+}
+
+
+@media screen and (max-height:720px) and (max-width:768px) {
+
+#wrapper { 
+    height: 150vh;
+}
+
+#price {
+    width: 45%;
+}
+
+
+}
 
 
 </style>

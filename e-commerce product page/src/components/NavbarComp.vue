@@ -129,7 +129,7 @@ export default {
 
 .navbar {
     height: 15vh;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid hsl(230, 100%, 93%);
 }
 
 #navbar-wrapper {
@@ -181,6 +181,7 @@ export default {
 #nrml_links:hover {
     border-bottom: 4px solid  hsl(26, 100%, 55%) ;
     transition: 0.2s ease-in-out;
+    color: black;
 }
 
 
@@ -207,7 +208,13 @@ export default {
 
 #avatar:hover {
     border: 2px solid hsl(26, 100%, 55%);
+    cursor: pointer;
+}
 
+#cart:hover {
+    cursor: pointer;
+    scale: 1.2;
+    transition: 0.2s ease-in-out;
 }
 
 #dropdown-menu {
@@ -270,13 +277,24 @@ b {
     height: 20%;
 }
 
+#delete:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
 #checkout {
     width: 90%;
-    height: 30%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: hsl(26, 100%, 55%);
+    color: white;
+}
+
+#checkout:hover {
+    background-color: hsl(26, 100%, 65%); ;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 992px){ 
@@ -347,7 +365,20 @@ b {
 }
 
 #nrml_links:hover {
-    border-bottom: 2px solid orange ;
+    border-bottom: none;
+}
+
+#avatar:hover {
+    border: none;
+    cursor: pointer;
+}
+
+#cart:hover {
+    scale: unset;
+}
+
+#checkout:hover {
+    background-color: hsl(26, 100%, 55%);
 }
 
 #dropdown-menu {
@@ -431,11 +462,6 @@ b {
     align-items: center;
     justify-content: center;
 }
-
-#nrml_links:hover {
-    border-bottom: 2px solid orange ;
-}
-
 #dropdown-menu {
     position: absolute; 
     left: 0; 
