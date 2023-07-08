@@ -395,6 +395,12 @@ b {
 
 }
 
+@media only screen and (max-width: 992px) and (max-height:500px){
+.navbar{
+    height: 20vh;
+}
+}
+
 @media only screen and (max-width: 768px){ 
 
 .navbar {

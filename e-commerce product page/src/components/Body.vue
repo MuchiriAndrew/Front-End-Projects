@@ -6,7 +6,7 @@
             <div id="inner-images-div" class="">
 
                 <div id="current-display">
-                <img class="rounded-0 rounded-md-3" id="current-image" src="../assets/image-product-1.jpg" alt="">
+                <img id="current-image" src="../assets/image-product-1.jpg" alt="">
                 </div>
 
                 <div id="thumbnails" class="d-none d-lg-flex">
@@ -123,6 +123,7 @@ export default {
 
 #current-image {
     height: 100%;
+    border-radius: 1.2rem;
 }
 
 #thumbnails {
@@ -316,6 +317,7 @@ export default {
 
 #current-image {
    height: 100%;
+    border-radius: 1.2rem;
 }
 
 #product-details {
@@ -419,6 +421,12 @@ export default {
 
 }
 
+@media only screen and (max-width: 992px) and (max-height:500px){
+#wrapper{
+    height: 200vh;
+}
+}
+
 
 @media only screen and (max-width: 768px){ 
 
@@ -458,7 +466,8 @@ export default {
 }
 
 #current-image {
-   width: 100%;
+    width: 100%;
+    border-radius: 0;
 }
 
 #product-details {
