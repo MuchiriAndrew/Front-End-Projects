@@ -171,7 +171,7 @@ export default {
 #nrml_links {
     text-decoration: none;
     font-family: Kumbh Sans;
-    color: hsl(220, 14%, 75%);
+    color: hsl(219, 9%, 45%);
     height: 100%;
     display: flex;
     align-items: center;

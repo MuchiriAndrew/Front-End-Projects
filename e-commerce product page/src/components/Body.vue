@@ -6,14 +6,22 @@
             <div id="inner-images-div" class="">
 
                 <div id="current-display">
-                <img id="current-image" src="../assets/image-product-1.jpg" alt="">
+                    <div @click='handlePrevious' class="scrollbtn1 rounded-circle d-flex d-lg-none">
+                        <img id="arrows" src="../assets/icon-previous.svg" alt="previous">
+                    </div>
+                    
+                <img :src="link" class="img-fluid" id="current-image">
+
+                    <div @click='handleNext' class="scrollbtn2 rounded-circle d-flex d-lg-none">
+                        <img id="arrows" src="../assets/icon-next.svg" alt="next">
+                    </div>
                 </div>
 
                 <div id="thumbnails" class="d-none d-lg-flex">
-                    <img class="thumb rounded-3" src="../assets/image-product-1-thumbnail.jpg" alt="">
-                    <img class="thumb rounded-3" src="../assets/image-product-2-thumbnail.jpg" alt="">
-                    <img class="thumb rounded-3" src="../assets/image-product-3-thumbnail.jpg" alt="">
-                    <img class="thumb rounded-3" src="../assets/image-product-4-thumbnail.jpg" alt="">
+                    <img @click='picture1' class="img-fluid thumb rounded-3" src="../assets/image-product-1-thumbnail.jpg" alt="">
+                    <img @click='picture2' class="img-fluid thumb rounded-3" src="../assets/image-product-2-thumbnail.jpg" alt="">
+                    <img @click='picture3' class="img-fluid thumb rounded-3" src="../assets/image-product-3-thumbnail.jpg" alt="">
+                    <img @click='picture4' class="img-fluid thumb rounded-3" src="../assets/image-product-4-thumbnail.jpg" alt="">
                 </div>
 
             </div>
@@ -63,6 +71,50 @@
 
 <script>
 export default {
+    data(){
+        return{
+            link: 'http://localhost:8080/img/image-product-1.c95272fd.jpg'
+        }
+    },
+    
+    methods: {
+        picture1() {
+            this.link = "http://localhost:8080/img/image-product-1.c95272fd.jpg"
+        },
+        picture2() {
+            this.link = "http://localhost:8080/img/image-product-2.3c0d837c.jpg"
+        },
+        picture3() {
+            this.link = "http://localhost:8080/img/image-product-3.18849313.jpg"
+        },
+        picture4() {
+            this.link = "http://localhost:8080/img/image-product-4.ed713294.jpg"
+        },
+
+        handleNext() {
+            if(this.link === "http://localhost:8080/img/image-product-1.c95272fd.jpg" ){
+               this.picture2()
+            }else if(this.link ==="http://localhost:8080/img/image-product-2.3c0d837c.jpg" ){
+                this.picture3()
+            }else if(this.link ==="http://localhost:8080/img/image-product-3.18849313.jpg" ){
+                this.picture4()
+            }else{
+                this.picture1()
+            }
+        },
+
+        handlePrevious() {
+            if(this.link === "http://localhost:8080/img/image-product-1.c95272fd.jpg" ){
+                 this.picture4()
+            }else if(this.link === "http://localhost:8080/img/image-product-2.3c0d837c.jpg" ){
+                 this.picture1()
+            }else if(this.link === "http://localhost:8080/img/image-product-3.18849313.jpg" ){
+                 this.picture2()
+            }else{
+                 this.picture3()
+            }
+        }
+    }
 
 }
 </script>
@@ -419,11 +471,49 @@ export default {
         cursor: pointer;
 }
 
+.scrollbtn1 {
+    width: 60px;
+    height: 60px;
+    background-color: hsl(229, 100%, 93%);
+    position: absolute;
+    left: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollbtn2 {
+    width: 60px;
+    height: 60px;
+    background-color: hsl(229, 100%, 93%);
+    position: absolute;
+    right: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrows {
+    width: 30%;
+}
+
 }
 
 @media only screen and (max-width: 992px) and (max-height:500px){
 #wrapper{
     height: 200vh;
+}
+
+.scrollbtn1 {
+    left: 24%;
+}
+
+.scrollbtn2 {
+    right: 24%;
+}
+
+#arrows {
+    width: 30%;
 }
 }
 
@@ -468,6 +558,32 @@ export default {
 #current-image {
     width: 100%;
     border-radius: 0;
+}
+
+.scrollbtn1 {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollbtn2 {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrows {
+    width: 30%;
 }
 
 #product-details {
