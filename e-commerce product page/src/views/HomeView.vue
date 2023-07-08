@@ -1,12 +1,27 @@
 <template>
-  <div class="home">
-    <h1>This is my HomePage</h1>
+  <div class="home bg-info">
+    <NavbarComp />
   </div>
 </template>
 
 <script>
+import NavbarComp from '../components/NavbarComp.vue'
 export default {
   name: 'HomeView',
-  components: {}
+  components: {NavbarComp}
 }
 </script>
+
+<style scoped>
+.home {
+  height: 100vh;
+  width: 80vw;
+}
+
+@media only screen and (max-width: 992px){ 
+    .home{
+      width: 100vw;
+    }
+}
+
+</style>
