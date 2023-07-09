@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <NavbarComp />
-    <Body />
+    <NavbarComp :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem' :badgeDisplay = 'badgeDisplay' :showProduct = 'showProduct' />
+    <Body :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem' />
   </div>
 </template>
 
@@ -10,7 +10,40 @@ import NavbarComp from '../components/NavbarComp.vue'
 import Body from '../components/Body.vue'
 export default {
   name: 'HomeView',
-  components: {NavbarComp, Body}
+  components: {NavbarComp, Body},
+    data() {
+    return{
+      quantity: 0,
+      badgeDisplay: false,
+      showProduct: false,
+    }
+  },
+
+  methods: {
+    addItem() {
+      this.quantity++
+
+      if(this.quantity === 0) {
+        this.badgeDisplay = false
+        this.showProduct = false
+      } else {
+        this.badgeDisplay = true
+        this.showProduct = true
+      }
+    },
+    subtractItem() {
+      this.quantity--
+
+      if(this.quantity === 0) {
+        this.badgeDisplay = false
+        this.showProduct = false
+      } else {
+        this.badgeDisplay = true
+        this.showProduct = true
+      }
+    }
+  }
+
 }
 </script>
 

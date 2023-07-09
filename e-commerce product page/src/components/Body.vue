@@ -18,10 +18,10 @@
                 </div>
 
                 <div id="thumbnails" class="d-none d-lg-flex">
-                    <img @click='handlePicture1' class="img-fluid thumb rounded-3" src="../assets/image-product-1-thumbnail.jpg" alt="">
-                    <img @click='handlePicture2' class="img-fluid thumb rounded-3" src="../assets/image-product-2-thumbnail.jpg" alt="">
-                    <img @click='handlePicture3' class="img-fluid thumb rounded-3" src="../assets/image-product-3-thumbnail.jpg" alt="">
-                    <img @click='handlePicture4' class="img-fluid thumb rounded-3" src="../assets/image-product-4-thumbnail.jpg" alt="">
+                    <img @click='handlePicture1' class="img-fluid thumb rounded-3" id="thumb1" src="../assets/image-product-1-thumbnail.jpg" alt="">
+                    <img @click='handlePicture2' class="img-fluid thumb rounded-3" id="thumb2" src="../assets/image-product-2-thumbnail.jpg" alt="">
+                    <img @click='handlePicture3' class="img-fluid thumb rounded-3" id="thumb3" src="../assets/image-product-3-thumbnail.jpg" alt="">
+                    <img @click='handlePicture4' class="img-fluid thumb rounded-3" id="thumb4" src="../assets/image-product-4-thumbnail.jpg" alt="">
                 </div>
 
             </div>
@@ -47,9 +47,9 @@
                 <div id="select-section" class="">
 
                     <div id="quantity" class="rounded-3">
-                        <span id="operation" >-</span>
-                        <span style="color:black">0</span>
-                        <span id="operation">+</span>
+                        <span @click="subtractItem" id="operation" >-</span>
+                        <span style="color:black">{{quantity}}</span>
+                        <span @click="addItem" id="operation">+</span>
                     </div>
 
                     <div id="addbtn" class='rounded-3'>
@@ -77,24 +77,69 @@ import picture4 from '../assets/image-product-4.jpg'
 
 
 export default {
+    props: ['quantity', 'addItem', 'subtractItem'],
+
     data(){
         return{
-            link: picture1
+            link: picture1,
+            opacity1:"0.3",
+            opacity2:"1",
+            opacity3:"1",
+            opacity4:"1",
+            border1:"2px solid red",
+            border2:"none",
+            border3:"none",
+            border4:"none",
         }
     },
     
     methods: {
         handlePicture1() {
             this.link = picture1
+            this.opacity1 = "0.3"
+            this.opacity2 = "none"
+            this.opacity3 = "none"
+            this.opacity4 = "none"
+            this.border1 = "2px solid red"
+            this.border2 = "none"
+            this.border3 = "none"
+            this.border4 = "none"
         },
         handlePicture2() {
             this.link = picture2
+            this.opacity2 = "0.3"
+            this.border2 = "2px solid red"
+
+            this.opacity1 = "none"
+            this.opacity3 = "none"
+            this.opacity4 = "none"
+            this.border1 = "none"
+            this.border3 = "none"
+            this.border4 = "none"
         },
         handlePicture3() {
             this.link = picture3
+            this.opacity3 = "0.3"
+            this.border3 = "2px solid red"
+
+            this.opacity1 = "none"
+            this.opacity2 = "none"
+            this.opacity4 = "none"
+            this.border1 = "none"
+            this.border2 = "none"
+            this.border4 = "none"
         },
         handlePicture4() {
             this.link = picture4
+            this.opacity4 = "0.3"
+            this.border4 = "2px solid red"
+
+            this.opacity1 = "none"
+            this.opacity3 = "none"
+            this.opacity2 = "none"
+            this.border1 = "none"
+            this.border3 = "none"
+            this.border2 = "none"
         },
 
         handleNext() {
@@ -196,14 +241,40 @@ export default {
 }
 
 .thumb:hover {
-    opacity: 0.5;
     cursor: pointer;
     scale: 1.1;
     transition: 0.2s ease-in-out;
 }
 
-.thumb:active {
-    border: 1px solid red;
+#thumb1 {
+    opacity: v-bind('opacity1'); 
+    border: v-bind('border1'); 
+}
+
+#thumb1:hover {
+    opacity: 0.5;
+}
+
+#thumb2 {
+    opacity: v-bind('opacity2'); 
+    border: v-bind('border2'); 
+}
+#thumb2:hover {
+    opacity: 0.5;
+}
+#thumb3 {
+    opacity: v-bind('opacity3'); 
+    border: v-bind('border3'); 
+}
+#thumb3:hover {
+    opacity: 0.5;
+}
+#thumb4 {
+    opacity: v-bind('opacity4'); 
+    border: v-bind('border4'); 
+}
+#thumb4:hover {
+    opacity: 0.5;
 }
 
 #dets1 {

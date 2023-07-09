@@ -55,6 +55,7 @@
             <div class="inner-second-nav ">
                 <div class="cart-dropdown">
                     <img @click='handleClick' id="cart" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" src="../assets/icon-cart.svg" alt="cart">
+                    <span v-show="badgeDisplay" id="howmuch" class="rounded-circle"> {{quantity}} </span>
 
                     <ul id="dropdown-menu" class="dropdown-menu p-0">
 
@@ -64,23 +65,25 @@
 
                         <hr class="dropdown-divider">
 
-                        <div id="product" class="">
+                        <div v-if="showProduct" id="product" class="">
 
                             <div id="prod-dets" class="">
                                 <img id="prod-img" src="../assets/image-product-1-thumbnail.jpg" alt="image">
 
                                 <div id="prodtxt" class="">
                                     <span>Fall Limited Edition Sneakers</span>
-                                    <span>$125 x 3 <b>$375.00</b></span>
+                                    <span>$125 x {{quantity}} &nbsp;&nbsp; <b>${{125 * quantity}}</b></span>
                                 </div>
 
-                                <img id="delete" src="../assets/icon-delete.svg" alt="delete">
+                                <img @click="handleDelete" id="delete" src="../assets/icon-delete.svg" alt="delete">
                             </div>
 
                             <div class="rounded-3" id="checkout">
                                 Checkout
                             </div>
                         </div>
+
+                        <h6 v-else>Your cart is empty</h6>
 
                     </ul>
                 </div>
@@ -96,11 +99,13 @@
 
 <script>
 export default {
+
+    props: ['quantity', 'addItem', 'subtractItem', 'badgeDisplay', 'showProduct'],
     
     data() {
         return{
             display:"none",
-            expanded: false
+            expanded: false,
         }
     },
 
@@ -117,6 +122,12 @@ export default {
                 this.expanded = !this.expanded
                 this.setDisplay()
                 console.log(this.display);
+            },
+            handleTotal(){
+                return 125 * this.quantity
+            },
+            handleDelete(){
+                this.showProduct = 0
             }
         }
     }
@@ -225,6 +236,8 @@ export default {
     height:250px;
     display: v-bind('display'); 
     flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 #headertxt {
@@ -295,6 +308,17 @@ b {
 #checkout:hover {
     background-color: hsl(26, 100%, 65%); ;
     cursor: pointer;
+}
+
+#howmuch {
+    font-family: Kumbh Sans;
+    font-size: 50%;
+    font-weight: 700;
+    color: white;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background-color: hsl(26, 100%, 55%);
 }
 
 @media only screen and (max-width: 992px){ 
