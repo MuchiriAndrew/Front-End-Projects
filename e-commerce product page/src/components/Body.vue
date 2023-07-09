@@ -18,10 +18,10 @@
                 </div>
 
                 <div id="thumbnails" class="d-none d-lg-flex">
-                    <img @click='picture1' class="img-fluid thumb rounded-3" src="../assets/image-product-1-thumbnail.jpg" alt="">
-                    <img @click='picture2' class="img-fluid thumb rounded-3" src="../assets/image-product-2-thumbnail.jpg" alt="">
-                    <img @click='picture3' class="img-fluid thumb rounded-3" src="../assets/image-product-3-thumbnail.jpg" alt="">
-                    <img @click='picture4' class="img-fluid thumb rounded-3" src="../assets/image-product-4-thumbnail.jpg" alt="">
+                    <img @click='handlePicture1' class="img-fluid thumb rounded-3" src="../assets/image-product-1-thumbnail.jpg" alt="">
+                    <img @click='handlePicture2' class="img-fluid thumb rounded-3" src="../assets/image-product-2-thumbnail.jpg" alt="">
+                    <img @click='handlePicture3' class="img-fluid thumb rounded-3" src="../assets/image-product-3-thumbnail.jpg" alt="">
+                    <img @click='handlePicture4' class="img-fluid thumb rounded-3" src="../assets/image-product-4-thumbnail.jpg" alt="">
                 </div>
 
             </div>
@@ -70,48 +70,54 @@
 </template>
 
 <script>
+import picture1 from '../assets/image-product-1.jpg'
+import picture2 from '../assets/image-product-2.jpg'
+import picture3 from '../assets/image-product-3.jpg'
+import picture4 from '../assets/image-product-4.jpg'
+
+
 export default {
     data(){
         return{
-            link: '../assets/image-product-1-thumbnail.jpg'
+            link: picture1
         }
     },
     
     methods: {
-        picture1() {
-            this.link = "../assets/image-product-1-thumbnail.jpg"
+        handlePicture1() {
+            this.link = picture1
         },
-        picture2() {
-            this.link = "../assets/image-product-2-thumbnail.jpg"
+        handlePicture2() {
+            this.link = picture2
         },
-        picture3() {
-            this.link = "../assets/image-product-3-thumbnail.jpg"
+        handlePicture3() {
+            this.link = picture3
         },
-        picture4() {
-            this.link = "../assets/image-product-4-thumbnail.jpg"
+        handlePicture4() {
+            this.link = picture4
         },
 
         handleNext() {
-            if(this.link === "../assets/image-product-1-thumbnail.jpg" ){
-               this.picture2()
-            }else if(this.link ==="../assets/image-product-2-thumbnail.jpg" ){
-                this.picture3()
-            }else if(this.link ==="../assets/image-product-3-thumbnail.jpg" ){
-                this.picture4()
+            if(this.link === picture1 ){
+               this.handlePicture2()
+            }else if(this.link ===picture2 ){
+                this.handlePicture3()
+            }else if(this.link ===picture3 ){
+                this.handlePicture4()
             }else{
-                this.picture1()
+                this.handlePicture1()
             }
         },
 
         handlePrevious() {
-            if(this.link === "../assets/image-product-1.jpg" ){
-                 this.picture4()
-            }else if(this.link === "../assets/image-product-2.jpg" ){
-                 this.picture1()
-            }else if(this.link === "../assets/image-product-3.jpg" ){
-                 this.picture2()
+            if(this.link === picture1 ){
+                 this.handlePicture4()
+            }else if(this.link === picture2 ){
+                 this.handlePicture1()
+            }else if(this.link === picture3 ){
+                 this.handlePicture2()
             }else{
-                 this.picture3()
+                 this.handlePicture3()
             }
         }
     }
