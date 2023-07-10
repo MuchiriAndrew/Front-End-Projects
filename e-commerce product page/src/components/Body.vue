@@ -1,5 +1,13 @@
 <template>
     <div id="wrapper" class="container-fluid">
+        <!-- Modal -->
+    <div class="modal fade justify-content-center align-items-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">s</button>
+      </div> -->
+  <Modal :link = 'link' :handleNext = 'handleNext' :handlePrevious = 'handlePrevious' :handlePicture1 = 'handlePicture1' :handlePicture2 = 'handlePicture2' :handlePicture3 = 'handlePicture3' :handlePicture4 = 'handlePicture4'  />
+    </div>
+
     <div class="row">
 
         <div id="product-images" class="col p-0">
@@ -10,12 +18,14 @@
                         <img id="arrows" src="../assets/icon-previous.svg" alt="previous">
                     </div>
                     
-                <img :src="link" class="img-fluid" id="current-image">
+                <img @click = 'handleModal' :src="link" class="img-fluid" id="current-image" data-bs-toggle="modal" data-bs-target="#exampleModal">
 
                     <div @click='handleNext' class="scrollbtn2 rounded-circle d-flex d-lg-none">
                         <img id="arrows" src="../assets/icon-next.svg" alt="next">
                     </div>
                 </div>
+
+                
 
                 <div id="thumbnails" class="d-none d-lg-flex">
                     <img @click='handlePicture1' class="img-fluid thumb rounded-3" id="thumb1" src="../assets/image-product-1-thumbnail.jpg" alt="">
@@ -74,10 +84,11 @@ import picture1 from '../assets/image-product-1.jpg'
 import picture2 from '../assets/image-product-2.jpg'
 import picture3 from '../assets/image-product-3.jpg'
 import picture4 from '../assets/image-product-4.jpg'
-
+import Modal from '../components/Modal.vue'
 
 export default {
     props: ['quantity', 'addItem', 'subtractItem'],
+    components: {Modal},
 
     data(){
         return{
@@ -90,6 +101,8 @@ export default {
             border2:"none",
             border3:"none",
             border4:"none",
+
+            viewModal: "none"
         }
     },
     
@@ -164,13 +177,17 @@ export default {
             }else{
                  this.handlePicture3()
             }
+        },
+
+        handleModal() {
+            this.viewModal = "block"
         }
     }
 
 }
 </script>
 
-<style>
+<style scoped>
 
 * {
     font-family: Kumbh Sans;
@@ -227,6 +244,10 @@ export default {
 #current-image {
     height: 100%;
     border-radius: 1.2rem;
+}
+
+#current-image:hover {
+cursor: pointer;
 }
 
 #thumbnails {

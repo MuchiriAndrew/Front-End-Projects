@@ -11,8 +11,6 @@
 
     </div>
 
-    
-    
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
       <div id="offcanvas" class="offcanvas-header justify-content-start">
@@ -49,7 +47,6 @@
       </div>
 
     </div>
-
 
     <ul id="second-navs" class=" p-0 m-0">
             <div class="inner-second-nav ">
@@ -91,7 +88,6 @@
                 <img id="avatar" src="../assets/image-avatar.png" alt="avatar">
             </div>
     </ul>
-
 
   </div>
 </nav>
