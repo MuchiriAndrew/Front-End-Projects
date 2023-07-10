@@ -75,7 +75,7 @@
                                     <span>$125 x {{quantity}} &nbsp;&nbsp; <b>${{125 * quantity}}</b></span>
                                 </div>
 
-                                <img @click="handleDelete" id="delete" src="../assets/icon-delete.svg" alt="delete">
+                                <img @click='handleDelete' id="delete" src="../assets/icon-delete.svg" alt="delete">
                             </div>
 
                             <div class="rounded-3" id="checkout">
@@ -100,7 +100,7 @@
 <script>
 export default {
 
-    props: ['quantity', 'addItem', 'subtractItem', 'badgeDisplay', 'showProduct'],
+    props: ['quantity', 'addItem', 'subtractItem', 'badgeDisplay', 'showProduct', 'handleDelete'],
     
     data() {
         return{
@@ -117,18 +117,11 @@ export default {
                     this.display = "none"
                 }
             },
-
             handleClick(){
                 this.expanded = !this.expanded
                 this.setDisplay()
                 console.log(this.display);
             },
-            handleTotal(){
-                return 125 * this.quantity
-            },
-            handleDelete(){
-                this.showProduct = 0
-            }
         }
     }
 
@@ -237,7 +230,12 @@ export default {
     display: v-bind('display'); 
     flex-direction: column;
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center; */
+}
+
+#dropdown-menu h6 {
+    width: 100%;
+    text-align: center;
 }
 
 #headertxt {

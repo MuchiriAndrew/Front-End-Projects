@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <NavbarComp :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem' :badgeDisplay = 'badgeDisplay' :showProduct = 'showProduct' />
-    <Body :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem' />
+    <NavbarComp :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem' :badgeDisplay = 'badgeDisplay' :showProduct = 'showProduct' :handleDelete = 'handleDelete' />
+    <Body :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem'/>
   </div>
 </template>
 
@@ -41,6 +41,11 @@ export default {
         this.badgeDisplay = true
         this.showProduct = true
       }
+    },
+    handleDelete(){
+        this.showProduct = false
+        this.quantity = 0
+        this.badgeDisplay = false
     }
   }
 
