@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <NavbarComp :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem' :badgeDisplay = 'badgeDisplay' :showProduct = 'showProduct' :handleDelete = 'handleDelete' />
-    <Body :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem'/>
+    <NavbarComp :quantity = 'quantity' :badgeQuantity = 'badgeQuantity' :subtractItem = 'subtractItem'  :addItem = 'addItem' :badgeDisplay = 'badgeDisplay' :showProduct = 'showProduct' :handleDelete = 'handleDelete' />
+    <Body :quantity = 'quantity' :subtractItem = 'subtractItem'  :addItem = 'addItem' :addToCart = 'addToCart'/>
   </div>
 </template>
 
@@ -16,6 +16,7 @@ export default {
       quantity: 0,
       badgeDisplay: true,
       showProduct: true,
+      badgeQuantity: null
     }
   },
 
@@ -28,34 +29,38 @@ export default {
       this.quantity = localStorage.getItem('quantity')
     },
 
-    addItem() {
-      this.quantity++
-      this.setVal()
-
-      if(this.quantity === 0) {
-        this.badgeDisplay = false
-        this.showProduct = false
-      } else {
+    addToCart() {
+      if(this.quantity > 0) {
+        this.badgeQuantity = this.quantity
         this.badgeDisplay = true
         this.showProduct = true
       }
     },
+
+    addItem() {
+
+      if(this.badgeQuantity === this.quantity){
+        this.quantity++
+        this.badgeQuantity++
+      }
+      this.setVal()
+    },
     subtractItem() {
-      if(this.quantity > 0 ){
+      if(this.quantity > 0 && this.badgeQuantity > 0 && this.badgeQuantity === this.quantity){
         this.quantity--
+        this.badgeQuantity--
         this.setVal()
       }
-      if(this.quantity === 0) {
+
+      if(this.badgeQuantity <= 0){
         this.badgeDisplay = false
         this.showProduct = false
-      } else {
-        this.badgeDisplay = true
-        this.showProduct = true
       }
     },
     handleDelete(){
         this.showProduct = false
         this.quantity = 0
+        this.badgeQuantity = 0
         this.badgeDisplay = false
         this.setVal()
     }
@@ -63,11 +68,11 @@ export default {
 
   created: function() {
     this.getVal()
-    if(this.quantity <= 0) {
+    this.badgeQuantity = this.quantity
+    if(this.quantity <= 0  || this.badgeQuantity <= 0) {
       this.badgeDisplay = false
       this.showProduct = false
     }
-    console.log(this.badgeDisplay);
   },
 
 }

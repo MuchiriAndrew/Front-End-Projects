@@ -61,7 +61,7 @@
                         <span @click="addItem" id="operation">+</span>
                     </div>
 
-                    <div id="addbtn" class='rounded-3'>
+                    <div @click = 'addToCart' id="addbtn" class='rounded-3'>
                         <div id="inner">
                             <img id="btncart" src="../assets/icon-cart-white.svg" alt="">
                             Add to cart
@@ -86,7 +86,7 @@ import picture4 from '../assets/image-product-4.jpg'
 import Modal from '../components/Modal.vue'
 
 export default {
-    props: ['quantity', 'addItem', 'subtractItem'],
+    props: ['quantity', 'addItem', 'subtractItem', 'addToCart'],
     components: {Modal},
 
     data(){

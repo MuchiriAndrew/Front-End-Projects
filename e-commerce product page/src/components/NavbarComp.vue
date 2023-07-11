@@ -53,7 +53,7 @@
             <div class="inner-second-nav ">
                 <div class="cart-dropdown">
                     <img @click='handleClick' id="cart" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" src="../assets/icon-cart.svg" alt="cart">
-                    <span v-show="badgeDisplay" id="howmuch" class="rounded-circle"> {{quantity}} </span>
+                    <span v-show="badgeDisplay" id="howmuch" class="rounded-circle"> {{badgeQuantity}} </span>
 
                     <ul id="dropdown-menu" class="dropdown-menu p-0">
 
@@ -70,7 +70,7 @@
 
                                 <div id="prodtxt" class="">
                                     <span>Fall Limited Edition Sneakers</span>
-                                    <span>$125 x {{quantity}} &nbsp;&nbsp; <b>${{125 * quantity}}</b></span>
+                                    <span>$125 x {{badgeQuantity}} &nbsp;&nbsp; <b>${{125 * badgeQuantity}}</b></span>
                                 </div>
 
                                 <img @click='handleDelete' id="delete" src="../assets/icon-delete.svg" alt="delete">
@@ -97,7 +97,7 @@
 <script>
 export default {
 
-    props: ['quantity', 'addItem', 'subtractItem', 'badgeDisplay', 'showProduct', 'handleDelete'],
+    props: ['quantity', 'badgeQuantity', 'addItem', 'subtractItem', 'badgeDisplay', 'showProduct', 'handleDelete'],
     
     data() {
         return{
