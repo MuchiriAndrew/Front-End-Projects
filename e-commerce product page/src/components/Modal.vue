@@ -1,22 +1,23 @@
 <template>
 <!-- Modal -->
 
-  <div class="modal-dialog modal-dialog-centered bg-primary" id="wrapper">
-    <div class="modal-header pt-0 pb-3" id="header">
-        <button id="closebtn" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="../assets/icon-close.svg" alt=""></button>
-      </div>
+  <div class="modal-dialog modal-dialog-centered" id="wrapper">
+
+    <div class="pt-4 pb-0 pe-3" id="header">
+        <button class="p-0" id="closebtn" data-bs-dismiss="modal" aria-label="Close"><img id="closeimg" src="../assets/icon-close-orange.svg" alt=""></button>
+    </div>
 
     <div class="modal-content rounded-5" id="content">
 
                 <div id="current-display">
-                    <div @click='handlePrevious' class="scrollbtn1 rounded-circle d-flex d-lg-none">
-                        <img id="arrows" src="../assets/icon-previous.svg" alt="previous">
+                    <div @click='handlePrevious'  id="arrowdiv1" class="scrollbtn1 rounded-circle bg-white">
+                        <img id="arrow1" src="../assets/icon-previous.svg" alt="previous">
                     </div>
                     
-                <img @click = 'handleModal' :src="link" class="img-fluid rounded-4" id="current-image" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img @click = 'handleModal' :src="link" class="img-fluid rounded-4" id="current-image">
 
-                    <div @click='handleNext' class="scrollbtn2 rounded-circle d-flex d-lg-none">
-                        <img id="arrows" src="../assets/icon-next.svg" alt="next">
+                    <div @click='handleNext' id="arrowdiv2"  class="scrollbtn2 rounded-circle bg-white">
+                        <img id="arrow2" src="../assets/icon-next.svg" alt="next">
                     </div>
                 </div>
 
@@ -33,7 +34,7 @@
 
 <script>
 export default {
-    props:['link', 'handleNext', 'handlePrevious', 'handlePicture1', 'handlePicture2', 'handlePicture3', 'handlePicture4']
+    props:['link', 'handleNext', 'handlePrevious', 'handlePicture1', 'handlePicture2', 'handlePicture3', 'handlePicture4', 'opacity1', 'opacity2', 'opacity3', 'opacity4', 'border1', 'border2', 'border3', 'border4']
 
 }
 </script>
@@ -52,14 +53,14 @@ export default {
 }
 
 #header {
-    width: 100%;
+    width: 65%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
 }
 
 #closebtn {
     /* background: aqua; */
-    width:65%;
+    width:max-content;
     border: none;
     background: transparent;
     height: 20px;
@@ -70,17 +71,30 @@ export default {
     height: 100%;
 }
 
+/* #closebtn:hover{
+    cursor: pointer;
+} */
+#closeimg:hover{
+    cursor: pointer;
+}
+
 #content {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: transparent;
+    border: none;
 }
 
 #current-display{
     height:70%;
     width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #current-image {
@@ -96,6 +110,71 @@ export default {
 
 .thumb {
     width: 20%;
+}
+
+.thumb:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+}
+
+#thumb1 {
+    opacity: v-bind('opacity1'); 
+    border: v-bind('border1'); 
+}
+
+#thumb1:hover {
+    opacity: 0.5;
+}
+
+#thumb2 {
+    opacity: v-bind('opacity2'); 
+    border: v-bind('border2'); 
+}
+#thumb2:hover {
+    opacity: 0.5;
+}
+#thumb3 {
+    opacity: v-bind('opacity3'); 
+    border: v-bind('border3'); 
+}
+#thumb3:hover {
+    opacity: 0.5;
+}
+#thumb4 {
+    opacity: v-bind('opacity4'); 
+    border: v-bind('border4'); 
+}
+#thumb4:hover {
+    opacity: 0.5;
+}
+
+
+#arrowdiv1 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 17%;
+}
+
+#arrowdiv1:hover {
+cursor: pointer;
+}
+#arrowdiv2:hover {
+cursor: pointer;
+}
+
+#arrowdiv2 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 17%;
 }
 
 </style>

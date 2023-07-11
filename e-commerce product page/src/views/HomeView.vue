@@ -32,7 +32,10 @@ export default {
       }
     },
     subtractItem() {
-      this.quantity--
+      if(this.quantity > 0 ){
+        this.quantity--
+      }
+      
 
       if(this.quantity === 0) {
         this.badgeDisplay = false

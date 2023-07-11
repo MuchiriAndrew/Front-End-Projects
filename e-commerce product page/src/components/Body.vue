@@ -1,11 +1,9 @@
 <template>
     <div id="wrapper" class="container-fluid">
+
         <!-- Modal -->
-    <div class="modal fade justify-content-center align-items-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <!-- <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">s</button>
-      </div> -->
-  <Modal :link = 'link' :handleNext = 'handleNext' :handlePrevious = 'handlePrevious' :handlePicture1 = 'handlePicture1' :handlePicture2 = 'handlePicture2' :handlePicture3 = 'handlePicture3' :handlePicture4 = 'handlePicture4'  />
+    <div v-if="showModal" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <Modal :link = 'link' :handleNext = 'handleNext' :handlePrevious = 'handlePrevious' :handlePicture1 = 'handlePicture1' :handlePicture2 = 'handlePicture2' :handlePicture3 = 'handlePicture3' :handlePicture4 = 'handlePicture4' :opacity1 = 'opacity1' :opacity2 = 'opacity2' :opacity3 = 'opacity3' :opacity4 = 'opacity4' :border1 = 'border1' :border2 = 'border2' :border3 = 'border3' :border4 = 'border4'  />
     </div>
 
     <div class="row">
@@ -18,7 +16,8 @@
                         <img id="arrows" src="../assets/icon-previous.svg" alt="previous">
                     </div>
                     
-                <img @click = 'handleModal' :src="link" class="img-fluid" id="current-image" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img v-if="showModal" :src="link" class="img-fluid" id="current-image" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img v-else :src="link" class="img-fluid" id="current-image">
 
                     <div @click='handleNext' class="scrollbtn2 rounded-circle d-flex d-lg-none">
                         <img id="arrows" src="../assets/icon-next.svg" alt="next">
@@ -101,8 +100,8 @@ export default {
             border2:"none",
             border3:"none",
             border4:"none",
-
-            viewModal: "none"
+            screenWidth: 0,
+            showModal: true
         }
     },
     
@@ -154,7 +153,6 @@ export default {
             this.border3 = "none"
             this.border2 = "none"
         },
-
         handleNext() {
             if(this.link === picture1 ){
                this.handlePicture2()
@@ -166,7 +164,6 @@ export default {
                 this.handlePicture1()
             }
         },
-
         handlePrevious() {
             if(this.link === picture1 ){
                  this.handlePicture4()
@@ -178,12 +175,27 @@ export default {
                  this.handlePicture3()
             }
         },
+        onScreenResize() {
+            window.addEventListener("resize", () => {
+            this.updateScreenWidth();
+        });
+        },
 
-        handleModal() {
-            this.viewModal = "block"
-        }
-    }
+        updateScreenWidth() {
+            this.screenWidth = window.innerWidth;
 
+            if(this.screenWidth > 992) {
+                this.showModal = true
+            } else {
+                this.showModal = false
+            }
+            },
+        },
+
+          mounted() {
+            this.updateScreenWidth();
+            this.onScreenResize();
+        },
 }
 </script>
 
@@ -199,6 +211,10 @@ export default {
 
 .row {
     height: 100%;
+}
+
+.modal {
+    display: none;
 }
 
 #product-images {
@@ -339,6 +355,7 @@ cursor: pointer;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    color: black;
 }
 
 #price h3 {
@@ -409,7 +426,7 @@ cursor: pointer;
     height: 55%;
     display: flex;
     flex-direction: row;
-    background-color: hsl(229, 100%, 93%);
+    background-color: hsl(228, 100%, 98%);
 }
 
 #quantity span {
@@ -547,7 +564,7 @@ cursor: pointer;
     height: 50px;
     display: flex;
     flex-direction: row;
-    background-color: hsl(220, 14%, 75%);
+    background-color: hsl(228, 100%, 98%);
 }
 
 #quantity span {
@@ -762,7 +779,7 @@ cursor: pointer;
     height: 50px;
     display: flex;
     flex-direction: row;
-    background-color: hsl(220, 14%, 75%);
+    background-color: hsl(228, 100%, 98%);
 }
 
 #quantity span {
