@@ -73,7 +73,6 @@ export default {
 }
 
 .row {
-    background: aqua;
     height: 100%;
     display: flex;
     flex-direction: row;
