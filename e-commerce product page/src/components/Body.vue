@@ -96,7 +96,7 @@ export default {
             opacity2:"1",
             opacity3:"1",
             opacity4:"1",
-            border1:"2px solid red",
+            border1:"2px solid hsl(26, 100%, 55%)",
             border2:"none",
             border3:"none",
             border4:"none",
@@ -112,7 +112,7 @@ export default {
             this.opacity2 = "none"
             this.opacity3 = "none"
             this.opacity4 = "none"
-            this.border1 = "2px solid red"
+            this.border1 = "2px solid hsl(26, 100%, 55%)"
             this.border2 = "none"
             this.border3 = "none"
             this.border4 = "none"
@@ -120,7 +120,7 @@ export default {
         handlePicture2() {
             this.link = picture2
             this.opacity2 = "0.3"
-            this.border2 = "2px solid red"
+            this.border2 = "2px solid hsl(26, 100%, 55%)"
 
             this.opacity1 = "none"
             this.opacity3 = "none"
@@ -132,7 +132,7 @@ export default {
         handlePicture3() {
             this.link = picture3
             this.opacity3 = "0.3"
-            this.border3 = "2px solid red"
+            this.border3 = "2px solid hsl(26, 100%, 55%)"
 
             this.opacity1 = "none"
             this.opacity2 = "none"
@@ -144,7 +144,7 @@ export default {
         handlePicture4() {
             this.link = picture4
             this.opacity4 = "0.3"
-            this.border4 = "2px solid red"
+            this.border4 = "2px solid hsl(26, 100%, 55%)"
 
             this.opacity1 = "none"
             this.opacity3 = "none"
