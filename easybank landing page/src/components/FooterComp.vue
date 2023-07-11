@@ -1,13 +1,13 @@
 <template>
   <div id="wrapper4">
 
-    <div id="footer-contents" class="container">
+    <div id="footer-contents" class="container ">
     <div class="row">
-        <div id="col1" class="col p-0">
 
+        <div id="col1" class="col p-0 ">
         <div class="inner-footer-cont1">
             
-                <div id="logo_socials" class="col ">
+                <div id="logo_socials" class="col">
                 <img id="logo" src="../assets/logo-white.svg" alt="logo">
                 <ul id="socials-list">
                     <li><img src="../assets/icon-facebook.svg" alt=""></li>
@@ -34,7 +34,7 @@
         </div>
 
 
-        <div id="col2" class="col p-0">
+        <div id="col2" class="col p-0 ">
         <div class="inner-footer-cont2">
             <div id="content" class="">
 
@@ -46,6 +46,7 @@
             </div>
         </div>
         </div>
+
     </div>
     </div>
 
@@ -70,6 +71,8 @@ export default {
 
 .row {
     height: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 #col1 {
@@ -194,12 +197,15 @@ span {
 
 @media only screen and (max-width: 767px){
 #wrapper4 {
-    height: 80vh;
+    height: 60vh;
     background-color: hsl(233, 26%, 24%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #footer-contents {
-    height: 100%;
+    height: 80%;
 }
 
 .row {
@@ -209,15 +215,17 @@ span {
 }
 
 #col1 {
+    height: 80% ;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #col2 { 
+    height: 20%;
      display: flex;  
-     justify-content: start;
-     align-items: start;
+     justify-content: star;
+     align-items: center;
 }
 
 .inner-footer-cont1 {
@@ -230,19 +238,17 @@ span {
 
 .inner-footer-cont2 {
     width: 100%;
-    height: 70%;
+    height: 100%;
     display: flex;
     justify-content:center;
-    align-items: start;
 }
 
-
 #logo_socials {
+    height: 25%;
     width: 100%;
-    height: unset;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -262,7 +268,7 @@ span {
 
 #sm-col {
     list-style: none;
-    height:70%;
+    height:37.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -273,7 +279,7 @@ span {
 
 #content {
     width: 100%;
-    height: 60%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,7 +304,7 @@ span {
 
 @media screen and (max-height:720px) and (max-width:768px) {
 #wrapper4 {
-    height: 120vh;
+    height: 90vh;
 }
 }
 
