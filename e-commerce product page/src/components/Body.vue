@@ -589,7 +589,7 @@ cursor: pointer;
 .scrollbtn1 {
     width: 60px;
     height: 60px;
-    background-color: hsl(229, 100%, 93%);
+    background-color: hsl(228, 100%, 98%);
     position: absolute;
     left: 14%;
     display: flex;
@@ -600,7 +600,7 @@ cursor: pointer;
 .scrollbtn2 {
     width: 60px;
     height: 60px;
-    background-color: hsl(229, 100%, 93%);
+    background-color: hsl(228, 100%, 98%);
     position: absolute;
     right: 14%;
     display: flex;

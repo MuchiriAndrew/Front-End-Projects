@@ -14,14 +14,23 @@ export default {
     data() {
     return{
       quantity: 0,
-      badgeDisplay: false,
-      showProduct: false,
+      badgeDisplay: true,
+      showProduct: true,
     }
   },
 
   methods: {
+    setVal() {
+      localStorage.setItem('quantity', this.quantity)
+    },
+
+    getVal() {
+      this.quantity = localStorage.getItem('quantity')
+    },
+
     addItem() {
       this.quantity++
+      this.setVal()
 
       if(this.quantity === 0) {
         this.badgeDisplay = false
@@ -34,9 +43,8 @@ export default {
     subtractItem() {
       if(this.quantity > 0 ){
         this.quantity--
+        this.setVal()
       }
-      
-
       if(this.quantity === 0) {
         this.badgeDisplay = false
         this.showProduct = false
@@ -49,8 +57,18 @@ export default {
         this.showProduct = false
         this.quantity = 0
         this.badgeDisplay = false
+        this.setVal()
     }
-  }
+  },
+
+  created: function() {
+    this.getVal()
+    if(this.quantity <= 0) {
+      this.badgeDisplay = false
+      this.showProduct = false
+    }
+    console.log(this.badgeDisplay);
+  },
 
 }
 </script>
