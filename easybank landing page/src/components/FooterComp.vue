@@ -1,10 +1,10 @@
 <template>
   <div id="wrapper4">
 
-    <div id="footer-contents" class="container ">
+    <div id="footer-contents">
     <div class="row">
 
-        <div id="col1" class="col p-0 ">
+        <div id="col1" class="p-0 ">
         <div class="inner-footer-cont1">
             
                 <div id="logo_socials" class="col">
@@ -34,7 +34,7 @@
         </div>
 
 
-        <div id="col2" class="col p-0 ">
+        <div id="col2" class="p-0 ">
         <div class="inner-footer-cont2">
             <div id="content" class="">
 
@@ -63,19 +63,26 @@ export default {
 #wrapper4 {
     height: 30vh;
     background-color: hsl(233, 26%, 24%);
+    display: flex;
+    justify-content: center;
 }
 
 #footer-contents {
     height: 100%;
+    width: 90%;
 }
 
 .row {
+    background: aqua;
     height: 100%;
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
 
 #col1 {
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -83,6 +90,7 @@ export default {
 }
 
 #col2 {
+    width: 50%;
      height: 100%; 
      display: flex;  
      justify-content: center;
@@ -176,7 +184,7 @@ li:hover {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 992px){
+ @media only screen and (max-width: 992px){
 #wrapper4 {
     height: 20vh;
     background-color: hsl(233, 26%, 24%);
@@ -193,11 +201,11 @@ span {
 #wrapper4{
     height: 50vh;
 }
-}
+} 
 
 @media only screen and (max-width: 767px){
 #wrapper4 {
-    height: 60vh;
+    height: 80vh;
     background-color: hsl(233, 26%, 24%);
     display: flex;
     justify-content: center;
@@ -205,27 +213,33 @@ span {
 }
 
 #footer-contents {
-    height: 80%;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row {
     height: 100%;
-    display: flex;
+    width: 100%;
     flex-direction: column;
 }
 
 #col1 {
-    height: 80% ;
+    width: 100%;
+    height:80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #col2 { 
+    width: 100%;
     height: 20%;
-     display: flex;  
-     justify-content: star;
-     align-items: center;
+    display: flex;  
+    justify-content: star;
+    align-items: center;
 }
 
 .inner-footer-cont1 {
@@ -244,11 +258,10 @@ span {
 }
 
 #logo_socials {
-    height: 25%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
