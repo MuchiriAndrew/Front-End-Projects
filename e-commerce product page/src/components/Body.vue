@@ -546,7 +546,7 @@ cursor: pointer;
 }
 
 #addbtn:hover {
-    background-color: unset;
+    background-color: hsl(26, 100%, 65%);
 }
 
 #inner {
@@ -761,7 +761,7 @@ cursor: pointer;
 }
 
 #addbtn:hover {
-    background-color: unset;
+    background-color:  hsl(26, 100%, 65%);
 }
 
 #inner {
