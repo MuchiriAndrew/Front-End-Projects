@@ -347,7 +347,7 @@ b {
     height: 50%;
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 #offcanvasNavbar {
