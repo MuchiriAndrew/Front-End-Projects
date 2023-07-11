@@ -3,7 +3,8 @@
   <div id="navbar-wrapper" class="container-fluid p-0">
 
     <div id="brand-div" class="">
-    <img class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" src="../assets/icon-menu.svg" alt="menu">
+
+    <img id="menu-toggler" class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" src="../assets/icon-menu.svg" alt="menu">
 
     <a class="navbar-brand p-0" style="display:flex; justify-content:center; align-items:center" href="#">
         <img id="brand-img" class="img-fluid" src="../assets/logo.svg" alt="">
@@ -89,7 +90,7 @@
             </div>
     </ul>
 
-  </div>
+  </div> 
 </nav>
 </template>
 
@@ -125,8 +126,6 @@ export default {
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-
-
 .navbar {
     height: 15vh;
     border-bottom: 1px solid hsl(230, 100%, 93%);
@@ -315,6 +314,11 @@ b {
     background-color: hsl(26, 100%, 55%);
 }
 
+#menu-toggler {
+    width: 30px;
+    height: 20px;
+}
+
 @media only screen and (max-width: 992px){ 
 
 .navbar {
@@ -324,7 +328,7 @@ b {
 
 #brand-div {
     height: 100%;
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -332,7 +336,7 @@ b {
 }
 
 #second-navs {
-    width: 30%;
+    width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
