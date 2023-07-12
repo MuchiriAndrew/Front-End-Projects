@@ -47,7 +47,7 @@ function ViewCountry({mode, setMode}) {
 
     <Navbar sticky='top' id='nav' style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)", height:"10vh"}}>
       <Container>
-        <h4 style={{color: mode ? "black" : "white"}}>Where in the world?</h4>
+      <Link to={'/'} style={{color: mode ? "black" : "white", textDecoration:"none"}}><b>Where in the world?</b></Link>
 
         <div style={{color: mode ? "black" : "white"}}  id='mode-selector' onClick={handleMode}>
         <i className={moon}></i>
@@ -181,11 +181,11 @@ function ViewCountry({mode, setMode}) {
         {mydata.borders &&(
         <>
           <ul id='list' className='p-0'>
-              <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[0]}`}>{borders[0]}</Link>
-              {borders[1] && (<> <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[1]}`}>{borders[1]}</Link></>)}
-              {borders[2] && (<> <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[2]}`}>{borders[2]}</Link></>)}
-              {borders[3] && (<> <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[3]}`}>{borders[3]}</Link></>)}
-              {borders[4] && (<> <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[4]}`}>{borders[4]}</Link></>)}
+              <Link style={{color: mode ? "black" : "white", backgroundColor:mode ? "white" : "hsl(209, 23%, 22%)"}} id='borders' to={`/country/${borders[0]}`}>{borders[0]}</Link>
+              {borders[1] && (<> <Link style={{color: mode ? "black" : "white", backgroundColor:mode ? "white" : "hsl(209, 23%, 22%)"}} id='borders' to={`/country/${borders[1]}`}>{borders[1]}</Link></>)}
+              {borders[2] && (<> <Link style={{color: mode ? "black" : "white", backgroundColor:mode ? "white" : "hsl(209, 23%, 22%)"}} id='borders' to={`/country/${borders[2]}`}>{borders[2]}</Link></>)}
+              {borders[3] && (<> <Link style={{color: mode ? "black" : "white", backgroundColor:mode ? "white" : "hsl(209, 23%, 22%)"}} id='borders' to={`/country/${borders[3]}`}>{borders[3]}</Link></>)}
+              {borders[4] && (<> <Link style={{color: mode ? "black" : "white", backgroundColor:mode ? "white" : "hsl(209, 23%, 22%)"}} id='borders' to={`/country/${borders[4]}`}>{borders[4]}</Link></>)}
           </ul>
         </>
       )}

@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import './Search.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Countries from '../Countries';
+import { Link } from 'react-router-dom';
 
 
 
@@ -33,7 +34,7 @@ function Search({mode, setMode}) {
     <>
      <Navbar sticky='top' id='nav' style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)", height:"10vh"}}>
       <Container>
-        <h4 style={{color: mode ? "black" : "white"}}>Where in the world?</h4>
+        <Link to={'./'} style={{color: mode ? "black" : "white", textDecoration:"none"}}> <b>Where in the world?</b> </Link>
 
         <div style={{color: mode ? "black" : "white"}}  id='mode-selector' onClick={handleMode}>
         <i className={moon}></i>

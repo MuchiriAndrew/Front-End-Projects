@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #map-div {
@@ -80,7 +81,8 @@
 }
 
 #borders {
-    border: 1px solid gray;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 5px;
     width: 90px;
     text-align: center;
