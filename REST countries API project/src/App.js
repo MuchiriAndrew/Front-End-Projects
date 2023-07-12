@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -10,6 +10,19 @@ import { useState } from 'react';
 function App() {
 
   const [mode, setMode] = useState(false);
+
+  // useEffect(() => {
+  //   localStorage.setItem('mode', mode);
+  //   console.log(mode);
+  // }, [mode]);
+
+  // useEffect(() => {
+  //   const prevMode = localStorage.getItem('mode')
+  //   if (prevMode) {
+  //     setMode(prevMode)
+  //     console.log(mode);
+  //   }
+  // }, []);
 
   return(
     <>

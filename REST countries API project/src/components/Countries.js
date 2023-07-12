@@ -48,15 +48,15 @@ function Countries({mode, region, text}) {
 
 
     {countries.length > 0 && countries.map((country)=> {
-        const {name, population, region, capital, flags, fifa } = country;
+        const {name, population, region, capital, flags, cca3 } = country;
 
         return <article id='cardcont'>
             <Card style={{backgroundColor:mode ? "hsl(0, 0%, 100%)" : "hsl(209, 23%, 22%)"}} id='mycards'>
-                <Link id='img_cont' to={`/country/${fifa}`}>
+                <Link id='img_cont' to={`/country/${cca3}`}>
                 <Card.Img id='country-img' className='img-fluid' variant="top" src={flags.png}  />
                 </Link>
 
-                <Link style={{textDecoration:"none"}} to={`/country/${fifa}`}>
+                <Link style={{textDecoration:"none"}} to={`/country/${cca3}`}>
                 <Card.Body className='body-txt' >
                     <Card.Title style={{color: mode ? "black" : "white"}} id='country-title'>{name.common}</Card.Title>
                     <Card.Text >
