@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(true);
 
   // useEffect(() => {
   //   localStorage.setItem('mode', mode);
