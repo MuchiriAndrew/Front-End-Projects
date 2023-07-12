@@ -9,6 +9,11 @@
     justify-content: center;
 }
 
+#cardcont:hover {
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+}
+
 #mycards {
     width: 15rem;
     height: 20rem;
