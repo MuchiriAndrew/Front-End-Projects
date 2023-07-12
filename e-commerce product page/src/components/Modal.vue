@@ -59,7 +59,6 @@ export default {
 }
 
 #closebtn {
-    /* background: aqua; */
     width:max-content;
     border: none;
     background: transparent;
@@ -71,9 +70,6 @@ export default {
     height: 100%;
 }
 
-/* #closebtn:hover{
-    cursor: pointer;
-} */
 #closeimg:hover{
     cursor: pointer;
 }
