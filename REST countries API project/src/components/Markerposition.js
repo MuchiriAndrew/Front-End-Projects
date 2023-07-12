@@ -10,8 +10,6 @@ useEffect(()=> {
     map.flyTo(coordinates, 3, {
         animate:true,
     })
-
-    console.log(coordinates);
 },[coordinates])
 
   return (

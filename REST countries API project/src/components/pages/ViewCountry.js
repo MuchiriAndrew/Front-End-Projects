@@ -15,10 +15,12 @@ function ViewCountry({mode, setMode}) {
     const [country, setCountry] = useState([])
     const [theme, setTheme] = useState("Dark");
     const {name} = useParams()
+    console.log(name);
 
   useEffect(()=> {
       const fetchCountryData = async() => {
-        const res = await fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
+        const res = await fetch(`
+        https://restcountries.com/v3.1/alpha?codes=${name}`)
         const data = await res.json()
         setCountry(data)
         console.log(data);
@@ -65,7 +67,7 @@ function ViewCountry({mode, setMode}) {
    <Container style={{color: mode ? "black" : "white"}} fluid id='wrapper-6' className=' p-0'>
 
    {country.map((mydata)=> {
-        const {name, population, region, subregion, capital, tld, flags, borders } = mydata;
+        const {name, population, region, subregion, capital, tld, flags, borders} = mydata;
 
         const currencies = (x) =>
         Object.keys(x.currencies).map((e) => x.currencies[e].name);
@@ -172,18 +174,18 @@ function ViewCountry({mode, setMode}) {
 
 
         
-        <div id='border-countries' className=''>
+        <div id='border-countries'>
 
         <h5 className='me-md-3 '>Border Countries: </h5>
 
         {mydata.borders &&(
         <>
           <ul id='list' className='p-0'>
-              <li id='borders' >{borders[0]}</li>
-              {borders[1] && (<> <li id='borders'>{borders[1]}</li></>)}
-              {borders[2] && (<> <li id='borders'>{borders[2]}</li></>)}
-              {borders[3] && (<> <li id='borders'>{borders[3]}</li></>)}
-              {borders[4] && (<> <li id='borders'>{borders[4]}</li></>)}
+              <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[0]}`}>{borders[0]}</Link>
+              {borders[1] && (<> <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[1]}`}>{borders[1]}</Link></>)}
+              {borders[2] && (<> <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[2]}`}>{borders[2]}</Link></>)}
+              {borders[3] && (<> <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[3]}`}>{borders[3]}</Link></>)}
+              {borders[4] && (<> <Link style={{color: mode ? "black" : "white"}} id='borders' to={`/country/${borders[4]}`}>{borders[4]}</Link></>)}
           </ul>
         </>
       )}
