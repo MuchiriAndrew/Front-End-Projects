@@ -1,5 +1,4 @@
 <template>
-<!-- Modal -->
 
   <div class="modal-dialog modal-dialog-centered" id="wrapper">
 
