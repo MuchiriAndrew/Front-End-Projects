@@ -811,7 +811,7 @@ cursor: pointer;
 @media screen and (max-height:720px) and (max-width:768px) {
 
 #wrapper {
-    height: 150vh;
+    height: 170vh;
     min-height: max-content;
 }
 
