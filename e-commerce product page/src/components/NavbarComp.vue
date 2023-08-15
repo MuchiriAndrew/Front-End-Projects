@@ -6,7 +6,7 @@
 
     <img id="menu-toggler" class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" src="../assets/icon-menu.svg" alt="menu">
 
-    <a class="navbar-brand p-0" style="display:flex; justify-content:center; align-items:center" href="#">
+    <a class="navbar-brand p-0 m-0" style="display:flex; justify-content:center; align-items:center" href="#">
         <img id="brand-img" class="img-fluid" src="../assets/logo.svg" alt="">
     </a>
 
@@ -15,13 +15,13 @@
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
       <div id="offcanvas" class="offcanvas-header justify-content-start">
-        <img   data-bs-dismiss="offcanvas" id="closebtn" src="../assets/icon-close.svg" alt="close">
+        <img data-bs-dismiss="offcanvas" id="closebtn" src="../assets/icon-close.svg" alt="close">
       </div>
 
       <div class="offcanvas-body p-0">
         <div class="navbar-nav">
 
-        <ul id="first-navs" class="ps-3 p-xl-0 ">
+        <ul id="first-navs" class="ps-3 p-xl-0">
 
             <li id="nav-item">
             <a  id='nrml_links' href="#">Collections</a>
@@ -43,7 +43,7 @@
                 <a id="nrml_links" href="#">Contact</a>
             </li>
         </ul>
-    
+
         </div>
       </div>
 
@@ -85,12 +85,12 @@
 
                     </ul>
                 </div>
-                
+
                 <img id="avatar" src="../assets/image-avatar.png" alt="avatar">
             </div>
     </ul>
 
-  </div> 
+  </div>
 </nav>
 </template>
 
@@ -98,7 +98,7 @@
 export default {
 
     props: ['quantity', 'badgeQuantity', 'addItem', 'subtractItem', 'badgeDisplay', 'showProduct', 'handleDelete'],
-    
+
     data() {
         return{
             display:"none",
@@ -220,9 +220,9 @@ export default {
     background-color: white;
     left:75%;
     top:85%;
-    width:350px; 
+    width:350px;
     height:250px;
-    display: v-bind('display'); 
+    display: v-bind('display');
     flex-direction: column;
     /* justify-content: center; */
     /* align-items: center; */
@@ -319,7 +319,7 @@ b {
     height: 20px;
 }
 
-@media only screen and (max-width: 992px){ 
+@media only screen and (max-width: 992px){
 
 .navbar {
     height: 10vh;
@@ -332,7 +332,7 @@ b {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #second-navs {
@@ -404,14 +404,14 @@ b {
 }
 
 #dropdown-menu {
-    position: absolute; 
-    left: 0; 
+    position: absolute;
+    left: 0;
     top:0;
     margin-top: 11vh;
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width:90vw; 
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width:90vw;
     height:250px
 }
 
@@ -421,9 +421,16 @@ b {
 .navbar{
     height: 20vh;
 }
+
+.navbar-nav {
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
 }
 
-@media only screen and (max-width: 768px){ 
+@media only screen and (max-width: 768px){
 
 .navbar {
     height: 10vh;
@@ -436,7 +443,7 @@ b {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #second-navs {
@@ -460,7 +467,7 @@ b {
 }
 
 .navbar-nav {
-    height: 40%;
+    height: 70%;
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
@@ -472,7 +479,7 @@ b {
     flex-direction: column;
     align-items: start;
     justify-content: space-around;
-    width: 70%;
+    width: 100%;
     height: 100%;
     margin: 0;
 }
@@ -491,14 +498,14 @@ b {
     justify-content: center;
 }
 #dropdown-menu {
-    position: absolute; 
-    left: 0; 
+    position: absolute;
+    left: 0;
     top:0;
     margin-top: 11vh;
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width:90vw; 
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width:90vw;
     height:250px
 }
 
