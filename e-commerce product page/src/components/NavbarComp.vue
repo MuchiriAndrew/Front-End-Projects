@@ -4,7 +4,7 @@
 
     <div id="brand-div" class="">
 
-    <img id="menu-toggler" class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" src="../assets/icon-menu.svg" alt="menu">
+    <img id="menu-toggler" class="d-lg-none ms-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" src="../assets/icon-menu.svg" alt="menu">
 
     <a class="navbar-brand p-0 m-0" style="display:flex; justify-content:center; align-items:center" href="#">
         <img id="brand-img" class="img-fluid" src="../assets/logo.svg" alt="">
@@ -14,8 +14,8 @@
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-      <div id="offcanvas" class="offcanvas-header justify-content-start">
-        <img data-bs-dismiss="offcanvas" id="closebtn" src="../assets/icon-close.svg" alt="close">
+      <div id="offcanvas" class="offcanvas-header justify-content-end">
+        <img style="height:30px" data-bs-dismiss="offcanvas" id="closebtn" src="../assets/icon-close.svg" alt="close">
       </div>
 
       <div class="offcanvas-body p-0">
