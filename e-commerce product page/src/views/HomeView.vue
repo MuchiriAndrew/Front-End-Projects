@@ -84,7 +84,7 @@ export default {
   width: 80vw;
 }
 
-@media only screen and (max-width: 992px){ 
+@media only screen and (max-width: 992px){
     .home{
       width: 100vw;
     }

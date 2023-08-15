@@ -15,7 +15,7 @@
                     <div @click='handlePrevious' class="scrollbtn1 rounded-circle d-flex d-lg-none">
                         <img id="arrows" src="../assets/icon-previous.svg" alt="previous">
                     </div>
-                    
+
                 <img v-if="showModal" :src="link" class="img-fluid" id="current-image" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img v-else :src="link" class="img-fluid" id="current-image">
 
@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                
+
 
                 <div id="thumbnails" class="d-none d-lg-flex">
                     <img @click='handlePicture1' class="img-fluid thumb rounded-3" id="thumb1" src="../assets/image-product-1-thumbnail.jpg" alt="">
@@ -43,11 +43,11 @@
                     <h1>Fall Limited Edition Sneakers</h1>
                     <p>These low profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer</p>
                 </div>
-                
+
                 <div id="prices-section" class="">
                     <div id="price">
                         <h3>$125.00</h3>
-                        <span id="discount" class="rounded-2 p-1 p-lg-2">50%</span> 
+                        <span id="discount" class="rounded-2 p-1 p-lg-2">50%</span>
                     </div>
 
                     <span id="price-before"><s>$250.00</s></span>
@@ -66,7 +66,7 @@
                             <img id="btncart" src="../assets/icon-cart-white.svg" alt="">
                             Add to cart
                         </div>
-                        
+
                     </div>
 
                 </div>
@@ -104,7 +104,7 @@ export default {
             showModal: true
         }
     },
-    
+
     methods: {
         handlePicture1() {
             this.link = picture1
@@ -205,8 +205,9 @@ export default {
     font-family: Kumbh Sans;
 }
 
-#wrapper { 
+#wrapper {
     height: 85vh;
+    min-height: max-content;
 }
 
 .row {
@@ -225,10 +226,10 @@ export default {
 }
 
 #product-details {
-    height: 100%; 
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
 #inner-images-div {
@@ -284,8 +285,8 @@ cursor: pointer;
 }
 
 #thumb1 {
-    opacity: v-bind('opacity1'); 
-    border: v-bind('border1'); 
+    opacity: v-bind('opacity1');
+    border: v-bind('border1');
 }
 
 #thumb1:hover {
@@ -293,22 +294,22 @@ cursor: pointer;
 }
 
 #thumb2 {
-    opacity: v-bind('opacity2'); 
-    border: v-bind('border2'); 
+    opacity: v-bind('opacity2');
+    border: v-bind('border2');
 }
 #thumb2:hover {
     opacity: 0.5;
 }
 #thumb3 {
-    opacity: v-bind('opacity3'); 
-    border: v-bind('border3'); 
+    opacity: v-bind('opacity3');
+    border: v-bind('border3');
 }
 #thumb3:hover {
     opacity: 0.5;
 }
 #thumb4 {
-    opacity: v-bind('opacity4'); 
-    border: v-bind('border4'); 
+    opacity: v-bind('opacity4');
+    border: v-bind('border4');
 }
 #thumb4:hover {
     opacity: 0.5;
@@ -447,8 +448,9 @@ cursor: pointer;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 992px){ 
-#wrapper { 
+@media only screen and (max-width: 992px){
+#wrapper {
+    min-height: max-content;
     height: 90vh;
 }
 
@@ -488,10 +490,10 @@ cursor: pointer;
 }
 
 #product-details {
-    height: 60%; 
+    height: 60%;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
 #inner-details-div {
@@ -617,6 +619,7 @@ cursor: pointer;
 @media only screen and (max-width: 992px) and (max-height:500px){
 #wrapper{
     height: 200vh;
+    min-height: max-content;
 }
 
 .scrollbtn1 {
@@ -633,10 +636,11 @@ cursor: pointer;
 }
 
 
-@media only screen and (max-width: 768px){ 
+@media only screen and (max-width: 768px){
 
-#wrapper { 
-    height: 90vh;
+#wrapper {
+    min-height: max-content;
+    height: 100vh;
 }
 
 .row {
@@ -646,7 +650,7 @@ cursor: pointer;
 }
 
 #product-images {
-    max-height: 40%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -670,7 +674,8 @@ cursor: pointer;
 }
 
 #current-image {
-    width: 100%;
+    height: 100%;
+    width: unset;
     border-radius: 0;
 }
 
@@ -701,10 +706,10 @@ cursor: pointer;
 }
 
 #product-details {
-    height: 60%; 
+    height: 60%;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
 #inner-details-div {
@@ -805,12 +810,18 @@ cursor: pointer;
 
 @media screen and (max-height:720px) and (max-width:768px) {
 
-#wrapper { 
+#wrapper {
     height: 150vh;
+    min-height: max-content;
 }
 
 #price {
     width: 45%;
+}
+
+#current-image {
+    height: 100%;
+    width: unset;
 }
 
 
