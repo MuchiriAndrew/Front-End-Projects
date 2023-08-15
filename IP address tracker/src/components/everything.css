@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    min-height: max-content;
 }
 
 #input-div {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     height: 35%;
     background-image: url(../images/pattern-bg-desktop.png);
@@ -50,7 +51,7 @@
     width: 25%;
     height: 50%;
     display: flex;
-    justify-content:start;
+    justify-content:flex-start;
     align-items: center;
     border-right: 1px solid grey;
     margin-left: 10px;
@@ -119,6 +120,10 @@ h3 {
         background-size: cover;
     }
 
+    .txtbox {
+        height: 50px;
+    }
+
     .inner-div {
         height: 50%;
         width: 80%;
@@ -151,7 +156,7 @@ h3 {
     h6 {
         font-size: 12px;
     }
-    
+
     h3 {
         font-size: 20px;
     }
@@ -195,7 +200,7 @@ h3 {
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
     }
-    
+
     .mybtn {
         width: 15%;
         border: none;
@@ -211,15 +216,15 @@ h3 {
         height: 35%;
         top: 180px;
     }
-    
+
     .myrow {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }    
-    
+    }
+
     #col {
         width: 100%;
         height: unset;
@@ -230,11 +235,12 @@ h3 {
         border-right: none;
         margin-left: 0px;
     }
-} 
+}
 
 @media screen and (max-height:740px) and (max-width:768px) {
     .wrapper {
         height: 140vh;
+        min-height: max-content;
     }
 
     .results-div {
